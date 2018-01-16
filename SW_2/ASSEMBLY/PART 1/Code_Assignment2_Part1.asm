@@ -9,8 +9,30 @@
 ;--------------------------------------------------------------------------
 .CSEG
 .ORG 0x01 ; set the data segment counter to 0x01
+
 IN R0,IN_PORT
 CMP R0,THRESHOLD
-BRCS MULTIPLY_VALUE
-BREQ MULTIPLY_VALUE
+BRCS DIVIDE_VALUE
+BREQ DIVIDE_VALUE
+
+
+DIVIDE_VALUE:
+CLC
+LSR R0
+CLC
+LSR R0
+
+BRN OUTPUT
+
+MULTIPLY_VALUE:
+CLC
+LSL R0
+
+OUTPUT:
+OUT R0,OUT_PORT
+
+
+
+
+
 
