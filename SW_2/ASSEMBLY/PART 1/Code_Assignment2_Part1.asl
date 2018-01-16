@@ -28,30 +28,28 @@ C5:  Raw line from source code.
 (0012)                            || 
 (0013)  CS-0x001  0x32030         || IN R0,IN_PORT
 (0014)  CS-0x002  0x30080         || CMP R0,THRESHOLD
-(0015)  CS-0x003  0x0A028         || BRCS DIVIDE_VALUE
-(0016)  CS-0x004  0x0802A         || BREQ DIVIDE_VALUE
+(0015)  CS-0x003  0x0A041         || BRCC DIVIDE_VALUE
+(0016)  CS-0x004  0x08042         || BREQ DIVIDE_VALUE
 (0017)                            || 
-(0018)                            || 
-(0019)                     0x005  || DIVIDE_VALUE:
-(0020)  CS-0x005  0x18000         || CLC
-(0021)  CS-0x006  0x10001         || LSR R0
-(0022)  CS-0x007  0x18000         || CLC
-(0023)  CS-0x008  0x10001         || LSR R0
-(0024)                            || 
-(0025)  CS-0x009  0x08060         || BRN OUTPUT
-(0026)                            || 
-(0027)                     0x00A  || MULTIPLY_VALUE:
-(0028)  CS-0x00A  0x18000         || CLC
-(0029)  CS-0x00B  0x10000         || LSL R0
-(0030)                            || 
-(0031)                     0x00C  || OUTPUT:
-(0032)  CS-0x00C  0x34042         || OUT R0,OUT_PORT
+(0018)                     0x005  || MULTIPLY_VALUE:
+(0019)  CS-0x005  0x18000         || CLC
+(0020)  CS-0x006  0x10000         || LSL R0
+(0021)  CS-0x007  0x08060         || BRN OUTPUT
+(0022)                            || 
+(0023)                     0x008  || DIVIDE_VALUE:
+(0024)  CS-0x008  0x18000         || CLC
+(0025)  CS-0x009  0x10001         || LSR R0
+(0026)  CS-0x00A  0x18000         || CLC
+(0027)  CS-0x00B  0x10001         || LSR R0
+(0028)                            || 
+(0029)                     0x00C  || OUTPUT:
+(0030)  CS-0x00C  0x34042         || OUT R0,OUT_PORT
+(0031)                            || 
+(0032)                            || 
 (0033)                            || 
 (0034)                            || 
 (0035)                            || 
 (0036)                            || 
-(0037)                            || 
-(0038)                            || 
 
 
 
@@ -70,9 +68,9 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-DIVIDE_VALUE   0x005   (0019)  ||  0015 0016 
-MULTIPLY_VALUE 0x00A   (0027)  ||  
-OUTPUT         0x00C   (0031)  ||  0025 
+DIVIDE_VALUE   0x008   (0023)  ||  0015 0016 
+MULTIPLY_VALUE 0x005   (0018)  ||  
+OUTPUT         0x00C   (0029)  ||  0021 
 
 
 -- Directives: .BYTE
@@ -85,7 +83,7 @@ OUTPUT         0x00C   (0031)  ||  0025
 DIVIDE         0x004   (0004)  ||  
 IN_PORT        0x030   (0001)  ||  0013 
 MULTIPLY       0x002   (0005)  ||  
-OUT_PORT       0x042   (0002)  ||  0032 
+OUT_PORT       0x042   (0002)  ||  0030 
 THRESHOLD      0x080   (0003)  ||  0014 
 
 
