@@ -29,12 +29,12 @@ C5:  Raw line from source code.
 (0013)                            || ;--------------------------------------------------------------------------
 (0014)                            || .CSEG
 (0015)                       001  || .ORG 0x01 ; set the data segment counter to 0x01
-(0016)  CS-0x001  0x36100  0x001  || MAIN : MOV R1,0x00
-(0017)  CS-0x002  0x32030         || IN R0,IN_PORT
-(0018)  CS-0x003  0x240FF         || EXOR R0, 0xFF
-(0019)  CS-0x004  0x28001         || ADD R0,0x01
-(0020)  CS-0x005  0x34040         || OUT R0,OUT_PORT
-(0021)  CS-0x006  0x08008         || BRN MAIN
+(0016)                     0x001  || MAIN :
+(0017)  CS-0x001  0x32030         || IN R0,IN_PORT
+(0018)  CS-0x002  0x240FF         || EXOR R0, 0xFF
+(0019)  CS-0x003  0x28001         || ADD R0,0x01
+(0020)  CS-0x004  0x34040         || OUT R0,OUT_PORT
+(0021)  CS-0x005  0x08008         || BRN MAIN
 (0022)                            || 
 (0023)                            || 
 (0024)                            || 
