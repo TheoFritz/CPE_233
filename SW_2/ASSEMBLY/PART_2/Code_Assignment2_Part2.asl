@@ -28,12 +28,12 @@ C5:  Raw line from source code.
 (0012)  CS-0x002  0x04101         || MOV R1,R0
 (0013)                            || 
 (0014)  CS-0x003  0x18000         || CLC 
-(0015)  CS-0x004  0x10100         || LSL R1
-(0016)  CS-0x005  0x0A059         || BRCC IS_ODD
+(0015)  CS-0x004  0x10101         || LSR R1
+(0016)  CS-0x005  0x0A058         || BRCS IS_ODD
 (0017)                            || 
 (0018)  CS-0x006  0x18000         || CLC
-(0019)  CS-0x007  0x10100         || LSL R1
-(0020)  CS-0x008  0x0A078         || BRCS IS_DIVISIBLE_BY_FOUR
+(0019)  CS-0x007  0x10101         || LSR R1
+(0020)  CS-0x008  0x0A079         || BRCC IS_DIVISIBLE_BY_FOUR
 (0021)                            || 
 (0022)  CS-0x009  0x2C001         || SUB R0,0x01
 (0023)  CS-0x00A  0x08088         || BRN OUTPUT
@@ -41,7 +41,7 @@ C5:  Raw line from source code.
 (0025)                     0x00B  || IS_ODD:
 (0026)  CS-0x00B  0x28011         || ADD R0,0x11
 (0027)  CS-0x00C  0x18000         || CLC
-(0028)  CS-0x00D  0x10000         || LSL R0
+(0028)  CS-0x00D  0x10001         || LSR R0
 (0029)  CS-0x00E  0x08088         || BRN OUTPUT
 (0030)                            || 
 (0031)                     0x00F  || IS_DIVISIBLE_BY_FOUR:
