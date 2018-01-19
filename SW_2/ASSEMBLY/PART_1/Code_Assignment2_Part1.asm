@@ -28,9 +28,3 @@ LSR R0
 
 OUTPUT:
 OUT R0,OUT_PORT
-
-
-
-
-
-

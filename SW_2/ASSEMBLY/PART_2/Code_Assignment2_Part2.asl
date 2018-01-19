@@ -33,23 +33,23 @@ C5:  Raw line from source code.
 (0017)                            || 
 (0018)  CS-0x006  0x18000         || CLC
 (0019)  CS-0x007  0x10101         || LSR R1
-(0020)  CS-0x008  0x0A079         || BRCC IS_DIVISIBLE_BY_FOUR
+(0020)  CS-0x008  0x0A071         || BRCC IS_DIVISIBLE_BY_FOUR
 (0021)                            || 
 (0022)  CS-0x009  0x2C001         || SUB R0,0x01
-(0023)  CS-0x00A  0x08088         || BRN OUTPUT
+(0023)  CS-0x00A  0x08080         || BRN OUTPUT
 (0024)                            || 
 (0025)                     0x00B  || IS_ODD:
 (0026)  CS-0x00B  0x28011         || ADD R0,0x11
-(0027)  CS-0x00C  0x18000         || CLC
-(0028)  CS-0x00D  0x10001         || LSR R0
-(0029)  CS-0x00E  0x08088         || BRN OUTPUT
-(0030)                            || 
-(0031)                     0x00F  || IS_DIVISIBLE_BY_FOUR:
-(0032)  CS-0x00F  0x240FF         || EXOR R0,0xFF
-(0033)  CS-0x010  0x08088         || BRN OUTPUT
-(0034)                            || 
-(0035)                     0x011  || OUTPUT:
-(0036)  CS-0x011  0x34042         || OUT R0,OUT_PORT
+(0027)  CS-0x00C  0x10001         || LSR R0
+(0028)  CS-0x00D  0x08080         || BRN OUTPUT
+(0029)                            || 
+(0030)                     0x00E  || IS_DIVISIBLE_BY_FOUR:
+(0031)  CS-0x00E  0x240FF         || EXOR R0,0xFF
+(0032)  CS-0x00F  0x08080         || BRN OUTPUT
+(0033)                            || 
+(0034)                     0x010  || OUTPUT:
+(0035)  CS-0x010  0x34042         || OUT R0,OUT_PORT
+(0036)  CS-0x011  0x08008         || BRN 0x01
 (0037)                            ||  
 
 
@@ -69,9 +69,9 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-IS_DIVISIBLE_BY_FOUR 0x00F   (0031)  ||  0020 
+IS_DIVISIBLE_BY_FOUR 0x00E   (0030)  ||  0020 
 IS_ODD         0x00B   (0025)  ||  0016 
-OUTPUT         0x011   (0035)  ||  0023 0029 0033 
+OUTPUT         0x010   (0034)  ||  0023 0028 0032 
 
 
 -- Directives: .BYTE
@@ -82,7 +82,7 @@ OUTPUT         0x011   (0035)  ||  0023 0029 0033
 -- Directives: .EQU
 ------------------------------------------------------------ 
 IN_PORT        0x030   (0001)  ||  0011 
-OUT_PORT       0x042   (0002)  ||  0036 
+OUT_PORT       0x042   (0002)  ||  0035 
 
 
 -- Directives: .DEF
