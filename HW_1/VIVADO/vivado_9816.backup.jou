@@ -2,13 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Jan 22 12:00:04 2018
-# Process ID: 8776
+# Start of session at: Mon Jan 22 11:56:05 2018
+# Process ID: 9816
 # Current directory: C:/Users/edavis/Documents/CPE_233/HW_1/VIVADO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7632 C:\Users\edavis\Documents\CPE_233\HW_1\VIVADO\HW_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32 C:\Users\edavis\Documents\CPE_233\HW_1\VIVADO\HW_1.xpr
 # Log file: C:/Users/edavis/Documents/CPE_233/HW_1/VIVADO/vivado.log
 # Journal file: C:/Users/edavis/Documents/CPE_233/HW_1/VIVADO\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/edavis/Documents/CPE_233/HW_1/VIVADO/HW_1.xpr
-update_compile_order -fileset sources_1
