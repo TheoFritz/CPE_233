@@ -1,22 +1,17 @@
 ; ----------------------------------------------------
 ;
-; RAT ASSIGNMENT No. 1: PART 2A
+; HW ASSIGNMENT No. 1
 ; DOMINIC GAIERO AND ELIZABETH DAVIS
 ;
+; DESCRIPTION:
+; Cycles through 0-255 and outputs it to PWM_PORT (0x40)
 ; ----------------------------------------------------
 
 .EQU PWM_PORT = 0x40
-;--------------------------------------------------------------------------
-;-- .ORG used in data segment
-;--------------------------------------------------------------------------
 
-
-.DSEG
-.ORG 0x00 ; sets the code segment counter to 0x00
-
-;--------------------------------------------------------------------------
-;-- .ORG used in code segment
-;--------------------------------------------------------------------------
+; ----------------------------------------------------
+; -- .ORG used in code segment
+; ----------------------------------------------------
 .CSEG
 .ORG 0x01 ; set the data segment counter to 0x01
 MAIN : MOV R0,0x00  ; Moves 0x00 into R0
