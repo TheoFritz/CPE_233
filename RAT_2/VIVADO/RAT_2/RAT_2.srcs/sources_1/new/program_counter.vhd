@@ -26,12 +26,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity program_counter is
   Port (
-    D_IN: std_logic_vector(9 downto 0);
-    PC_LD: std_logic;
-    PC_INC: std_logic;
-    RST: std_logic;
-    CLK: std_logic;
-    PC_COUNT: std_logic_vector(9 downto 0)
+    D_IN: IN std_logic_vector(9 downto 0);
+    PC_LD: IN std_logic;
+    PC_INC: IN std_logic;
+    RST: IN std_logic;
+    CLK: IN std_logic;
+    PC_COUNT: OUT std_logic_vector(9 downto 0)
   );
 end program_counter;
 

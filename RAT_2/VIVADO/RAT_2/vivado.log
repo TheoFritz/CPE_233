@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Jan 24 17:33:43 2018
+# Process ID: 1108
+# Current directory: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7464 C:\Users\edavis\Documents\CPE_233\RAT_2\VIVADO\RAT_2\RAT_2.xpr
+# Log file: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/vivado.log
+# Journal file: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.xpr
+INFO: [Project 1-313] Project file moved from 'C:/utilities/CPE_233/RAT_2/VIVADO/RAT_2' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.ip_user_files', nor could it be found using path 'C:/utilities/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_Vivado/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 667.539 ; gain = 44.410
+update_compile_order -fileset sources_1
+set_property top program_counter [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Wed Jan 24 17:39:04 2018] Launched synth_1...
+Run output will be captured here: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/runme.log
+set_property top pc_mux [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jan 24 18:04:15 2018] Launched synth_1...
+Run output will be captured here: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jan 24 18:45:05 2018] Launched synth_1...
+Run output will be captured here: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jan 24 18:48:25 2018] Launched synth_1...
+Run output will be captured here: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 18:55:24 2018...

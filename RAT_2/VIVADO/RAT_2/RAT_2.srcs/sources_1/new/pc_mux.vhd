@@ -32,12 +32,25 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity pc_mux is
---  Port ( );
+  Port (
+  FROM_IMMED: IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+  FROM_STACK: IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+  PC_MUX_SEL: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+  D_OUT: OUT STD_LOGIC_VECTOR(9 DOWNTO 0) 
+  );
 end pc_mux;
 
 architecture Behavioral of pc_mux is
 
 begin
+
+
+D_OUT <= FROM_IMMED when (PC_MUX_SEL = "00") else
+        FROM_STACK when (PC_MUX_SEL = "01") else
+        "1111111111" when (PC_MUX_SEL = "10") else
+        "0000000000";
+        
+
 
 
 end Behavioral;
