@@ -1,6 +1,6 @@
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 70478705404e4b06a2e6b202382b1852 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench -log elaborate.log 
+Running: C:/Xilinx_Vivado/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 70478705404e4b06a2e6b202382b1852 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration

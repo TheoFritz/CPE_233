@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1516857553">
+  <File Type="PWROPT-DRC" Name="program_counter_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="program_counter_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="program_counter_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="program_counter_power_routed.rpx"/>
   <File Type="PA-TCL" Name="program_counter.tcl"/>
-  <File Type="INIT-TIMING" Name="program_counter_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="program_counter_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="program_counter_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="program_counter.hwdef"/>
   <File Type="RDI-RDI" Name="program_counter.vdi"/>
   <File Type="OPT-DCP" Name="program_counter_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="program_counter.hwdef"/>
   <File Type="OPT-DRC" Name="program_counter_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="program_counter_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="program_counter_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="program_counter_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="program_counter_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="program_counter_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="program_counter_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="program_counter.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="program_counter_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="program_counter_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="program_counter.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="program_counter_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="program_counter_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="program_counter.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="program_counter_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="program_counter_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="program_counter.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="program_counter_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="program_counter_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="program_counter_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="program_counter_route_status.rpt"/>
