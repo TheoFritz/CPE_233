@@ -1,38 +1,20 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 01/24/2018 07:57:35 PM
--- Design Name: 
--- Module Name: test_bench - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+--
+-- RAT ASSIGNMENT NO. 2:
+-- TEST_BENCH.VHD
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
+--
+-- Test Bench for PC
+--
 ----------------------------------------------------------------------------------
+
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity test_bench is
-   -- Port ();
+
 end test_bench;
 
 architecture behavior of test_bench is
@@ -81,17 +63,68 @@ begin
         
         STIMULUS_PROCESS: PROCESS
             BEGIN
+
+            ----------------------------------------------------------------------------------             
+            -- VERIFY IF MUX "00" WORKS
+            ---------------------------------------------------------------------------------- 
             FROM_IMMED_TB <= "0001000000";
             PC_MUX_SEL_TB <= "00";
-            
             RST_TB <= '0';
             INC_TB <= '1';
             LD_TB <= '1';
             WAIT FOR 10ns;
             LD_TB <= '0';
-            WAIT FOR 200ns;
+            WAIT FOR 50ns;
+            ----------------------------------------------------------------------------------             
+            -- VERIFY IF MUX "01" WORKS
+            ----------------------------------------------------------------------------------             
+            FROM_STACK_TB <= "0010101000";
+            PC_MUX_SEL_TB <= "01";
+            INC_TB <= '0';
+            LD_TB <= '1';
+            WAIT FOR 10ns;
+            LD_TB <= '0';
+            WAIT FOR 50ns;
+            
+            ----------------------------------------------------------------------------------             
+            -- VERIFY IF MUX "10" WORKS
+            ----------------------------------------------------------------------------------            
+            PC_MUX_SEL_TB <= "10";
+            INC_TB <= '0';
+            LD_TB <= '1';
+            WAIT FOR 10ns;
+            LD_TB <= '0';
+            WAIT FOR 50ns;   
+                     
+            ----------------------------------------------------------------------------------             
+            -- VERIFY IF RST WORKS
+            ---------------------------------------------------------------------------------- 
+            FROM_STACK_TB <= "0010101000";
+            PC_MUX_SEL_TB <= "01";
+            RST_TB <= '1';
+            INC_TB <= '0';
+            LD_TB <= '1';
+            WAIT FOR 10ns;
+            LD_TB <= '0';
+            WAIT FOR 50ns;
+            
+            ----------------------------------------------------------------------------------             
+            -- VERIFY IF INC WORKS
+            ----------------------------------------------------------------------------------            
+            FROM_IMMED_TB <= "0001000000";
+            PC_MUX_SEL_TB <= "00";
+            RST_TB <= '0';
+            INC_TB <= '1';
+            LD_TB <= '1';
+            WAIT FOR 10ns;
+            LD_TB <= '0';
+            WAIT FOR 50ns;
+            
+        
             
         END PROCESS;
+        
+        
 
 
 end behavior;
