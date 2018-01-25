@@ -18,9 +18,5 @@ MAIN : MOV R0,0x00  ; Moves 0x00 into R0
 ADD_1: OUT R0,PWM_PORT; Outputs the value of R0 to the PWM_port
        CMP R0,0xFF ; Compares the value in R0 to 0xFF
 	   ADD R0,0x01 ; Adds one
-       BREQ END_PROGRAM ; Branches to END_PROGRAM if R0=255
-       BRN ADD_1 ; Loops the program by adding one each time until it reaches 255
-
-       END_PROGRAM: ; Terminates program
-
-
+       BRNE ADD_1 ; Branches to END_PROGRAM if R0!=255
+	   
