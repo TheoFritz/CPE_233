@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Jan 24 18:48:26 2018
-# Process ID: 400
-# Current directory: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1
-# Command line: vivado.exe -log pc_mux.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pc_mux.tcl
-# Log file: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/pc_mux.vds
-# Journal file: C:/Users/edavis/Documents/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1\vivado.jou
+# Start of session at: Wed Jan 24 21:18:01 2018
+# Process ID: 23764
+# Current directory: C:/utilities/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1
+# Command line: vivado.exe -log program_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source program_counter.tcl
+# Log file: C:/utilities/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1/program_counter.vds
+# Journal file: C:/utilities/CPE_233/RAT_2/VIVADO/RAT_2/RAT_2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source pc_mux.tcl -notrace
+source program_counter.tcl -notrace

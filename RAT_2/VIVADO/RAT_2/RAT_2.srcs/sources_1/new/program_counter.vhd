@@ -51,9 +51,9 @@ begin
         IF (RST = '0') THEN
           IF (PC_LD = '1') THEN
             PC_COUNT_TMP <= D_IN;
+          ELSIF (PC_LD = '0') THEN
             IF (PC_INC = '1') THEN
-              PC_COUNT_TMP <= std_logic_vector(unsigned(PC_COUNT_TMP) + 1);
-            ELSE
+                PC_COUNT_TMP <= std_logic_vector(unsigned(PC_COUNT_TMP) + 1);
             END IF;
           END IF;
         ELSE
