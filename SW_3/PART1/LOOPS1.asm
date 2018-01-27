@@ -6,7 +6,7 @@
 ; DESCRIPTION:
 ; Take an input from port 0x9A (unsigned 8-bit). Split
 ; input into two four-bits (top four and bottom four).
-; Multiply with numbers together and ouptut on 0x42.
+; Multiply with numbers together and output on 0x42.
 ; ----------------------------------------------------
 
 .EQU IN_PORT = 0x9A
