@@ -13,44 +13,37 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity test_bench is
+entity test_bench_sr is
 
-end test_bench;
+end test_bench_sr;
 
-architecture behavior of test_bench is
-    COMPONENT PC_WRAPPER IS
+architecture behavior of test_bench_sr is
+    COMPONENT SCRATCH_RAM IS
         PORT (
-                   RST        : in STD_LOGIC;
-                   INC        : in STD_LOGIC;
-                   LD         : in STD_LOGIC;
-                   CLK        : in STD_LOGIC;
-                   FROM_IMMED : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-                   FROM_STACK : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-                   PC_MUX_SEL : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-                   IR         : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
+                DATA_IN  : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+                SCR_ADDR : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+                SCR_WE   : IN STD_LOGIC;
+                CLK      : IN STD_LOGIC;
+                DATA_OUT : OUT STD_LOGIC_VECTOR (9 DOWNTO 0)
         );
     END COMPONENT;
 
     CONSTANT CLK_PERIOD : TIME := 10ns;
 
-    SIGNAL RST_TB : STD_LOGIC;
-    SIGNAL INC_TB    : STD_LOGIC;
-    SIGNAL LD_TB : STD_LOGIC;
+    SIGNAL DATA_IN_TB : STD_LOGIC_VECTOR (9 DOWNTO 0);
+    SIGNAL SCR_ADDR_TB    : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    SIGNAL SCR_WE_TB : STD_LOGIC;
     SIGNAL CLK_TB : STD_LOGIC;
-    SIGNAL FROM_IMMED_TB : STD_LOGIC_VECTOR (9 DOWNTO 0);
-    SIGNAL FROM_STACK_TB : STD_LOGIC_VECTOR (9 DOWNTO 0);
-    SIGNAL PC_MUX_SEL_TB : STD_LOGIC_VECTOR (1 DOWNTO 0);
+    SIGNAL DATA_OUT_TB : STD_LOGIC_VECTOR (9 DOWNTO 0);
 
 begin
 
-    UUT: PC_WRAPPER PORT MAP (
-        RST => RST_TB,
-        INC => INC_TB,
-        LD => LD_TB,
+    UUT: SCRATCH_RAM PORT MAP (
+        DATA_IN => DATA_IN_TB,
+        SCR_ADDR => SCR_ADDR_TB,
+        SCR_WE => SCR_WE_TB,
         CLK => CLK_TB,
-        FROM_IMMED => FROM_IMMED_TB,
-        FROM_STACK => FROM_STACK_TB,
-        PC_MUX_SEL => PC_MUX_SEL_TB
+        DATA_OUT => DATA_OUT_TB
         );
         
         CLK_PROCESS: PROCESS
@@ -64,61 +57,30 @@ begin
         STIMULUS_PROCESS: PROCESS
             BEGIN
 
-            ----------------------------------------------------------------------------------             
-            -- VERIFY IF MUX "00" WORKS
-            ---------------------------------------------------------------------------------- 
-            FROM_IMMED_TB <= "0001000000";
-            PC_MUX_SEL_TB <= "00";
-            RST_TB <= '0';
-            INC_TB <= '1';
-            LD_TB <= '1';
-            WAIT FOR 10ns;
-            LD_TB <= '0';
-            WAIT FOR 50ns;
-            ----------------------------------------------------------------------------------             
-            -- VERIFY IF MUX "01" WORKS
-            ----------------------------------------------------------------------------------             
-            FROM_STACK_TB <= "0010101000";
-            PC_MUX_SEL_TB <= "01";
-            INC_TB <= '0';
-            LD_TB <= '1';
-            WAIT FOR 10ns;
-            LD_TB <= '0';
-            WAIT FOR 50ns;
+            DATA_IN_TB <= "0101011010";
+            SCR_ADDR_TB <= "01110110";
+            SCR_WE_TB <= '1';
+            WAIT FOR 80ns;
             
-            ----------------------------------------------------------------------------------             
-            -- VERIFY IF MUX "10" WORKS
-            ----------------------------------------------------------------------------------            
-            PC_MUX_SEL_TB <= "10";
-            INC_TB <= '0';
-            LD_TB <= '1';
-            WAIT FOR 10ns;
-            LD_TB <= '0';
-            WAIT FOR 50ns;   
-                     
-            ----------------------------------------------------------------------------------             
-            -- VERIFY IF RST WORKS
-            ---------------------------------------------------------------------------------- 
-            FROM_STACK_TB <= "0010101000";
-            PC_MUX_SEL_TB <= "01";
-            RST_TB <= '1';
-            INC_TB <= '0';
-            LD_TB <= '1';
-            WAIT FOR 10ns;
-            LD_TB <= '0';
-            WAIT FOR 50ns;
+            DATA_IN_TB <= "0101011010";
+            SCR_ADDR_TB <= "01110110";
+            SCR_WE_TB <= '0';
+            WAIT FOR 80ns;
             
-            ----------------------------------------------------------------------------------             
-            -- VERIFY IF INC WORKS
-            ----------------------------------------------------------------------------------            
-            FROM_IMMED_TB <= "0001000000";
-            PC_MUX_SEL_TB <= "00";
-            RST_TB <= '0';
-            INC_TB <= '1';
-            LD_TB <= '1';
-            WAIT FOR 10ns;
-            LD_TB <= '0';
-            WAIT FOR 50ns;
+            DATA_IN_TB <= "1111111111";
+            SCR_ADDR_TB <= "01011011";
+            SCR_WE_TB <= '1';
+            WAIT FOR 80ns;
+            
+            DATA_IN_TB <= "1110011111";
+            SCR_ADDR_TB <= "01011011";
+            SCR_WE_TB <= '0';
+            WAIT FOR 80ns;
+            
+            DATA_IN_TB <= "0000000001";
+            SCR_ADDR_TB <= "01011000";
+            SCR_WE_TB <= '1';
+            WAIT FOR 80ns;
             
         
             

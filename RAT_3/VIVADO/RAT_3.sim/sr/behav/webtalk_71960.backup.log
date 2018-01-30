@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jan 29 18:26:51 2018
+# Process ID: 71960
+# Current directory: C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav
+# Command line: wbtcv.exe -mode batch -source C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav/xsim.dir/test_bench_sr_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav/webtalk.log
+# Journal file: C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav/xsim.dir/test_bench_sr_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/utilities/CPE_233/RAT_3/VIVADO/RAT_3.sim/sr/behav/xsim.dir/test_bench_sr_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Jan 29 18:26:53 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Jan 29 18:26:53 2018...
