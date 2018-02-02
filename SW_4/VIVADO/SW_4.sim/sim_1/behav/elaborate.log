@@ -1,0 +1,9 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto f7414b1030d444f3b3dca70336423e08 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_TB_behav xil_defaultlib.ALU_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-716] formal port sum of mode in cannot be associated with actual port sum of mode out [C:/utilities/CP_233/SW_4/VIVADO/SW_4.srcs/sim_1/new/ALU_TB.vhd:43]
+ERROR: [VRFC 10-716] formal port c_flag of mode in cannot be associated with actual port c_flag of mode out [C:/utilities/CP_233/SW_4/VIVADO/SW_4.srcs/sim_1/new/ALU_TB.vhd:44]
+ERROR: [VRFC 10-716] formal port z_flag of mode in cannot be associated with actual port z_flag of mode out [C:/utilities/CP_233/SW_4/VIVADO/SW_4.srcs/sim_1/new/ALU_TB.vhd:45]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit alu_tb in library work failed.
