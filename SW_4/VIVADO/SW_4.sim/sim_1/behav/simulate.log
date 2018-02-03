@@ -1,0 +1,7 @@
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 0 ps  Iteration: 0  Process: /ALU_TB/STIMULUS_PROCESS
+  File: C:/utilities/CP_233/SW_4/VIVADO/SW_4.srcs/sim_1/new/ALU_TB.vhd
+
+HDL Line: C:/utilities/CP_233/SW_4/VIVADO/SW_4.srcs/sim_1/new/ALU_TB.vhd:80
