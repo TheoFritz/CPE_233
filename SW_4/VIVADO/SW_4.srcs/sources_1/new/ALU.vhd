@@ -1,22 +1,14 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
 --
--- Create Date: 02/01/2018 05:24:34 PM
--- Design Name:
--- Module Name: ALU - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
+-- RAT ASSIGNMENT NO. 4:
+-- ALU.VHD
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
 --
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
+-- The ALU takes in two 8 bit numbers, and, based on the select input will
+-- process those inputs and output on SUM. The carry flag and zero flag are set 
+-- based on conditions of the input. The ALU performs arithmetic and logic operations.
 ----------------------------------------------------------------------------------
+
 
 
 library IEEE;
@@ -26,17 +18,17 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 entity ALU is
-    Port ( A : in STD_LOGIC_VECTOR (7 downto 0);
-           B : in STD_LOGIC_VECTOR (7 downto 0);
-           SEL : in STD_LOGIC_VECTOR (3 downto 0);
-           C_IN : in STD_LOGIC;
-           SUM : out STD_LOGIC_VECTOR (7 downto 0);
-           C_FLAG : out STD_LOGIC;
-           Z_FLAG : out STD_LOGIC);
+    Port ( A : in STD_LOGIC_VECTOR (7 downto 0); -- A Input to the ALU
+           B : in STD_LOGIC_VECTOR (7 downto 0); -- B Input to the ALU
+           SEL : in STD_LOGIC_VECTOR (3 downto 0); -- Selector
+           C_IN : in STD_LOGIC; -- Carry In
+           SUM : out STD_LOGIC_VECTOR (7 downto 0); -- Output of the Operation
+           C_FLAG : out STD_LOGIC; -- Carry Flag
+           Z_FLAG : out STD_LOGIC); -- Zero Flag
 end ALU;
 
 architecture Behavioral of ALU is
-  signal temp_result: STD_LOGIC_VECTOR (8 downto 0);
+  signal temp_result: STD_LOGIC_VECTOR (8 downto 0); -- TEMPORARY OUTPUT FOR INSIDE THE PROCESS STATEMENT
 begin
 
   process (A,B,C_IN)
@@ -63,12 +55,12 @@ begin
       END case;
   END process;
 
-SUM <= temp_result (7 downto 0);
-C_FLAG <= temp_result(8);
+SUM <= temp_result (7 downto 0); -- SETS THE LAST EIGHT BITS OG TEMP RESULT TO BE THE SUM OR OUTPUT
+C_FLAG <= temp_result(8); -- SETS THE NINTH BIT OF TEMP RESULT TO BE THE C-FLAG
 
 process (temp_result)
   begin
-    if temp_result = "000000000" then
+    if temp_result = "000000000" then -- IF THE RESULT IS ALL 0'S THE Z-FLAG GOES HIGH OTHERWISE LOW
       Z_FLAG <= '1';
     else
       Z_FLAG <= '0';
