@@ -1,11 +1,4 @@
-Exception at PC 0x000000000040AF0B
-Attemped to read address 0x0000000000000000
-Printing stacktrace...
-
-[0]  [0x000000000040AF0B]
-[1]  [0x000000000040AF0B]
-Done
-Unable to capture context for thread 59280 in process 67604, can not generate back trace
+Unable to capture context for thread 81896 in process 79508, can not generate back trace
 Exception at PC 0x00007FFCD799BB93
 Printing stacktrace...
 
@@ -25,7 +18,7 @@ Printing stacktrace...
 [13] (RtlUserThreadStart+0x21) [0x00007FFD7BB4EFB1]
 Done
 Exception at PC 0x00007FFCD76A1A52
-Attemped to write at address 0x00007FFD2BF8ABA4
+Attemped to write at address 0x00007FFD3B63ABA4
 Printing stacktrace...
 
 [0]  [0x00007FFCD76A1A52]

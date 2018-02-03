@@ -35,9 +35,9 @@ begin
     begin
       case SEL is
         WHEN "0000" => temp_result <= ('0' & A) + B; --ADD
-        WHEN "0001" => temp_result <= '0' & (A + B + C_IN);--ADDC
+        WHEN "0001" => temp_result <= (('0' & A) + B + C_IN);--ADDC
         WHEN "0010" => temp_result <= ('0' & A) - B;--SUB
-        WHEN "0011" => temp_result <= '0' & (A - B - C_IN); --SUBC
+        WHEN "0011" => temp_result <= (('0' & A) - B - C_IN); --SUBC
         WHEN "0100" => temp_result <= ('0' & A) - B; --CMP
         WHEN "0101" => temp_result <= ('0' & (A AND B)); --AND
         WHEN "0110" => temp_result <= ('0' & (A OR B)); --OR
@@ -60,7 +60,7 @@ C_FLAG <= temp_result(8); -- SETS THE NINTH BIT OF TEMP RESULT TO BE THE C-FLAG
 
 process (temp_result)
   begin
-    if temp_result = "000000000" then -- IF THE RESULT IS ALL 0'S THE Z-FLAG GOES HIGH OTHERWISE LOW
+    if temp_result (7 DOWNTO 0) = "00000000" then -- IF THE RESULT IS ALL 0'S THE Z-FLAG GOES HIGH OTHERWISE LOW
       Z_FLAG <= '1';
     else
       Z_FLAG <= '0';

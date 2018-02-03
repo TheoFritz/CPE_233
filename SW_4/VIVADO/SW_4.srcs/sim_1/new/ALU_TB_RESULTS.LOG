@@ -1,0 +1,16 @@
+FAILURE (SUM INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 10101010  11111111  0100  0    10101010 1      0      500 ns
+               ACTUAL  :                                10101011 1      0
+FAILURE (SUM INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 11111111  10101010  0100  0    11111111 0      0      540 ns
+               ACTUAL  :                                01010101 0      0
+FAILURE (SUM INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 10101010  10101010  0100  0    10101010 0      1      580 ns
+               ACTUAL  :                                00000000 0      1
+FAILURE (SUM INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 10101010  10101010  0101  0    10101010 0      0      620 ns
+               ACTUAL  :                                00000000 0      1
+FAILURE (Z_FLAG INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 10101010  10101010  0101  0    10101010 0      0      620 ns
+FAILURE (Z_FLAG INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
+               EXPECTED: 10101010  10101010  0111  0    00000000 0      0      780 ns
