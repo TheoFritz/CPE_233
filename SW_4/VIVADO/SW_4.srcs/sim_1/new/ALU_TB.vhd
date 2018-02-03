@@ -31,8 +31,8 @@ use ieee.std_logic_textio.all;
 ENTITY ALU_TB IS
 END ALU_TB;
 ARCHITECTURE stimulus OF ALU_TB IS
-	FILE ALU_TB_VECS    : TEXT OPEN READ_MODE IS "ALU_TB.TB";
-	FILE ALU_TB_RESULTS : TEXT OPEN WRITE_MODE IS "ALU_TB_RESULTS.LOG";
+	FILE ALU_TB_VECS    : TEXT OPEN READ_MODE IS "C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\SW_4\VIVADO\SW_4.srcs\sim_1\new\ALU_TB.txt";
+	FILE ALU_TB_RESULTS : TEXT OPEN WRITE_MODE IS "C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\SW_4\VIVADO\SW_4.srcs\sim_1\new\ALU_TB_RESULTS.LOG";
 	COMPONENT ALU IS
 		PORT
 		(
@@ -67,33 +67,30 @@ BEGIN
 	);
 	STIMULUS_PROCESS            : PROCESS
 		VARIABLE V_FAIL             : STD_LOGIC := '0';
-		VARIABLE V_VEC_LINE         : LINE;
+--		VARIABLE V_VEC_LINE         : LINE;
 		VARIABLE v_results_line     : LINE;
-		VARIABLE V_A, V_B           : STD_LOGIC_VECTOR (7 DOWNTO 0);
-		VARIABLE V_SEL              : STD_LOGIC_VECTOR (3 DOWNTO 0);
-		VARIABLE V_C_IN             : STD_LOGIC;
-		VARIABLE V_SUM              : STD_LOGIC_VECTOR (7 DOWNTO 0);
-		VARIABLE V_C_FLAG, V_Z_FLAG : STD_LOGIC;
+--		VARIABLE V_A, V_B           : STD_LOGIC_VECTOR (7 DOWNTO 0);
+--		VARIABLE V_SEL              : STD_LOGIC_VECTOR (3 DOWNTO 0);
+--		VARIABLE V_C_IN             : STD_LOGIC;
+--		VARIABLE V_SUM              : STD_LOGIC_VECTOR (7 DOWNTO 0);
+--		VARIABLE V_C_FLAG, V_Z_FLAG : STD_LOGIC;
 	BEGIN
-		WHILE NOT ENDFILE(ALU_TB_VECS) LOOP
-		READLINE(ALU_TB_VECS, V_VEC_LINE);
-		IF V_VEC_LINE(1) = '$' THEN
-			NEXT;
-		END IF;
-		READ(V_VEC_LINE, V_A);
-		READ(V_VEC_LINE, V_B);
-		READ(V_VEC_LINE, V_SEL);
-		READ(V_VEC_LINE, V_C_IN);
-		READ(V_VEC_LINE, V_SUM);
-		READ(V_VEC_LINE, V_C_FLAG);
-		READ(V_VEC_LINE, V_Z_FLAG);
+--		WHILE NOT ENDFILE(ALU_TB_VECS) LOOP
+--		READLINE(ALU_TB_VECS, V_VEC_LINE);
+--		IF V_VEC_LINE(0) = '$' THEN
+--			NEXT;
+--		END IF;
+--		READ(V_VEC_LINE, V_A);
+--		READ(V_VEC_LINE, V_B);
+--		READ(V_VEC_LINE, V_SEL);
+--		READ(V_VEC_LINE, V_C_IN);
+--		READ(V_VEC_LINE, V_SUM);
+--		READ(V_VEC_LINE, V_C_FLAG);
+--		READ(V_VEC_LINE, V_Z_FLAG);
 		A_TB    <= V_A;
 		B_TB    <= V_B;
 		SEL_TB  <= V_SEL;
 		C_IN_TB <= V_C_IN;
-		-- SUM_TB <= V_SUM_TB;
-		-- C_FLAG_TB <= V_C_FLAG;
-		-- Z_FLAG_TB <= V_Z_FLAG;
 		WAIT FOR 20 ns;
 		IF (SUM_TB /= V_SUM) THEN
 			write(v_results_line, STRING'("SUM IS NOT correct at "));
@@ -113,7 +110,7 @@ BEGIN
 			writeline(ALU_TB_RESULTS, v_results_line);
 			V_FAIL := '1';
 		END IF;
-	END LOOP;
+--	END LOOP;
 	IF (v_fail = '1') THEN
 		write(v_results_line, STRING'("The DUT failed testing."));
 		writeline(ALU_TB_RESULTS, v_results_line);
