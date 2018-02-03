@@ -12,5 +12,7 @@ FAILURE (SUM INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG T
                ACTUAL  :                                00000000 0      1
 FAILURE (Z_FLAG INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
                EXPECTED: 10101010  10101010  0101  0    10101010 0      0      620 ns
+               ACTUAL  :                                00000000 0      1
 FAILURE (Z_FLAG INCORRECT): A         B         SEL   C_IN SUM      Z_FLAG C_FLAG TIME
                EXPECTED: 10101010  10101010  0111  0    00000000 0      0      780 ns
+               ACTUAL  :                                00000000 0      1

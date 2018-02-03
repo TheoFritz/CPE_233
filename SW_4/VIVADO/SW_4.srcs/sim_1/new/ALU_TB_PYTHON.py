@@ -46,8 +46,14 @@ for line in f:
 			write(v_results_line, STRING'("               EXPECTED: "));
 
 			write(v_results_line, STRING'("{0}  {1}  {2}  {3}    {4} {5}      {6}      "));
-
 			write(v_results_line, now);
+			writeline(ALU_TB_RESULTS, v_results_line);
+			write(v_results_line, STRING'("               ACTUAL  :                                "));
+			write(v_results_line, SUM_TB);
+			write(v_results_line, STRING'(" "));
+			write(v_results_line, C_FLAG_TB);
+			write(v_results_line, STRING'("      "));
+			write(v_results_line, Z_FLAG_TB);
 			writeline(ALU_TB_RESULTS, v_results_line);
 			V_FAIL := '1';
 		END IF;
@@ -57,8 +63,14 @@ for line in f:
 			write(v_results_line, STRING'("               EXPECTED: "));
 
 			write(v_results_line, STRING'("{0}  {1}  {2}  {3}    {4} {5}      {6}      "));
-
 			write(v_results_line, now);
+			writeline(ALU_TB_RESULTS, v_results_line);
+			write(v_results_line, STRING'("               ACTUAL  :                                "));
+			write(v_results_line, SUM_TB);
+			write(v_results_line, STRING'(" "));
+			write(v_results_line, C_FLAG_TB);
+			write(v_results_line, STRING'("      "));
+			write(v_results_line, Z_FLAG_TB);
 			writeline(ALU_TB_RESULTS, v_results_line);
 			V_FAIL := '1';
 		END IF;
