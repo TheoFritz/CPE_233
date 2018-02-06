@@ -1,0 +1,5 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../HW_2.srcs/sources_1/new/SPEAKER_DRIVER.vhd"
+
+# Do not sort compile order
+nosort

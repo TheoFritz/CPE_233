@@ -1,0 +1,1 @@
+-wto "4bb7dbfab2254b61b1a72223442b9a75" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "SPEAKER_DRIVER_behav" "xil_defaultlib.SPEAKER_DRIVER" -log "elaborate.log" 
