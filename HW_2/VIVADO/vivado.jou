@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Feb  5 18:29:02 2018
+# Process ID: 65776
+# Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/HW_2/VIVADO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent54504 C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\HW_2\VIVADO\HW_2.xpr
+# Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/HW_2/VIVADO/vivado.log
+# Journal file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/HW_2/VIVADO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/HW_2/VIVADO/HW_2.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
