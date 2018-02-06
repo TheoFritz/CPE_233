@@ -2,3 +2,6 @@ Running: xsim.dir/SPEAKER_DRIVER_behav/xsimk.exe -simmode gui -wdb SPEAKER_DRIVE
 Design successfully loaded
 Design Loading Memory Usage: 6344 KB (Peak: 6344 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 14892 KB (Peak: 14892 KB)
+Simulation CPU Usage: 1296 ms
