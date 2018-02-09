@@ -1,3 +1,5 @@
+.EQU OUT_PORT = 0x42
+
 .DSEG
 .ORG 0x20
 FIB_SEQ: .DB 0x01, 0x01, 0x02, 0x03, 0x05
@@ -6,4 +8,14 @@ FIB_SEQ: .DB 0x01, 0x01, 0x02, 0x03, 0x05
 
 .CSEG
 .ORG 0x40
-MAIN: MOV R0, 0x00
+MOV R0, 0x20
+MOV R1, 0x23
+MAIN: LD R2, (R0)
+      LD R3, (R1)
+      SUB R3, R2
+      OUT R3, OUT_PORT
+      ADD R0, 0x01
+      ADD R1, 0x01
+	  CLC
+	  CMP R0, 0x2A
+      BRCS MAIN
