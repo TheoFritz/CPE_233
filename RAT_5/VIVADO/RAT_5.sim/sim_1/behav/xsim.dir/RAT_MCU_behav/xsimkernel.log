@@ -1,4 +1,7 @@
-Running: xsim.dir/RAT_MCU_behav/xsimk.exe -simmode gui -wdb RAT_MCU_behav.wdb -simrunnum 0 -socket 55748
+Running: xsim.dir/RAT_MCU_behav/xsimk.exe -simmode gui -wdb RAT_MCU_behav.wdb -simrunnum 0 -socket 56130
 Design successfully loaded
-Design Loading Memory Usage: 6664 KB (Peak: 6664 KB)
-Design Loading CPU Usage: 61 ms
+Design Loading Memory Usage: 6652 KB (Peak: 6652 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 15392 KB (Peak: 15392 KB)
+Simulation CPU Usage: 131046 ms

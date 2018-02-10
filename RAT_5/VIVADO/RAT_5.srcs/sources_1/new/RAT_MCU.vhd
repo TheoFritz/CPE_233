@@ -191,12 +191,12 @@ signal ADDRESS      : std_logic_vector(9 downto 0);
 signal INSTRUCTION  : std_logic_vector(17 downto 0);
 signal A            : STD_LOGIC_VECTOR (7 DOWNTO 0); -- A Input to the ALU
 signal B            : std_logic_vector (7 downto 0); -- B Input to the ALU
-signal SEL          : STD_LOGIC_VECTOR (3 DOWNTO 0); -- Selector
+--signal SEL          : STD_LOGIC_VECTOR (3 DOWNTO 0); -- Selector
 signal C_IN         : STD_LOGIC; -- Carry In
 signal SUM          : STD_LOGIC_VECTOR (7 DOWNTO 0);
 signal FROM_IMMED   : STD_LOGIC_VECTOR(9 DOWNTO 0);
 signal FROM_STACK   : STD_LOGIC_VECTOR(9 DOWNTO 0);
-signal D_OUT        : STD_LOGIC_VECTOR(9 DOWNTO 0);
+--signal D_OUT        : STD_LOGIC_VECTOR(9 DOWNTO 0);
 signal D_IN         : std_logic_vector(9 DOWNTO 0);
 
 begin
@@ -300,8 +300,8 @@ PC_MUX_1 : pc_mux
 		PC_COUNT => ADDRESS
 	);
 
-DX_OUT <= A;
-OUT_PORT <= A;
+A <= DX_OUT;
+OUT_PORT <= DX_OUT;
 FROM_IMMED <= INSTRUCTION (12 DOWNTO 3);
 OPCODE_HI_5 <= INSTRUCTION (17 DOWNTO 13);
 OPCODE_LO_2 <= INSTRUCTION (1 DOWNTO 0);
