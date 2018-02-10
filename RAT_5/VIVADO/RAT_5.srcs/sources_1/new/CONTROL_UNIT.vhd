@@ -36,8 +36,8 @@ entity CONTROL_UNIT is
            Z_FLAG       : in STD_LOGIC;
            INT          : in STD_LOGIC;
            RESET        : in STD_LOGIC;
-           OPCODE_HI_5   : in STD_LOGIC_VECTOR (14 downto 0);
-           OPCODE_LO_2  : in STD_LOGIC_VECTOR (2 downto 0);
+           OPCODE_HI_5   : in STD_LOGIC_VECTOR (4 downto 0);
+           OPCODE_LO_2  : in STD_LOGIC_VECTOR (1 downto 0);
            CLK          : in STD_LOGIC;
 
            I_SET        : out STD_LOGIC;
