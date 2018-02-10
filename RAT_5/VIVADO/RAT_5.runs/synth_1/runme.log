@@ -14,22 +14,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10952 
+INFO: Helper process launched with PID 56412 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 306.938 ; gain = 82.758
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 304.836 ; gain = 83.508
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:46]
-INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:34' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:204]
-INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:67]
-INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:237]
-INFO: [Synth 8-638] synthesizing module 'REG_FILE' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'REG_FILE' (2#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:26]
-INFO: [Synth 8-3491] module 'REG_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:11' bound to instance 'REG_MUX_i' of component 'REG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:248]
-INFO: [Synth 8-638] synthesizing module 'REG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (3#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:21]
-INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:46]
+INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:34' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:67]
+INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:237]
+INFO: [Synth 8-638] synthesizing module 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'REG_FILE' (2#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_FILE.vhd:26]
+INFO: [Synth 8-3491] module 'REG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:11' bound to instance 'REG_MUX_i' of component 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (3#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:21]
+INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:29]
 	Parameter INIT bound to: 20'b00000000000000000000 
 	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100111100000000000000000000000000000000 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -105,26 +105,26 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SRVAL bound to: 20'b00000000000000000000 
 	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
-INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/edavis/Documents/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:194]
-INFO: [Synth 8-256] done synthesizing module 'prog_rom' (4#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:29]
-INFO: [Synth 8-3491] module 'ALU_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:34' bound to instance 'ALU_MUX_i' of component 'ALU_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:266]
-INFO: [Synth 8-638] synthesizing module 'ALU_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'ALU_MUX' (5#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:41]
-INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:15' bound to instance 'ALU_i' of component 'ALU' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:275]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:26]
-INFO: [Synth 8-3491] module 'pc_mux' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:21' bound to instance 'PC_MUX_1' of component 'pc_mux' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:286]
-INFO: [Synth 8-638] synthesizing module 'pc_mux' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'pc_mux' (7#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:29]
-INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:24' bound to instance 'PC' of component 'program_counter' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:293]
-INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'program_counter' (8#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:35]
-WARNING: [Synth 8-3848] Net A in module/entity RAT_MCU does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:192]
-WARNING: [Synth 8-3848] Net PORT_ID in module/entity RAT_MCU does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:40]
-WARNING: [Synth 8-3848] Net IO_STRB in module/entity RAT_MCU does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:41]
-WARNING: [Synth 8-3848] Net C_IN in module/entity RAT_MCU does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:195]
-WARNING: [Synth 8-3848] Net FROM_STACK in module/entity RAT_MCU does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:198]
-INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (9#1) [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:46]
+INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'prog_rom' (4#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/ASSEMBLY/prog_rom.vhd:29]
+INFO: [Synth 8-3491] module 'ALU_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:34' bound to instance 'ALU_MUX_i' of component 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ALU_MUX' (5#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU_MUX.vhd:41]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:15' bound to instance 'ALU_i' of component 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:26]
+INFO: [Synth 8-3491] module 'pc_mux' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:21' bound to instance 'PC_MUX_1' of component 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'pc_mux' (7#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/pc_mux.vhd:29]
+INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:24' bound to instance 'PC' of component 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'program_counter' (8#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/program_counter.vhd:35]
+WARNING: [Synth 8-3848] Net A in module/entity RAT_MCU does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:192]
+WARNING: [Synth 8-3848] Net PORT_ID in module/entity RAT_MCU does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:40]
+WARNING: [Synth 8-3848] Net IO_STRB in module/entity RAT_MCU does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:41]
+WARNING: [Synth 8-3848] Net C_IN in module/entity RAT_MCU does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:195]
+WARNING: [Synth 8-3848] Net FROM_STACK in module/entity RAT_MCU does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:198]
+INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (9#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/RAT_MCU.vhd:46]
 WARNING: [Synth 8-3331] design CONTROL_UNIT has unconnected port C_FLAG
 WARNING: [Synth 8-3331] design CONTROL_UNIT has unconnected port Z_FLAG
 WARNING: [Synth 8-3331] design CONTROL_UNIT has unconnected port INT
@@ -138,49 +138,50 @@ WARNING: [Synth 8-3331] design RAT_MCU has unconnected port PORT_ID[1]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port PORT_ID[0]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IO_STRB
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 357.270 ; gain = 133.090
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 355.098 ; gain = 133.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.270 ; gain = 133.090
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 355.098 ; gain = 133.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.270 ; gain = 133.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 355.098 ; gain = 133.770
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Synth 8-6014] Unused sequential element I_CLR_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element SP_LD_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element SP_INC_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element SP_DECR_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element SCR_WE_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element SCR_ADDR_SEL_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element SCR_DATA_SEL_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element FLG_C_SET_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element FLG_C_LD_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element FLG_Z_LD_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element FLG_LD_SEL_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element FLG_SHAD_LD_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:105]
 INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "RST" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "PC_INC" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ALU_SEL" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:31]
-WARNING: [Synth 8-327] inferring latch for variable 'I_SET_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-WARNING: [Synth 8-327] inferring latch for variable 'I_CLR_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_LD_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_INC_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-327] inferring latch for variable 'PC_MUX_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-327] inferring latch for variable 'ALU_OPY_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-327] inferring latch for variable 'ALU_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-327] inferring latch for variable 'RF_WR_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-WARNING: [Synth 8-327] inferring latch for variable 'RF_WR_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-WARNING: [Synth 8-327] inferring latch for variable 'SP_LD_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'SP_INC_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'SP_DECR_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'SCR_WE_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-327] inferring latch for variable 'SCR_ADDR_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-327] inferring latch for variable 'SCR_DATA_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_C_SET_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_C_CLR_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_C_LD_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_Z_LD_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_LD_SEL_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'FLG_SHAD_LD_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-327] inferring latch for variable 'RST_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:89]
-WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:96]
-WARNING: [Synth 8-327] inferring latch for variable 'D_OUT_reg' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:23]
+INFO: [Synth 8-5544] ROM "RST" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/ALU.vhd:31]
+WARNING: [Synth 8-327] inferring latch for variable 'I_SET_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_LD_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_INC_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'PC_MUX_SEL_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'ALU_OPY_SEL_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'ALU_SEL_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_WR_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_WR_SEL_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'FLG_C_CLR_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:104]
+WARNING: [Synth 8-327] inferring latch for variable 'RST_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
+WARNING: [Synth 8-327] inferring latch for variable 'D_OUT_reg' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/REG_MUX.vhd:23]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 357.270 ; gain = 133.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 355.098 ; gain = 133.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,7 +211,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 15    
 	   2 Input      1 Bit        Muxes := 18    
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -227,7 +228,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   8 Input      4 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 15    
 	   2 Input      1 Bit        Muxes := 16    
 	   5 Input      1 Bit        Muxes := 1     
 Module REG_MUX 
@@ -285,131 +286,14 @@ WARNING: [Synth 8-3331] design RAT_MCU has unconnected port PORT_ID[2]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port PORT_ID[1]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port PORT_ID[0]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IO_STRB
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[7]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[6]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[5]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[4]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[3]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[2]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[1]
-WARNING: [Synth 8-3331] design RAT_MCU has unconnected port IN_PORT[0]
 WARNING: [Synth 8-3331] design RAT_MCU has unconnected port INT
-warning: Removed RAM REG_FILE_i/memoryModule_reg due to inactive write enable
-WARNING: [Synth 8-6014] Unused sequential element REG_FILE_i/memoryModule_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'CU/PC_MUX_SEL_reg[1]' (LD) to 'CU/PC_MUX_SEL_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\CU/PC_MUX_SEL_reg[0] )
+INFO: [Synth 8-3886] merging instance 'CU/ALU_SEL_reg[1]' (LD) to 'CU/ALU_SEL_reg[2]'
+INFO: [Synth 8-3886] merging instance 'CU/RF_WR_SEL_reg[1]' (LD) to 'CU/RF_WR_SEL_reg[0]'
 WARNING: [Synth 8-3332] Sequential element (CU/I_SET_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/I_SET_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-WARNING: [Synth 8-3332] Sequential element (CU/I_CLR_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/I_CLR_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:81]
-WARNING: [Synth 8-3332] Sequential element (CU/PC_LD_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/PC_LD_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-3332] Sequential element (CU/PC_INC_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/PC_INC_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-3332] Sequential element (CU/PC_MUX_SEL_reg[1]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/PC_MUX_SEL_reg[1]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
 WARNING: [Synth 8-3332] Sequential element (CU/PC_MUX_SEL_reg[0]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/PC_MUX_SEL_reg[0]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:82]
-WARNING: [Synth 8-3332] Sequential element (CU/ALU_OPY_SEL_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/ALU_OPY_SEL_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-3332] Sequential element (CU/ALU_SEL_reg[3]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/ALU_SEL_reg[3]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-3332] Sequential element (CU/ALU_SEL_reg[2]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/ALU_SEL_reg[2]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-3332] Sequential element (CU/ALU_SEL_reg[1]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/ALU_SEL_reg[1]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-3332] Sequential element (CU/ALU_SEL_reg[0]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/ALU_SEL_reg[0]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:83]
-WARNING: [Synth 8-3332] Sequential element (CU/RF_WR_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/RF_WR_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-WARNING: [Synth 8-3332] Sequential element (CU/RF_WR_SEL_reg[1]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/RF_WR_SEL_reg[1]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-WARNING: [Synth 8-3332] Sequential element (CU/RF_WR_SEL_reg[0]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/RF_WR_SEL_reg[0]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:84]
-WARNING: [Synth 8-3332] Sequential element (CU/SP_LD_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SP_LD_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-3332] Sequential element (CU/SP_INC_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SP_INC_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-3332] Sequential element (CU/SP_DECR_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SP_DECR_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:85]
-WARNING: [Synth 8-3332] Sequential element (CU/SCR_WE_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SCR_WE_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-3332] Sequential element (CU/SCR_ADDR_SEL_reg[1]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SCR_ADDR_SEL_reg[1]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-3332] Sequential element (CU/SCR_ADDR_SEL_reg[0]) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SCR_ADDR_SEL_reg[0]/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-3332] Sequential element (CU/SCR_DATA_SEL_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/SCR_DATA_SEL_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:86]
-WARNING: [Synth 8-3332] Sequential element (CU/FLG_C_SET_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_C_SET_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
 WARNING: [Synth 8-3332] Sequential element (CU/FLG_C_CLR_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_C_CLR_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-WARNING: [Synth 8-3332] Sequential element (CU/FLG_C_LD_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_C_LD_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:87]
-WARNING: [Synth 8-3332] Sequential element (CU/FLG_Z_LD_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_Z_LD_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-3332] Sequential element (CU/FLG_LD_SEL_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_LD_SEL_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-3332] Sequential element (CU/FLG_SHAD_LD_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/FLG_SHAD_LD_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:88]
-WARNING: [Synth 8-3332] Sequential element (CU/RST_reg) is unused and will be removed from module RAT_MCU.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'CU/RST_reg/Q' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:89]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:89]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.srcs/sources_1/new/CONTROL_UNIT.vhd:89]
-WARNING: [Synth 8-3332] Sequential element (CU/NS_reg[1]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (CU/NS_reg[0]) is unused and will be removed from module RAT_MCU.
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[7]) is unused and will be removed from module RAT_MCU.
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[6]) is unused and will be removed from module RAT_MCU.
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[5]) is unused and will be removed from module RAT_MCU.
@@ -418,20 +302,24 @@ WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[3]) is unused an
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[2]) is unused and will be removed from module RAT_MCU.
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[1]) is unused and will be removed from module RAT_MCU.
 WARNING: [Synth 8-3332] Sequential element (REG_MUX_i/D_OUT_reg[0]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (CU/PS_reg[1]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (CU/PS_reg[0]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[9]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[8]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[7]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[6]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[5]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[4]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[3]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[2]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[1]) is unused and will be removed from module RAT_MCU.
-WARNING: [Synth 8-3332] Sequential element (PC/PC_COUNT_TMP_reg[0]) is unused and will be removed from module RAT_MCU.
+INFO: [Synth 8-3886] merging instance 'CU/ALU_OPY_SEL_reg' (LD) to 'CU/ALU_SEL_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 463.555 ; gain = 239.375
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 487.094 ; gain = 265.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-----------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object                  | Inference | Size (Depth x Width) | Primitives     | 
++------------+-----------------------------+-----------+----------------------+----------------+
+|RAT_MCU     | REG_FILE_i/memoryModule_reg | Implied   | 32 x 8               | RAM32X1D x 8   | 
++------------+-----------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,7 +332,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 463.555 ; gain = 239.375
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 487.094 ; gain = 265.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -456,7 +344,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -480,7 +368,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -493,7 +381,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -505,25 +393,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -536,33 +424,58 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |OBUFT |    17|
-+------+------+------+
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |     6|
+|3     |LUT1       |     1|
+|4     |LUT2       |     8|
+|5     |LUT3       |    19|
+|6     |LUT4       |    31|
+|7     |LUT5       |    13|
+|8     |LUT6       |    36|
+|9     |RAM32X1D   |     8|
+|10    |RAMB16_S18 |     1|
+|11    |FDCE       |     2|
+|12    |FDRE       |    10|
+|13    |LD         |    10|
+|14    |IBUF       |    10|
+|15    |OBUF       |     8|
+|16    |OBUFT      |     9|
++------+-----------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    17|
-+------+---------+-------+------+
++------+-------------+----------------+------+
+|      |Instance     |Module          |Cells |
++------+-------------+----------------+------+
+|1     |top          |                |   173|
+|2     |  ALU_i      |ALU             |    15|
+|3     |  CU         |CONTROL_UNIT    |    56|
+|4     |  PC         |program_counter |    20|
+|5     |  REG_FILE_i |REG_FILE        |    33|
+|6     |  prog_rom_i |prog_rom        |    21|
++------+-------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 84 critical warnings and 110 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 471.402 ; gain = 247.223
+Synthesis finished with 0 errors, 0 critical warnings and 62 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 487.461 ; gain = 266.133
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 19 instances were transformed.
+  LD => LDCE: 10 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
+  RAMB16_S18 => RAMB18E1: 1 instances
 
-37 Infos, 110 Warnings, 84 Critical Warnings and 0 Errors encountered.
+45 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 574.652 ; gain = 358.516
-INFO: [Common 17-1381] The checkpoint 'C:/Users/edavis/Documents/CPE_233/RAT_5/VIVADO/RAT_5.runs/synth_1/RAT_MCU.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 574.652 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Feb  9 21:17:05 2018...
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 585.324 ; gain = 371.527
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_5/VIVADO/RAT_5.runs/synth_1/RAT_MCU.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.055 . Memory (MB): peak = 585.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  9 22:19:03 2018...
