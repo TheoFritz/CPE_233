@@ -39,8 +39,24 @@ entity Z_FLAG_FF is
 end Z_FLAG_FF;
 
 architecture Behavioral of Z_FLAG_FF is
-
+SIGNAL Z_FLAG_TEMP: STD_LOGIC;
 begin
+
+Z_FLAG_DF: Process(Z, CLK, FLG_Z_LD)
+   begin
+      IF (RISING_EDGE(CLK)) THEN 
+         IF FLG_Z_LD = '1' THEN
+           Z_FLAG_TEMP <= Z;
+         ELSE
+         Z_FLAG_TEMP <= '0';
+         END IF;
+         
+      END IF;
+      END PROCESS;    
+      
+      Z_FLAG <= Z_FLAG_TEMP; 
+            
+
 
 
 end Behavioral;
