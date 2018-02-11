@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1518331289">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1518340376">
   <File Type="RDS-PROPCONSTRS" Name="RAT_MCU_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="RAT_MCU.tcl"/>
   <File Type="RDS-RDS" Name="RAT_MCU.vds"/>
@@ -92,7 +92,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="RAT_MCU"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

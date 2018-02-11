@@ -165,7 +165,7 @@ WHEN ST_EXEC =>
     FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
     RST          <= '0';
     
-  WHEN "10010--" => -- EXOR (REG-IMMED)
+  WHEN "1001000" | "1001001" | "1001010" | "1001011" => -- EXOR (REG-IMMED)
       EXEC_STATE <= "000100";
       I_SET        <= '0';    I_CLR        <= '0';
       PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
@@ -177,7 +177,7 @@ WHEN ST_EXEC =>
       FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
       RST          <= '0';
           
-  WHEN "11001--" => -- IN (REG-IMMED)
+  WHEN "1100100" | "1100101" | "1100110" | "1100111"=> -- IN (REG-IMMED)
   EXEC_STATE <= "001000";
   I_SET        <= '0';    I_CLR        <= '0';
   PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
@@ -200,7 +200,7 @@ WHEN ST_EXEC =>
     FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
     FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
     RST          <= '0';
-  WHEN "11011--" => -- MOV (REG-IMEMD)
+  WHEN "1101100" | "1101101" | "1101110" | "1101111" => -- MOV (REG-IMEMD)
       I_SET        <= '0';    I_CLR        <= '0';
       PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
       ALU_OPY_SEL  <= '1';    ALU_SEL      <= "1110";
