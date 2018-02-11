@@ -73,6 +73,7 @@ architecture Behavioral of CONTROL_UNIT is
 --OP Code
     signal sig_opcode_7: std_logic_vector(6 downto 0);
 
+    SIGNAL EXEC_STATE: STD_LOGIC_VECTOR(5 DOWNTO 0);
 
 
 BEGIN
@@ -89,10 +90,10 @@ sync_proc: process(CLK,NS,RESET)
 
 COMB_PROC: PROCESS(OPCODE_HI_5, OPCODE_LO_2, sig_opcode_7, C_FLAG, Z_FLAG, PS, NS, INT)
 
-BEGIN
-sig_OPCODE_7 <= OPCODE_HI_5 & OPCODE_LO_2;
 
- I_SET        <= '0';    I_CLR        <= '0';
+BEGIN
+
+I_SET        <= '0';    I_CLR        <= '0';
 PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
 ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
 RF_WR        <= '0';    RF_WR_SEL    <= "00";
@@ -101,6 +102,8 @@ SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
 FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
 FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
 RST          <= '0';
+
+sig_OPCODE_7 <= OPCODE_HI_5 & OPCODE_LO_2;
 
 
 CASE PS IS
@@ -128,31 +131,87 @@ WHEN ST_FETCH =>
   RST          <= '0';
 WHEN ST_EXEC =>
   NS <= ST_FETCH;
-  PC_INC <= '0';
+  I_SET        <= '0';    I_CLR        <= '0';
+  PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+  ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
+  RF_WR        <= '0';    RF_WR_SEL    <= "00";
+  SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+  SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+  FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
+  FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+  RST          <= '0';
   CASE SIG_OPCODE_7 IS
   WHEN "0010000" => --BRN
-    PC_LD <= '1';
+    EXEC_STATE <= "000001";
+    I_SET        <= '0';    I_CLR        <= '0';
+    PC_LD        <= '1';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+    ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
+    RF_WR        <= '0';    RF_WR_SEL    <= "00";
+    SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+    SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+    FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
+    FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+    RST          <= '0';
+    
   WHEN "0000010" => -- EXOR (REG-REG)
-    RF_WR <= '1';
-    ALU_SEL <= "0111";
-    FLG_C_CLR <= '1';
-    FLG_Z_LD <= '1';
-  WHEN "--"&"10010" => -- EXOR (REG-IMMED)
-    RF_WR <= '1';
-    ALU_SEL <= "0111";
-    ALU_OPY_SEL <= '1';
-    FLG_C_CLR <= '1';
-    FLG_Z_LD <= '1';
-  WHEN "11001"&"--" => -- IN (REG-IMMED)
-    RF_WR <= '1';
-    RF_WR_SEL <= "11";
+    EXEC_STATE <= "000010";
+    I_SET        <= '0';    I_CLR        <= '0';
+    PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+    ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0111";
+    RF_WR        <= '1';    RF_WR_SEL    <= "00";
+    SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+    SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+    FLG_C_SET    <= '0';    FLG_C_CLR    <= '1';    FLG_C_LD     <= '0';
+    FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+    RST          <= '0';
+    
+  WHEN "10010--" => -- EXOR (REG-IMMED)
+      EXEC_STATE <= "000100";
+      I_SET        <= '0';    I_CLR        <= '0';
+      PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+      ALU_OPY_SEL  <= '1';    ALU_SEL      <= "0111";
+      RF_WR        <= '1';    RF_WR_SEL    <= "00";
+      SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+      SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+      FLG_C_SET    <= '0';    FLG_C_CLR    <= '1';    FLG_C_LD     <= '0';
+      FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+      RST          <= '0';
+          
+  WHEN "11001--" => -- IN (REG-IMMED)
+  EXEC_STATE <= "001000";
+  I_SET        <= '0';    I_CLR        <= '0';
+  PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+  ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
+  RF_WR        <= '1';    RF_WR_SEL    <= "11";
+  SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+  SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+  FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
+  FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+  RST          <= '0';
+    
   WHEN "0001001" => -- MOV (REG-REG)
-    RF_WR <= '1';
-    ALU_SEL <= "1110";
-  WHEN "11011"&"--" => -- MOV (REG-IMEMD)
-    RF_WR <= '1';
-    ALU_SEL <= "1110";
-    ALU_OPY_SEL <= '1';
+    EXEC_STATE <= "010000";
+    I_SET        <= '0';    I_CLR        <= '0';
+    PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+    ALU_OPY_SEL  <= '0';    ALU_SEL      <= "1110";
+    RF_WR        <= '1';    RF_WR_SEL    <= "00";
+    SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+    SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+    FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
+    FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+    RST          <= '0';
+  WHEN "11011--" => -- MOV (REG-IMEMD)
+      I_SET        <= '0';    I_CLR        <= '0';
+      PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
+      ALU_OPY_SEL  <= '1';    ALU_SEL      <= "1110";
+      RF_WR        <= '1';    RF_WR_SEL    <= "00";
+      SP_LD        <= '0';    SP_INC       <= '0';    SP_DECR      <= '0';
+      SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
+      FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
+      FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
+      RST          <= '0';
+    EXEC_STATE <= "100000";
+
 --  ELSIF OPCODE_HI_5 <= "11010" THEN -- OUT (REG-REG)
   WHEN OTHERS =>
     I_SET        <= '0';    I_CLR        <= '0';

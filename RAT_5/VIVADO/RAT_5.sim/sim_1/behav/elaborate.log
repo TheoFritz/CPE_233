@@ -20,6 +20,9 @@ Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package ieee.std_logic_textio
 Compiling architecture behavioral of entity xil_defaultlib.CONTROL_UNIT [control_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.C_FLAG_FF [c_flag_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.Z_FLAG_FF [z_flag_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.FLAGS [flags_default]
 Compiling architecture behavioral of entity xil_defaultlib.REG_FILE [reg_file_default]
 Compiling architecture behavioral of entity xil_defaultlib.REG_MUX [reg_mux_default]
 Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]

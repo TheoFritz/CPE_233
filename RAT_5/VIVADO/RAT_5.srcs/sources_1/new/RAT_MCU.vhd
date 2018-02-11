@@ -154,6 +154,23 @@ COMPONENT pc_mux IS
 		);
 	END COMPONENT;
 
+  component FLAGS
+    port (
+      FLG_C_SET   : in  STD_LOGIC;
+      FLG_C_CLR   : in  STD_LOGIC;
+      C           : in  STD_LOGIC;
+      Z           : in  STD_LOGIC;
+      FLG_C_LD    : in  STD_LOGIC;
+      FLG_Z_LD    : in  STD_LOGIC;
+      FLG_LD_SEL  : in  STD_LOGIC;
+      FLG_SHAD_LD : in  STD_LOGIC;
+      C_FLAG      : out STD_LOGIC;
+      Z_FLAG      : out STD_LOGIC;
+      CLK         : in  STD_LOGIC
+    );
+    end component FLAGS;
+
+
 signal C_FLAG       : STD_LOGIC;
 signal Z_FLAG       : STD_LOGIC;
 signal OPCODE_HI_5  : STD_LOGIC_VECTOR (4 downto 0);
@@ -181,6 +198,9 @@ signal FLG_LD_SEL   : STD_LOGIC;
 signal FLG_SHAD_LD  : STD_LOGIC;
 signal RST          : STD_LOGIC;
 
+signal C  : STD_LOGIC;
+signal Z          : STD_LOGIC;
+
 signal RF_WR_DATA   : STD_LOGIC_VECTOR (7 DOWNTO 0);
 signal ADRX         : STD_LOGIC_VECTOR (4 DOWNTO 0);
 signal ADRY         : STD_LOGIC_VECTOR (4 DOWNTO 0);
@@ -192,7 +212,7 @@ signal INSTRUCTION  : std_logic_vector(17 downto 0);
 signal A            : STD_LOGIC_VECTOR (7 DOWNTO 0); -- A Input to the ALU
 signal B            : std_logic_vector (7 downto 0); -- B Input to the ALU
 --signal SEL          : STD_LOGIC_VECTOR (3 DOWNTO 0); -- Selector
-signal C_IN         : STD_LOGIC; -- Carry In
+--signal C_IN         : STD_LOGIC; -- Carry In
 signal SUM          : STD_LOGIC_VECTOR (7 DOWNTO 0);
 signal FROM_IMMED   : STD_LOGIC_VECTOR(9 DOWNTO 0);
 signal FROM_STACK   : STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -233,6 +253,22 @@ begin
     FLG_SHAD_LD  => FLG_SHAD_LD,
     RST          => RST
   );
+
+  FLAGS_i : FLAGS
+port map (
+  FLG_C_SET   => FLG_C_SET,
+  FLG_C_CLR   => FLG_C_CLR,
+  C           => C,
+  Z           => Z,
+  FLG_C_LD    => FLG_C_LD,
+  FLG_Z_LD    => FLG_Z_LD,
+  FLG_LD_SEL  => FLG_LD_SEL,
+  FLG_SHAD_LD => FLG_SHAD_LD,
+  C_FLAG      => C_FLAG,
+  Z_FLAG      => Z_FLAG,
+  CLK         => CLK
+);
+
 
 REG_FILE_i          : REG_FILE
 port map (
@@ -277,10 +313,10 @@ PORT MAP (
 A => A,
 B => B,
 SEL => ALU_SEL,
-C_IN => C_IN,
+C_IN => C_FLAG,
 SUM => SUM,
-C_FLAG => C_FLAG,
-Z_FLAG => Z_FLAG
+C_FLAG => C,
+Z_FLAG => Z
 );
 
 PC_MUX_1 : pc_mux
@@ -308,6 +344,7 @@ OPCODE_LO_2 <= INSTRUCTION (1 DOWNTO 0);
 --PC_COUNT <= ADDRESS;
 ADRX <= INSTRUCTION (12 DOWNTO 8);
 ADRY <= INSTRUCTION (7 DOWNTO 3);
+PORT_ID <= INSTRUCTION (7 DOWNTO 0);
 
 
 
