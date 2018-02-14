@@ -23,6 +23,7 @@ BEGIN
 	D_OUT <= FROM_ALU WHEN (RF_WR_SEL = "00") ELSE
 	         FROM_PC WHEN (RF_WR_SEL = "01") ELSE
 	         FROM_B WHEN (RF_WR_SEL = "10") ELSE
-					 FROM_IN_PORT WHEN (RF_WR_SEL = "11");
+			 FROM_IN_PORT WHEN (RF_WR_SEL = "11") ELSE
+			 "00000000";
 
 END Behavioral;
