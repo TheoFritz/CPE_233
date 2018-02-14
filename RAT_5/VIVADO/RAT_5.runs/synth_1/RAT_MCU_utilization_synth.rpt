@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sun Feb 11 01:13:32 2018
+| Date         : Mon Feb 12 18:03:14 2018
 | Host         : DPS-XPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file RAT_MCU_utilization_synth.rpt -pb RAT_MCU_utilization_synth.pb
 | Design       : RAT_MCU
@@ -35,9 +35,9 @@ Table of Contents
 |   LUT as Memory            |   16 |     0 |      9600 |  0.17 |
 |     LUT as Distributed RAM |   16 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |   14 |     0 |     41600 |  0.03 |
+| Slice Registers            |   12 |     0 |     41600 |  0.03 |
 |   Register as Flip Flop    |   12 |     0 |     41600 |  0.03 |
-|   Register as Latch        |    2 |     0 |     41600 | <0.01 |
+|   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 4     |          Yes |           - |        Reset |
+| 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 10    |          Yes |       Reset |            - |
+| 12    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -156,17 +156,14 @@ Table of Contents
 | LUT5     |   18 |                 LUT |
 | RAMD32   |   16 |  Distributed Memory |
 | OBUF     |   16 |                  IO |
+| FDRE     |   12 |        Flop & Latch |
 | IBUF     |   10 |                  IO |
-| FDRE     |   10 |        Flop & Latch |
 | LUT4     |    6 |                 LUT |
-| LUT3     |    4 |                 LUT |
+| LUT3     |    5 |                 LUT |
 | LUT2     |    2 |                 LUT |
-| LDCE     |    2 |        Flop & Latch |
-| FDCE     |    2 |        Flop & Latch |
 | CARRY4   |    2 |          CarryLogic |
 | RAMB18E1 |    1 |        Block Memory |
 | OBUFT    |    1 |                  IO |
-| LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

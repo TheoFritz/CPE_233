@@ -81,14 +81,15 @@ BEGIN
 
 sync_proc: process(CLK,NS,RESET)
     begin
-      IF (RESET = '1') THEN
-         PS <= ST_INIT;
-      ELSIF (RISING_EDGE(CLK)) THEN
+     IF (RISING_EDGE(CLK)) THEN
          PS <= NS;
+         IF (RESET = '1') THEN
+             PS <= ST_INIT;             
+          END IF;
       END IF;
       END PROCESS sync_proc;
 
-COMB_PROC: PROCESS(OPCODE_HI_5, OPCODE_LO_2, sig_opcode_7, C_FLAG, Z_FLAG, PS, NS, INT)
+COMB_PROC: PROCESS(OPCODE_HI_5, OPCODE_LO_2, sig_opcode_7, C_FLAG, Z_FLAG, PS, INT)
 
 
 BEGIN
@@ -142,7 +143,6 @@ WHEN ST_EXEC =>
   RST          <= '0';
   CASE SIG_OPCODE_7 IS
   WHEN "0010000" => --BRN
-    EXEC_STATE <= "000001";
     I_SET        <= '0';    I_CLR        <= '0';
     PC_LD        <= '1';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
     ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
@@ -151,10 +151,9 @@ WHEN ST_EXEC =>
     SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
     FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
     FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-    RST          <= '0';
+    RST          <= '0';    NS <= ST_FETCH;
     
   WHEN "0000010" => -- EXOR (REG-REG)
-    EXEC_STATE <= "000010";
     I_SET        <= '0';    I_CLR        <= '0';
     PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
     ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0111";
@@ -163,10 +162,9 @@ WHEN ST_EXEC =>
     SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
     FLG_C_SET    <= '0';    FLG_C_CLR    <= '1';    FLG_C_LD     <= '0';
     FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-    RST          <= '0';
+    RST          <= '0';    NS <= ST_FETCH;
     
   WHEN "1001000" | "1001001" | "1001010" | "1001011" => -- EXOR (REG-IMMED)
-      EXEC_STATE <= "000100";
       I_SET        <= '0';    I_CLR        <= '0';
       PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
       ALU_OPY_SEL  <= '1';    ALU_SEL      <= "0111";
@@ -175,10 +173,9 @@ WHEN ST_EXEC =>
       SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
       FLG_C_SET    <= '0';    FLG_C_CLR    <= '1';    FLG_C_LD     <= '0';
       FLG_Z_LD     <= '1';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-      RST          <= '0';
+      RST          <= '0';    NS <= ST_FETCH;
           
   WHEN "1100100" | "1100101" | "1100110" | "1100111"=> -- IN (REG-IMMED)
-  EXEC_STATE <= "001000";
   I_SET        <= '0';    I_CLR        <= '0';
   PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
   ALU_OPY_SEL  <= '0';    ALU_SEL      <= "0000";
@@ -187,10 +184,9 @@ WHEN ST_EXEC =>
   SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
   FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
   FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-  RST          <= '0';
+  RST          <= '0';    NS <= ST_FETCH;
     
   WHEN "0001001" => -- MOV (REG-REG)
-    EXEC_STATE <= "010000";
     I_SET        <= '0';    I_CLR        <= '0';
     PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
     ALU_OPY_SEL  <= '0';    ALU_SEL      <= "1110";
@@ -199,7 +195,7 @@ WHEN ST_EXEC =>
     SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
     FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
     FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-    RST          <= '0';
+    RST          <= '0';    NS <= ST_FETCH;
   WHEN "1101100" | "1101101" | "1101110" | "1101111" => -- MOV (REG-IMEMD)
       I_SET        <= '0';    I_CLR        <= '0';
       PC_LD        <= '0';    PC_INC       <= '0';    PC_MUX_SEL   <= "00";
@@ -209,8 +205,7 @@ WHEN ST_EXEC =>
       SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
       FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
       FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-      RST          <= '0';
-    EXEC_STATE <= "100000";
+      RST          <= '0';    NS <= ST_FETCH;
 
 --  ELSIF OPCODE_HI_5 <= "11010" THEN -- OUT (REG-REG)
   WHEN OTHERS =>
@@ -222,7 +217,7 @@ WHEN ST_EXEC =>
     SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
     FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
     FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-    RST          <= '0';
+    RST          <= '0';    NS <= ST_FETCH;
   END CASE;
 
 WHEN OTHERS =>
@@ -234,7 +229,7 @@ WHEN OTHERS =>
   SCR_WE       <= '0';    SCR_ADDR_SEL <= "00";   SCR_DATA_SEL <= '0';
   FLG_C_SET    <= '0';    FLG_C_CLR    <= '0';    FLG_C_LD     <= '0';
   FLG_Z_LD     <= '0';    FLG_LD_SEL   <= '0';    FLG_SHAD_LD  <= '0';
-  RST          <= '0';
+  RST          <= '0';    NS <= ST_INIT;
 END CASE;
 
 
