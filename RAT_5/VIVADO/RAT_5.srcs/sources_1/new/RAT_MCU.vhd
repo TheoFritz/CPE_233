@@ -60,7 +60,8 @@ ARCHITECTURE Behavioral OF RAT_MCU IS
 			FLG_Z_LD     : OUT STD_LOGIC;
 			FLG_LD_SEL   : OUT STD_LOGIC;
 			FLG_SHAD_LD  : OUT STD_LOGIC;
-			RST          : OUT STD_LOGIC
+			RST          : OUT STD_LOGIC;
+			IO_STRB      : OUT STD_LOGIC
 		);
 	END COMPONENT;
 
@@ -237,7 +238,8 @@ BEGIN
 		FLG_Z_LD     => FLG_Z_LD,
 		FLG_LD_SEL   => FLG_LD_SEL,
 		FLG_SHAD_LD  => FLG_SHAD_LD,
-		RST          => RST
+		RST          => RST,
+		IO_STRB      => IO_STRB
 	);
 
 	FLAGS_i : FLAGS

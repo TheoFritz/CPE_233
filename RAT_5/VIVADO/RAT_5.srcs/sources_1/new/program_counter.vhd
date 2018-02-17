@@ -40,22 +40,35 @@ architecture Behavioral of program_counter is
 begin
 
 
-    pc: process(CLK)
+    pc: process(RST, CLK, PC_LD, PC_INC)
     begin
 
-      IF (rising_edge(CLK)) THEN
-        IF (RST = '0') THEN -- SYNCHRONOUS HIGH RESET
-          IF (PC_LD = '1') THEN -- PC_LD TAKES PRECEDANCE OVER PC_INT
+    IF (rising_edge(CLK)) THEN
+          IF (RST = '1') THEN -- SYNCHRONOUS HIGH RESET
+            PC_COUNT_TMP <= "0000000000"; -- SET PC_COUNT_TEMP TO 0x00
+          ELSIF (PC_LD = '1') THEN -- PC_LD TAKES PRECEDANCE OVER PC_INT
             PC_COUNT_TMP <= D_IN;
-          ELSIF (PC_LD = '0') THEN
-            IF (PC_INC = '1') THEN
-                PC_COUNT_TMP <= std_logic_vector(unsigned(PC_COUNT_TMP) + 1);
-            END IF;
+          ELSIF (PC_INC = '1') THEN
+            PC_COUNT_TMP <= std_logic_vector(unsigned(PC_COUNT_TMP) + 1);
+          ELSE
+            PC_COUNT_TMP <= PC_COUNT_TMP;
           END IF;
-        ELSE
-          PC_COUNT_TMP <= "0000000000"; -- SET PC_COUNT_TEMP TO 0x00
-        END IF;
-      END IF;
+          end if;
+--      IF (rising_edge(CLK)) THEN
+--        IF (RST = '0') THEN -- SYNCHRONOUS HIGH RESET
+--          IF (PC_LD = '1') THEN -- PC_LD TAKES PRECEDANCE OVER PC_INT
+--            PC_COUNT_TMP <= D_IN;
+--          ELSE
+--            IF (PC_INC = '1') THEN
+--                PC_COUNT_TMP <= std_logic_vector(unsigned(PC_COUNT_TMP) + 1);
+--            ELSE
+--                PC_COUNT_TMP <= PC_COUNT_TMP;
+--            END IF;
+--          END IF;
+--        ELSE
+--          PC_COUNT_TMP <= "0000000000"; -- SET PC_COUNT_TEMP TO 0x00
+--        END IF;
+--      END IF;
 
 
     end process;

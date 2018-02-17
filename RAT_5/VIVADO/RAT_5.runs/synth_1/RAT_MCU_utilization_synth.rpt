@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Feb 12 18:03:14 2018
+| Date         : Sat Feb 17 12:01:57 2018
 | Host         : DPS-XPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file RAT_MCU_utilization_synth.rpt -pb RAT_MCU_utilization_synth.pb
 | Design       : RAT_MCU
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |   76 |     0 |     20800 |  0.37 |
-|   LUT as Logic             |   60 |     0 |     20800 |  0.29 |
+| Slice LUTs*                |   73 |     0 |     20800 |  0.35 |
+|   LUT as Logic             |   57 |     0 |     20800 |  0.27 |
 |   LUT as Memory            |   16 |     0 |      9600 |  0.17 |
 |     LUT as Distributed RAM |   16 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -152,18 +152,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |   34 |                 LUT |
-| LUT5     |   18 |                 LUT |
+| LUT6     |   32 |                 LUT |
+| OBUF     |   17 |                  IO |
+| LUT5     |   17 |                 LUT |
 | RAMD32   |   16 |  Distributed Memory |
-| OBUF     |   16 |                  IO |
 | FDRE     |   12 |        Flop & Latch |
+| LUT4     |   10 |                 LUT |
 | IBUF     |   10 |                  IO |
-| LUT4     |    6 |                 LUT |
 | LUT3     |    5 |                 LUT |
 | LUT2     |    2 |                 LUT |
 | CARRY4   |    2 |          CarryLogic |
 | RAMB18E1 |    1 |        Block Memory |
-| OBUFT    |    1 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

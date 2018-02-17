@@ -1,6 +1,6 @@
 @echo off
-set xv_path=C:\\Xilinx_Vivado\\Vivado\\2017.2\\bin
-call %xv_path%/xsim test_bench_behav -key {Behavioral:sim_1:Functional:test_bench} -tclbatch test_bench.tcl -log simulate.log
+set xv_path=C:\\Xilinx\\Vivado\\2017.2\\bin
+call %xv_path%/xsim PC_WRAPPER_behav -key {Behavioral:sim_1:Functional:PC_WRAPPER} -tclbatch PC_WRAPPER.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

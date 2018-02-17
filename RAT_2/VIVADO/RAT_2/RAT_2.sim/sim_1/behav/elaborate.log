@@ -1,6 +1,6 @@
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx_Vivado/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 70478705404e4b06a2e6b202382b1852 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_bench_behav xil_defaultlib.test_bench -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 70478705404e4b06a2e6b202382b1852 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot PC_WRAPPER_behav xil_defaultlib.PC_WRAPPER -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -25,6 +25,5 @@ Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL 
 Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(initp_00="000000000000...]
 Compiling architecture ramb16_s18_v of entity unisim.RAMB16_S18 [\RAMB16_S18(initp_00="0000000000...]
 Compiling architecture low_level_definition of entity xil_defaultlib.prog_rom [prog_rom_default]
-Compiling architecture behavioral of entity xil_defaultlib.PC_WRAPPER [pc_wrapper_default]
-Compiling architecture behavior of entity xil_defaultlib.test_bench
-Built simulation snapshot test_bench_behav
+Compiling architecture behavioral of entity xil_defaultlib.pc_wrapper
+Built simulation snapshot PC_WRAPPER_behav

@@ -28,7 +28,7 @@ ARCHITECTURE Behavioral OF REG_FILE IS
 	SIGNAL memoryModule : Vector_array := (OTHERS => (OTHERS => '0')); -- Initalize memory module
 	-- set all values to zero
 BEGIN
-	RAM_WRITE : PROCESS (CLK, RF_WR)
+	RAM_WRITE : PROCESS (CLK, RF_WR, ADRX, RF_WR_DATA)
 	BEGIN
 		IF (Rising_Edge(CLK)) THEN -- Data is written synchronously
 			IF (RF_WR = '1') THEN

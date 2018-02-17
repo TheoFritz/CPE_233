@@ -43,7 +43,8 @@ architecture Behavioral of ALU_MUX is
 begin
 
    B <= DY_OUT WHEN (ALU_OPY_SEL = '0') ELSE
-        FROM_INSTRUCTION_REG WHEN (ALU_OPY_SEL = '1');
+        FROM_INSTRUCTION_REG WHEN (ALU_OPY_SEL = '1') ELSE
+        "00000000";
         
 
 
