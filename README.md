@@ -1,4 +1,20 @@
-#Issues
+# Issues
 
 RAT_MCU
-1. 
+When the Assembly file was:
+```
+IN r10,SWITCH_PORT
+; MOV r11,0xFF
+EXOR r10,r11
+OUT r10,LED_PORT
+BRN main
+```
+the blip did not happen. However, when the assembly file was
+```
+IN r10,SWITCH_PORT
+MOV r11,0xFF
+EXOR r10,r11
+OUT r10,LED_PORT
+BRN main
+```
+The blip did occur.
