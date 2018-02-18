@@ -21,11 +21,12 @@ C5:  Raw line from source code.
 (0005)                       064  || .EQU LED_PORT = 0x40 ; port for LED output
 (0006)                            || .CSEG
 (0007)                       016  || .ORG 0x10
-(0008)  CS-0x010  0x32A20  0x010  || main: IN r10,SWITCH_PORT
-(0009)  CS-0x011  0x36BFF         ||  MOV r11,0xFF
-(0010)  CS-0x012  0x00A5A         ||  EXOR r10,r11
-(0011)  CS-0x013  0x34A40         ||  OUT r10,LED_PORT
-(0012)  CS-0x014  0x08080         ||  BRN main
+(0008)                     0x010  || main:
+(0009)  CS-0x010  0x32A20         ||  IN r10,SWITCH_PORT
+(0010)                            ||  ; MOV r11,0xFF
+(0011)  CS-0x011  0x00A5A         ||  EXOR r10,r11
+(0012)  CS-0x012  0x34A40         ||  OUT r10,LED_PORT
+(0013)  CS-0x013  0x08080         ||  BRN main
 
 
 
@@ -44,7 +45,7 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-MAIN           0x010   (0008)  ||  0012 
+MAIN           0x010   (0008)  ||  0013 
 
 
 -- Directives: .BYTE
@@ -54,8 +55,8 @@ MAIN           0x010   (0008)  ||  0012
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-LED_PORT       0x040   (0005)  ||  0011 
-SWITCH_PORT    0x020   (0004)  ||  0008 
+LED_PORT       0x040   (0005)  ||  0012 
+SWITCH_PORT    0x020   (0004)  ||  0009 
 
 
 -- Directives: .DEF

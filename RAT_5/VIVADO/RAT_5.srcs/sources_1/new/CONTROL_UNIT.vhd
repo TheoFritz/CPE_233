@@ -36,7 +36,7 @@ entity CONTROL_UNIT is
            Z_FLAG       : in STD_LOGIC;
            INT          : in STD_LOGIC;
            RESET        : in STD_LOGIC;
-           OPCODE_HI_5   : in STD_LOGIC_VECTOR (4 downto 0);
+           OPCODE_HI_5  : in STD_LOGIC_VECTOR (4 downto 0);
            OPCODE_LO_2  : in STD_LOGIC_VECTOR (1 downto 0);
            CLK          : in STD_LOGIC;
 
@@ -118,8 +118,8 @@ WHEN ST_FETCH =>
 WHEN ST_EXEC =>
   NS <= ST_FETCH;
   CASE SIG_OPCODE_7 IS
-  WHEN "0010000" => --BRN
-    PC_LD        <= '1';
+--  WHEN "0010000" => --BRN
+--    PC_LD        <= '1';
 
   WHEN "0000010" => -- EXOR (REG-REG)
     ALU_SEL      <= "0111";
@@ -127,24 +127,24 @@ WHEN ST_EXEC =>
     FLG_C_CLR    <= '1';
     FLG_Z_LD     <= '1';
 
-  WHEN "1001000" | "1001001" | "1001010" | "1001011" => -- EXOR (REG-IMMED)
-      ALU_OPY_SEL  <= '1';    ALU_SEL      <= "0111";
-      RF_WR        <= '1';
-      FLG_C_CLR    <= '1';
-      FLG_Z_LD     <= '1';
+--  WHEN "1001000" | "1001001" | "1001010" | "1001011" => -- EXOR (REG-IMMED)
+--      ALU_OPY_SEL  <= '1';    ALU_SEL      <= "0111";
+--      RF_WR        <= '1';
+--      FLG_C_CLR    <= '1';
+--      FLG_Z_LD     <= '1';
 
-  WHEN "1100100" | "1100101" | "1100110" | "1100111"=> -- IN (REG-IMMED)
-      RF_WR        <= '1';    RF_WR_SEL    <= "11";
+--  WHEN "1100100" | "1100101" | "1100110" | "1100111"=> -- IN (REG-IMMED)
+--      RF_WR        <= '1';    RF_WR_SEL    <= "11";
 
-  WHEN "0001001" => -- MOV (REG-REG)
-    ALU_SEL      <= "1110";
-    RF_WR        <= '1';
+--  WHEN "0001001" => -- MOV (REG-REG)
+--    ALU_SEL      <= "1110";
+--    RF_WR        <= '1';
   WHEN "1101100" | "1101101" | "1101110" | "1101111" => -- MOV (REG-IMEMD)
       ALU_OPY_SEL  <= '1';    ALU_SEL      <= "1110";
       RF_WR        <= '1';
 
-  WHEN "1101000" | "1101001" | "1101010" | "1101011" => -- OUT (REG-REG)
-      IO_STRB      <= '1';
+--  WHEN "1101000" | "1101001" | "1101010" | "1101011" => -- OUT (REG-REG)
+--      IO_STRB      <= '1';
   WHEN OTHERS =>
     NS <= ST_FETCH;
   END CASE;

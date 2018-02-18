@@ -37,7 +37,9 @@ BEGIN
 	C_FLAG_DF : PROCESS (C, FLG_C_LD, FLG_C_SET, FLG_C_CLR, CLK)
 	BEGIN
 		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when FLG_C_LD is high
-			IF FLG_C_SET = '1' THEN -- the C_FLAG will go high.
+		    IF FLG_C_LD = '1' THEN
+		        C_FLAG_TEMP <= C;
+			ELSIF FLG_C_SET = '1' THEN -- the C_FLAG will go high.
 				C_FLAG_TEMP <= '1';
 			ELSIF FLG_C_CLR = '1' THEN
 				C_FLAG_TEMP <= '0'; -- Otherwise 0
