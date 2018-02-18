@@ -23,10 +23,10 @@ C5:  Raw line from source code.
 (0007)                       016  || .ORG 0x10
 (0008)                     0x010  || main:
 (0009)  CS-0x010  0x32A20         ||  IN r10,SWITCH_PORT
-(0010)                            ||  ; MOV r11,0xFF
-(0011)  CS-0x011  0x00A5A         ||  EXOR r10,r11
-(0012)  CS-0x012  0x34A40         ||  OUT r10,LED_PORT
-(0013)  CS-0x013  0x08080         ||  BRN main
+(0010)  CS-0x011  0x36BFF         ||  MOV r11,0xFF
+(0011)  CS-0x012  0x00A5A         ||  EXOR r10,r11
+(0012)  CS-0x013  0x34A40         ||  OUT r10,LED_PORT
+(0013)  CS-0x014  0x08080         ||  BRN main
 
 
 
