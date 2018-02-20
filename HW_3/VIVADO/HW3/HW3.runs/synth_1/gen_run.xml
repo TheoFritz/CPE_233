@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1519117197">
+  <File Type="RDS-PROPCONSTRS" Name="WRAPPER_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="WRAPPER.tcl"/>
+  <File Type="RDS-RDS" Name="WRAPPER.vds"/>
+  <File Type="RDS-UTIL" Name="WRAPPER_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="WRAPPER_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="WRAPPER.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="WRAPPER_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="WRAPPER_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/lab4/BCD7SEG_8.vhdl">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../CPE 133/cpe_133_labs/lab4/BCD7SEG_8.vhdl"/>
+        <Attr Name="ImportTime" Val="1517255767"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HW_3/keypad.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../keypad.vhd"/>
+        <Attr Name="ImportTime" Val="1519111948"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/WRAPPER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="WRAPPER"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../BASYS_FILES/Basys3_constraints.xdc"/>
+        <Attr Name="ImportTime" Val="1516650855"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

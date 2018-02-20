@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Feb 20 00:59:58 2018
+# Process ID: 12916
+# Current directory: C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.runs/synth_1
+# Command line: vivado.exe -log WRAPPER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WRAPPER.tcl
+# Log file: C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.runs/synth_1/WRAPPER.vds
+# Journal file: C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source WRAPPER.tcl -notrace
