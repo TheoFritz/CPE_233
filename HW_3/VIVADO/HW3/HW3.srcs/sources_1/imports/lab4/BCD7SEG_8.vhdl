@@ -1,21 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer: Dominic Gaiero and Elizabeth Davis
+-- HW ASSIGNMENT NO. 3:
+-- Keypad Driver (BCD7SEG_8.vhd)
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
 --
--- Create Date: 10/11/2017 03:45:05 PM
--- Design Name:
--- Module Name: BCD7SEG - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
+-- DESCRIPTION: This file incorporates the seven segment display and defines the 
+-- different segments for the different hex displayed values. It also defines which 
+-- display to use.
 ----------------------------------------------------------------------------------
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -23,7 +13,6 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY BCD7SEG_8 IS
 	PORT (
 		sw : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-		btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		seg : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 		an : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
 	);
