@@ -43,7 +43,7 @@ architecture Behavioral of RAT_wrapper is
               PORT_ID  : out STD_LOGIC_VECTOR (7 downto 0);
               IO_STRB  : out STD_LOGIC;
               RESET    : in  STD_LOGIC;
-              INT_IN   : in  STD_LOGIC;
+              INT      : in  STD_LOGIC;
               CLK      : in  STD_LOGIC);
    end component RAT_MCU;
    -------------------------------------------------------------------------------
@@ -54,6 +54,8 @@ architecture Behavioral of RAT_wrapper is
    signal s_port_id     : std_logic_vector (7 downto 0);
    signal s_load        : std_logic;
    signal s_clk_sig     : std_logic := '0';
+   constant MAX_COUNT_50MHZ : integer := (2);     -- clock divider 
+   signal CLK_50MHZ : std_logic := '0'; 
    --signal s_interrupt   : std_logic; -- not yet used
    
    -- Register definitions for output devices ------------------------------------
@@ -64,14 +66,29 @@ architecture Behavioral of RAT_wrapper is
 begin
  
    -- Clock Divider Process ------------------------------------------------------
-   clkdiv: process(CLK)
-    begin
-        if RISING_EDGE(CLK) then
-            s_clk_sig <= NOT s_clk_sig;
-        end if;
-    end process clkdiv;
+--   clkdiv: process(CLK)
+--    begin
+--        if RISING_EDGE(CLK) then
+--            s_clk_sig <= NOT s_clk_sig;
+--        end if;
+--    end process clkdiv;
    -------------------------------------------------------------------------------
    
+   
+   CLK_50MHZ_PROC: process (CLK, CLK_50MHZ)              
+         variable div_cnt : integer := 0;   
+      begin
+         if (rising_edge(clk)) then   
+            if (div_cnt = MAX_COUNT_50MHZ) then 
+               s_clk_sig <= not s_clk_sig; 
+               div_cnt := 0; 
+            else
+               div_cnt := div_cnt + 1; 
+            end if; 
+         end if; 
+      end process CLK_50MHZ_PROC; 
+      CLK_50MHZ <= s_clk_sig; 
+
    
    -- Instantiate RAT_CPU --------------------------------------------------------
    CPU: RAT_MCU
@@ -80,8 +97,8 @@ begin
               PORT_ID  => s_port_id,
               RESET    => RST,
               IO_STRB  => s_load,
-              INT_IN   => '0',  -- s_interrupt
-              CLK      => s_clk_sig);
+              INT      => '0',  -- s_interrupt
+              CLK      => CLK_50MHZ);
    -------------------------------------------------------------------------------
 
 
