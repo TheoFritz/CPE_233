@@ -1,21 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/20/2018 12:31:49 AM
--- Design Name: 
--- Module Name: WRAPPER - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- HW ASSIGNMENT NO. 3:
+-- Keypad Driver (WRAPPER.vhd)
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
+--
+-- DESCRIPTION:
+-- This module wraps the keypad and the seven segment display into one working device.
+-- It creates the keypad driver.
 ----------------------------------------------------------------------------------
 
 
@@ -37,7 +27,6 @@ entity WRAPPER is
            CLK : in STD_LOGIC;
            seg : out STD_LOGIC_VECTOR (7 downto 0);
            an : out STD_LOGIC_VECTOR (3 downto 0));
---           led : out STD_LOGIC_VECTOR (3 downto 0));
 end WRAPPER;
 
 architecture Behavioral of WRAPPER is
@@ -53,7 +42,6 @@ END COMPONENT;
 COMPONENT BCD7SEG_8 IS
     PORT (
             sw : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-            btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
             seg : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
             an : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
         );
@@ -73,11 +61,9 @@ READBUTTON => BUTTONIMMET
 bcd7seg_8_1: BCD7SEG_8
 PORT MAP (
 sw => BUTTONIMMET,
-btn => "1000",
 seg => seg,
 AN => an
 );
 
---led <= BUTTONIMMET;
 
 end Behavioral;

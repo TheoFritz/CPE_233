@@ -1,21 +1,14 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
+-- HW ASSIGNMENT NO. 3:
+-- Keypad Driver (keypad.vhd)
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
 --
--- Create Date: 02/09/2018 11:50:03 AM
--- Design Name:
--- Module Name: CONTROL_UNIT - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
+-- DESCRIPTION: This file implements the finite state machine used to check which
+-- button is pressed on the keypad. It first sets each row high and the checks to see
+-- if any of the columns in that row are high as a result. If one of the buttons in
+-- a single column are high then a hex value is outputted. If none of the buttons in a 
+-- column that is being checked is pressed then the program moves on to the next
+-- state. It continues to do this until it finds the key that is pressed.
 ----------------------------------------------------------------------------------
 
 
@@ -36,14 +29,14 @@ entity KEYPAD is
            ROWS : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
            CLK : IN STD_LOGIC;
            READBUTTON : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
---           led : out STD_LOGIC_VECTOR (3 DOWNTO 0) 
+
      );
 end KEYPAD;
 
 architecture Behavioral of KEYPAD is
 
--- Three different FSM states
-    type state_type is (ST_DETECT,ST_ROW_0, ST_ROW_1, ST_ROW_2, ST_ROW_3);
+-- Five different FSM states
+    type state_type is (ST_DETECT, ST_ROW_0, ST_ROW_1, ST_ROW_2, ST_ROW_3);
     signal PS : state_type := ST_DETECT;
     signal NS : state_type;
 
@@ -81,73 +74,72 @@ BEGIN
 
 case PS is
     
-    when ST_DETECT =>
+    when ST_DETECT =>         -- Initially sets the rows high in the initial state
         ROWS <= "1111";
-        readButtonTemp <= x"F";
+        readButtonTemp <= x"F";  -- sets it to the hex value 'F' which is set as all the segments turned off in our seven segment file
         case (COLUMNS) is
-            when "001" | "010" | "100" =>
+            when "001" | "010" | "100" => -- defines each of the states
                 NS <= ST_ROW_0;
             when others =>
                 NS <= PS;
         end case;
         
     when ST_ROW_0 =>
-        ROWS <= "0001";        
+        ROWS <= "0001";   -- sets the first row high     
         if COLUMNS = "001" then
-            readButtonTemp <= x"1";
+            readButtonTemp <= x"1"; -- first column key is pressed
         elsif COLUMNS = "010" then
-            readButtonTemp <= x"2";
+            readButtonTemp <= x"2"; -- second column key is pressed
         elsif COLUMNS = "100" THEN
-            readButtonTemp <= x"3";
+            readButtonTemp <= x"3"; -- third column key is pressed
         else
-            readButtonTemp <= x"F";    
-            NS <= ST_ROW_1;
+            readButtonTemp <= x"F";    -- if no column key is pressed in that row it displays nothing
+            NS <= ST_ROW_1; -- goes to the next state
         end if;
         
 
     when ST_ROW_1 =>
-        ROWS <= "0010";
+        ROWS <= "0010"; -- sets the second row high
         if COLUMNS = "001" then
-            readButtonTemp <= x"4";
+            readButtonTemp <= x"4"; -- first column key is pressed
         elsif COLUMNS = "010" then
-            readButtonTemp <= x"5";
+            readButtonTemp <= x"5"; -- second column key is pressed
         elsif COLUMNS = "100" THEN
-            readButtonTemp <= x"6";
+            readButtonTemp <= x"6"; -- third column key is pressed
         else
-            readButtonTemp <= x"F";    
-            NS <= ST_ROW_2;
+            readButtonTemp <= x"F"; -- if no column key is pressed in that row it displays nothing
+            NS <= ST_ROW_2; -- goes to the next state
         end if;
         
     when ST_ROW_2 =>
-        ROWS <= "0100";
-        if COLUMNS = "001" then
-            readButtonTemp <= x"7";
-        elsif COLUMNS = "010" then
-            readButtonTemp <= x"8";
-        elsif COLUMNS = "100" THEN
+        ROWS <= "0100"; -- sets the third row high
+        if COLUMNS = "001" then -- first column key is pressed
+            readButtonTemp <= x"7"; 
+        elsif COLUMNS = "010" then -- second column key is pressed 
+            readButtonTemp <= x"8"; 
+        elsif COLUMNS = "100" THEN -- third column key is pressed
             readButtonTemp <= x"9";
         else
-            readButtonTemp <= x"F";
-            NS <= ST_ROW_3;
+            readButtonTemp <= x"F"; -- if no column key is pressed in that row it displays nothing
+            NS <= ST_ROW_3; -- goes to the next state
         end if;
         
     when ST_ROW_3 =>
-        ROWS <= "1000";
-        if COLUMNS = "001" then
+        ROWS <= "1000"; -- sets the fourth row high 
+        if COLUMNS = "001" then -- first column is pressed
             readButtonTemp <= x"A";
-        elsif COLUMNS = "010" then
+        elsif COLUMNS = "010" then -- second column key is pressed
             readButtonTemp <= x"0";
-        elsif COLUMNS = "100" THEN
+        elsif COLUMNS = "100" THEN -- third column key is pressed
             readButtonTemp <= x"B";
         else
-            readButtonTemp <= x"F";
-            NS <= ST_ROW_0;
+            readButtonTemp <= x"F"; -- if no column key is pressed in that row it displays nothing
+            NS <= ST_ROW_0; -- goes to the next state
         end if;                              
                         
 end case;
 end process;
 
---led <= readButtonTemp;
 READBUTTON <= readButtonTemp;
 
 
