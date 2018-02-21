@@ -33,17 +33,6 @@ ARCHITECTURE Behavioral OF BCD7SEG_8 IS
 BEGIN
 	SEVENSEG : PROCESS (sw)
 	BEGIN
-		IF BTN = "-000" THEN
-			an <= "1110";
-		ELSIF BTN = "-001" THEN
-			an <= "1101";
-		ELSIF BTN = "-010" THEN
-			an <= "1011";
-		ELSIF BTN = "-011" THEN
-			an <= "0111";
-		ELSE
-			an <= "1111";
-		END IF;
 		CASE sw IS
 			WHEN "0000" => seg <= "11000000";
 			WHEN "0001" => seg <= "11111001";
@@ -55,20 +44,12 @@ BEGIN
 			WHEN "0111" => seg <= "11111000";
 			WHEN "1000" => seg <= "10000000";
 			WHEN "1001" => seg <= "10011000";
+			WHEN "1010" => seg <= "10001000";
+			when "1011" => seg <= "10000011";
+			WHEN "1111" => seg <= "11111111";
 			WHEN OTHERS => seg <= "11111111";
 		END CASE;
-		IF BTN = "1---" then
-		 CASE sw IS
-			 WHEN "1010" => seg <= "10001000";
-			 WHEN "1011" => seg <= "10000011";
-			 WHEN "1100" => seg <= "10100111";
-			 WHEN "1101" => seg <= "10100001";
-			 WHEN "1110" => seg <= "10000110";
-			 WHEN "1111" => seg <= "10001110";
-			 WHEN OTHERS => seg <= "11111111";
-			 END CASE;
-		 END IF;
- 
- 
-	 END PROCESS SEVENSEG;
+	 END PROCESS;
+	 
+	 an <= "1110";
  END Behavioral;

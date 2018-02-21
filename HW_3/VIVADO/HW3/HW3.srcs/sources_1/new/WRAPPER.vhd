@@ -37,6 +37,7 @@ entity WRAPPER is
            CLK : in STD_LOGIC;
            seg : out STD_LOGIC_VECTOR (7 downto 0);
            an : out STD_LOGIC_VECTOR (3 downto 0));
+--           led : out STD_LOGIC_VECTOR (3 downto 0));
 end WRAPPER;
 
 architecture Behavioral of WRAPPER is
@@ -58,7 +59,7 @@ COMPONENT BCD7SEG_8 IS
         );
 END COMPONENT;
 
-SIGNAL READBUTTONSIG : STD_LOGIC_VECTOR (3 DOWNTO 0);
+SIGNAL BUTTONIMMET : STD_LOGIC_VECTOR (3 DOWNTO 0);
 begin
 
 keypad1: keypad
@@ -66,15 +67,17 @@ PORT MAP (
 COLUMNS => COLUMNS,
 ROWS => ROWS,
 CLK => CLK,
-READBUTTON => READBUTTONSIG
+READBUTTON => BUTTONIMMET
 );
 
 bcd7seg_8_1: BCD7SEG_8
 PORT MAP (
-sw => READBUTTONSIG,
+sw => BUTTONIMMET,
 btn => "1000",
 seg => seg,
 AN => an
 );
+
+--led <= BUTTONIMMET;
 
 end Behavioral;

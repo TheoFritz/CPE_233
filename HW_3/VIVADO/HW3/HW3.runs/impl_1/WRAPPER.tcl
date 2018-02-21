@@ -42,6 +42,8 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -51,12 +53,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.cache/wt [current_project]
-  set_property parent.project_path C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.xpr [current_project]
-  set_property ip_output_repo C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.cache/wt [current_project]
+  set_property parent.project_path C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.xpr [current_project]
+  set_property ip_output_repo C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.runs/synth_1/WRAPPER.dcp
-  read_xdc C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc
+  add_files -quiet C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.runs/synth_1/WRAPPER.dcp
+  read_xdc C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc
   link_design -top WRAPPER -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

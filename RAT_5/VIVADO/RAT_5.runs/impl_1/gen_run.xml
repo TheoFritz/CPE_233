@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1518924053">
-  <File Type="PWROPT-DRC" Name="RAT_MCU_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="RAT_MCU_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="RAT_MCU_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="RAT_MCU_power_routed.rpx"/>
   <File Type="PA-TCL" Name="RAT_MCU.tcl"/>
-  <File Type="OPT-HWDEF" Name="RAT_MCU.hwdef"/>
+  <File Type="INIT-TIMING" Name="RAT_MCU_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="RAT_MCU_methodology_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="RAT_MCU_drc_pwropted.rpt"/>
   <File Type="RDI-RDI" Name="RAT_MCU.vdi"/>
   <File Type="OPT-DCP" Name="RAT_MCU_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="RAT_MCU.hwdef"/>
   <File Type="OPT-DRC" Name="RAT_MCU_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="RAT_MCU_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="RAT_MCU_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="RAT_MCU_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="RAT_MCU_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="RAT_MCU_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="RAT_MCU.bin"/>
   <File Type="ROUTE-DRC-RPX" Name="RAT_MCU_drc_routed.rpx"/>
-  <File Type="BG-DRC" Name="RAT_MCU.drc"/>
+  <File Type="BG-BIN" Name="RAT_MCU.bin"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="RAT_MCU_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MSK" Name="RAT_MCU.msk"/>
+  <File Type="BG-DRC" Name="RAT_MCU.drc"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="RAT_MCU_methodology_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="RAT_MCU.bgn"/>
+  <File Type="BITSTR-MSK" Name="RAT_MCU.msk"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="RAT_MCU_methodology_drc_routed.pb"/>
+  <File Type="BG-BGN" Name="RAT_MCU.bgn"/>
   <File Type="ROUTE-PWR" Name="RAT_MCU_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="RAT_MCU_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="RAT_MCU_route_status.rpt"/>

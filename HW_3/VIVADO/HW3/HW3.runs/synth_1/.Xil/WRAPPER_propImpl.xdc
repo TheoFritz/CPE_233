@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/edavis/Documents/CPE_233/HW_3/VIVADO/HW3/HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc rfile:../../../HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/utilities/CP_233/HW_3/VIVADO/HW3/HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc rfile:../../../HW3.srcs/constrs_1/imports/BASYS_FILES/Basys3_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]
