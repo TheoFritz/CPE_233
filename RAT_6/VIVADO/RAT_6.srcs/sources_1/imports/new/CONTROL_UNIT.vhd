@@ -114,12 +114,10 @@ BEGIN
                 NS <= ST_FETCH;
                 CASE SIG_OPCODE_7 IS
                     WHEN "0000100" => -- ADD (REG-REG)
-                        ALU_SEL  <= "0000";
                         RF_WR    <= '1';
                         FLG_C_LD <= '1';
                         FLG_Z_LD <= '1';
                     WHEN "1010000" | "1010001" | "1010010" | "1010011" => -- ADD (REG-IMMED)
-                        ALU_SEL     <= "0000";
                         ALU_OPY_SEL <= '1';
                         RF_WR       <= '1';
                         FLG_C_LD    <= '1';
@@ -203,7 +201,7 @@ BEGIN
                     WHEN "1100100" | "1100101" | "1100110" | "1100111" => -- IN (REG-IMMED)
                         RF_WR     <= '1';
                         RF_WR_SEL <= "11";
-                    WHEN "0001010" => -- LSL (REG-REG)
+                    WHEN "0100000" => -- LSL (REG-REG)
                         RF_WR    <= '1';
                         ALU_SEL  <= "1001";
                         FLG_C_LD <= '1';
@@ -270,12 +268,12 @@ BEGIN
                         RF_WR       <= '1';
                         ALU_SEL     <= "0110";
                         ALU_OPY_SEL <= '1';
-                        FLG_C_LD    <= '1';
+                        FLG_C_CLR    <= '1';
                         FLG_Z_LD    <= '1';
                     WHEN "0000001" => -- OR (REG-REG)
                         RF_WR    <= '1';
                         ALU_SEL  <= "0110";
-                        FLG_C_LD <= '1';
+                        FLG_C_CLR <= '1';
                         FLG_Z_LD <= '1';
                     WHEN OTHERS =>
                         NS <= ST_FETCH;

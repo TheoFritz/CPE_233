@@ -23,13 +23,13 @@ END Z_FLAG_FF;
 ARCHITECTURE Behavioral OF Z_FLAG_FF IS
 	SIGNAL Z_FLAG_TEMP : STD_LOGIC;
 BEGIN
-	Z_FLAG_DF : PROCESS (Z, CLK, FLG_Z_LD)
+	Z_FLAG_DF : PROCESS (Z_FLAG_TEMP, Z, CLK, FLG_Z_LD)
 	BEGIN
 		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when FLG_Z_LD is high
 			IF FLG_Z_LD = '1' THEN -- the flip-flop will latch data.
 				Z_FLAG_TEMP <= Z;
 			ELSE
-				Z_FLAG_TEMP <= '0'; -- Otherwise 0
+				Z_FLAG_TEMP <= Z_FLAG_TEMP; -- Otherwise 0
 			END IF;
 
 		END IF;

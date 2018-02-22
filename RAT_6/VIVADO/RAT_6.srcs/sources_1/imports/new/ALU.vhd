@@ -31,25 +31,25 @@ BEGIN
 		CASE SEL IS
 			WHEN "0000" => temp_result  <= ('0' & A) + B; --ADD
 			WHEN "0001" => temp_result  <= (('0' & A) + B + C_IN);--ADDC
-			WHEN "0010" => temp_result  <= ('1' & A) - ('1' & B);--SUB
-			WHEN "0011" => temp_result  <= (('1' & A) - ('1' & B) - C_IN); --SUBC
-			WHEN "0100" => temp_result  <= ('1' & A) - ('1' & B); --CMP
+			WHEN "0010" => temp_result  <= ('0' & A) - B;--SUB
+			WHEN "0011" => temp_result  <= (('0' & A) - B - C_IN); --SUBC
+			WHEN "0100" => temp_result  <= ('0' & A) - B; --CMP
 			WHEN "0101" => temp_result  <= ('0' & (A AND B)); --AND
 			WHEN "0110" => temp_result  <= ('0' & (A OR B)); --OR
 			WHEN "0111" => temp_result  <= ('0' & (A XOR B)); --EXOR
 			WHEN "1000" => temp_result  <= '0' & (A AND B); --TEST
-			WHEN "1001" => temp_result  <= A(7) & A(6 DOWNTO 0) & C_IN; --LSL
-			WHEN "1010" => temp_result <= '0' & C_IN & A(7 DOWNTO 1); --LSR
+			WHEN "1001" => temp_result  <= A & C_IN; --LSL
+			WHEN "1010" => temp_result <= A(0) & C_IN & A(7 DOWNTO 1); --LSR
 			WHEN "1011" => temp_result <= C_IN & A(6 DOWNTO 0) & A(7); --ROL
 			WHEN "1100" => temp_result <= A(0) & A (7 DOWNTO 1) & C_IN; --ROR
 			WHEN "1101" => temp_result <= A(0) & A (7 DOWNTO 0); --ASR
 			WHEN "1110" => temp_result <= '0' & B; --MOV
-			WHEN OTHERS => temp_result     <= "000000000"; --UNUSED
+			WHEN OTHERS => temp_result <= "000000000"; --UNUSED
 		END CASE;
 	END PROCESS;
 	SUM    <= temp_result (7 DOWNTO 0); -- SETS THE LAST EIGHT BITS OG TEMP RESULT TO BE THE SUM OR OUTPUT
 	C_FLAG <= temp_result(8); -- SETS THE NINTH BIT OF TEMP RESULT TO BE THE C-FLAG
-	PROCESS (temp_result)
+	PROCESS (A, B, C_IN, SEL, temp_result)
 		BEGIN
 			IF temp_result (7 DOWNTO 0) = "00000000" THEN -- IF THE RESULT IS ALL 0'S THE Z-FLAG GOES HIGH OTHERWISE LOW
 				Z_FLAG <= '1';

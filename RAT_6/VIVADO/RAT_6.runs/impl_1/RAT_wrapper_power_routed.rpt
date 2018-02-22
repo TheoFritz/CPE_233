@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Wed Feb 21 15:08:08 2018
+| Date             : Wed Feb 21 21:47:41 2018
 | Host             : DPS-XPS running 64-bit major release  (build 9200)
 | Command          : report_power -file RAT_wrapper_power_routed.rpt -pb RAT_wrapper_power_summary_routed.pb -rpx RAT_wrapper_power_routed.rpx
 | Design           : RAT_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.077 |
-| Dynamic (W)              | 0.005 |
+| Total On-Chip Power (W)  | 0.076 |
+| Dynamic (W)              | 0.004 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.6  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.002 |      307 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      179 |     20800 |            0.86 |
+| Slice Logic              |     0.002 |      241 |       --- |             --- |
+|   LUT as Logic           |     0.001 |      152 |     20800 |            0.73 |
 |   LUT as Distributed RAM |    <0.001 |        8 |      9600 |            0.08 |
-|   CARRY4                 |    <0.001 |       17 |      8150 |            0.21 |
-|   Register               |    <0.001 |       57 |     41600 |            0.14 |
+|   CARRY4                 |    <0.001 |        9 |      8150 |            0.11 |
+|   Register               |    <0.001 |       25 |     41600 |            0.06 |
+|   F7/F8 Muxes            |    <0.001 |        6 |     32600 |            0.02 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes            |    <0.001 |        5 |     32600 |            0.02 |
 |   Others                 |     0.000 |       17 |       --- |             --- |
-| Signals                  |     0.002 |      294 |       --- |             --- |
+| Signals                  |     0.002 |      226 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
 | I/O                      |    <0.001 |       18 |       106 |           16.98 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.077 |          |           |                 |
+| Total                    |     0.076 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.005 |      0.010 |
+| Vccint    |       1.000 |     0.013 |       0.004 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,8 +141,8 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| RAT_wrapper                     |     0.005 |
-|   CPU                           |     0.004 |
+| RAT_wrapper                     |     0.004 |
+|   CPU                           |     0.003 |
 |     ALU_i                       |    <0.001 |
 |     CU                          |    <0.001 |
 |     FLAGS_i                     |    <0.001 |

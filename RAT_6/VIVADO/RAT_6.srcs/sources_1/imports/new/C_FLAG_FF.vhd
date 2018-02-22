@@ -34,7 +34,7 @@ END C_FLAG_FF;
 ARCHITECTURE Behavioral OF C_FLAG_FF IS
 	SIGNAL C_FLAG_TEMP : STD_LOGIC;
 BEGIN
-	C_FLAG_DF : PROCESS (C, FLG_C_LD, FLG_C_SET, FLG_C_CLR, CLK)
+	C_FLAG_DF : PROCESS (C_FLAG_TEMP, C, FLG_C_LD, FLG_C_SET, FLG_C_CLR, CLK)
 	BEGIN
 		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when FLG_C_LD is high
 		    IF FLG_C_LD = '1' THEN
@@ -44,7 +44,7 @@ BEGIN
 			ELSIF FLG_C_CLR = '1' THEN
 				C_FLAG_TEMP <= '0'; -- Otherwise 0
 			ELSE
-				C_FLAG_TEMP <= C; -- the flip-flop will latch data.
+				C_FLAG_TEMP <= C_FLAG_TEMP; -- the flip-flop will latch data.
 			END IF;
 		END IF;
 	END PROCESS;
