@@ -26,7 +26,7 @@ C5:  Raw line from source code.
 (0010)                            || 
 (0011)                       154  || .EQU IN_PORT = 0x9A
 (0012)                       066  || .EQU OUT_PORT = 0x42
-(0013)                       003  || .EQU DIV_FACTOR = 0x03
+(0013)                       016  || .EQU DIV_FACTOR = 0x10
 (0014)                            || 
 (0015)                            || ;--------------------------------------------------------------------------
 (0016)                            || ;-- .ORG used in code segment
@@ -37,7 +37,7 @@ C5:  Raw line from source code.
 (0021)  CS-0x001  0x3209A         || IN R0, IN_PORT           ; R0 TAKES IN THE VALUE OF IN_PORT
 (0022)  CS-0x002  0x36100         || MOV R1, 0x00             ; CLEAR COUNTER REG
 (0023)                     0x003  || DIVIDE_LOOP:     
-(0024)  CS-0x003  0x2C003         || SUB R0, DIV_FACTOR     
+(0024)  CS-0x003  0x2C010         || SUB R0, DIV_FACTOR     
 (0025)  CS-0x004  0x08042         || BREQ OUTPUT_EQUAL        ; CHECKS IF THE DIVISOR FACTOR IS EVENLY DIVISIBLE INTO
 (0026)                            ||                          ; INPUT NUMBER
 (0027)  CS-0x005  0x0A048         || BRCS OUTPUT              ; IF IT IS NOT DIVISIBLE, CARRY WILL BE SET TO 1, OUTPUT
@@ -78,7 +78,7 @@ OUTPUT_EQUAL   0x008   (0031)  ||  0025
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-DIV_FACTOR     0x003   (0013)  ||  0024 
+DIV_FACTOR     0x010   (0013)  ||  0024 
 IN_PORT        0x09A   (0011)  ||  0021 
 OUT_PORT       0x042   (0012)  ||  0034 
 
