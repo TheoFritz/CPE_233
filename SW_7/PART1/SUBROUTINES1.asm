@@ -23,18 +23,18 @@ BRN MAIN
 
 DIVIDE_BY_100:
 CMP R1, FACTOR_100; Does an initial compare to see if the number is smaller than the divisor
-BRCS UNDERFLOW; If it is less than it doesnt divide and jumps to Underflow
+BRCS UNDERFLOW; If it is less than it doesn't divide and jumps to Underflow
 SUB R1, FACTOR_100; Subtracts 100 from the input number
-ADD R6, 0x01; Adds one to the count register which is the result of the divsion
+ADD R6, 0x01; Adds one to the count register which is the result of the division
 CMP R1, FACTOR_100; Compares R1 after the initial subtraction with 100 to check for underflow
 BRCC DIVIDE_BY_100; If the carry is cleared it continues to subtract from the input value
 RET; Returns from the subroutine
 
 DIVIDE_BY_10:
 CMP R2, FACTOR_10; Does an initial compare to see if the number is smaller than the divisor
-BRCS UNDERFLOW; If it is less than it doesnt divide and jumps to Underflow
+BRCS UNDERFLOW; If it is less than it doesn't divide and jumps to Underflow
 SUB R2, FACTOR_10; Subtracts 10 from the input number
-ADD R6, 0x01; Adds one to the count register which is the result of the divsion
+ADD R6, 0x01; Adds one to the count register which is the result of the division
 CMP R2, FACTOR_10; Compares R1 after the initial subtraction with 100 to check for underflow
 BRCC DIVIDE_BY_10; If the carry is cleared it continues to subtract from the input value
 RET; Returnd from the subroutine
