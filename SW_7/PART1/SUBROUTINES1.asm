@@ -4,7 +4,8 @@
 ; DOMINIC GAIERO AND ELIZABETH DAVIS
 ;
 ; DESCRIPTION:
-;
+; CONVERTS AN UNSIGNED 8 BIT BINARY NUMBER TO BINARY
+; CODED DECIMAL
 ; ----------------------------------------------------
 
 .EQU IN_PORT = 0x9A
