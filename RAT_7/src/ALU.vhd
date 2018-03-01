@@ -41,8 +41,9 @@ BEGIN
 			WHEN "1001" => temp_result  <= A & C_IN; --LSL
 			WHEN "1010" => temp_result <= A(0) & C_IN & A(7 DOWNTO 1); --LSR
 			WHEN "1011" => temp_result <= C_IN & A(6 DOWNTO 0) & A(7); --ROL
-			WHEN "1100" => temp_result <= A(0) & A (7 DOWNTO 1) & C_IN; --ROR
-			WHEN "1101" => temp_result <= A(0) & A (7 DOWNTO 0); --ASR
+--			WHEN "1100" => temp_result <= A(0) & A (7 DOWNTO 1) & C_IN; --ROR
+            WHEN "1100" => temp_result <= '0'&A(0) & A (7 DOWNTO 1); --ROR
+			WHEN "1101" => temp_result <= '0' & A(7)&A (7 DOWNTO 1); --ASR
 			WHEN "1110" => temp_result <= '0' & B; --MOV
 			WHEN OTHERS => temp_result <= "000000000"; --UNUSED
 		END CASE;

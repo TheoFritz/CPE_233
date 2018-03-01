@@ -25,7 +25,8 @@ BEGIN
 	SCR_ADDR_MUX_DATA_OUT <= DY_OUT WHEN ( SCR_ADDR_SEL= "00") ELSE -- when select is "00" DY_OUT goes to SCR_ADDR_MUX_DATA_OUT
 	         FROM_IMMED WHEN (SCR_ADDR_SEL = "01") ELSE -- when select is "01" FROM_IMMED goes to SCR_ADDR_MUX_DATA_OUT
 	         SP_DATA_OUT WHEN (SCR_ADDR_SEL = "10") ELSE -- when select is "10" SP_DATA_OUT goes to SCR_ADDR_MUX_DATA_OUT
-	         (SP_DATA_OUT - "00000001") WHEN (SCR_ADDR_SEL = "11"); -- when select is "11"
+	         (SP_DATA_OUT - "00000001") WHEN (SCR_ADDR_SEL = "11") ELSE
+	         "00000000"; -- when select is "11"
 	       
 
 END Behavioral;
