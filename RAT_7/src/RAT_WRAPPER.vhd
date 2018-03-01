@@ -16,7 +16,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RAT_wrapper is
     Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
-           an       : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
+           an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
            RST      : in    STD_LOGIC;
@@ -51,13 +51,13 @@ architecture Behavioral of RAT_wrapper is
    end component RAT_MCU;
    -------------------------------------------------------------------------------
 
-   COMPONENT BCD7SEG_8 IS
+   COMPONENT BCD7SEG_8
     PORT (
             sw : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
             seg : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
             an : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
         );
-    END COMPONENT;
+    END COMPONENT BCD7SEG_8;
 
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
    signal s_input_port  : std_logic_vector (7 downto 0);
@@ -67,6 +67,7 @@ architecture Behavioral of RAT_wrapper is
    signal s_clk_sig     : std_logic := '0';
    constant MAX_COUNT_50MHZ : integer := (2);     -- clock divider
    signal CLK_50MHZ : std_logic := '0';
+   signal SEVEN_SEG_IM : std_logic_vector (3 downto 0);
    --signal s_interrupt   : std_logic; -- not yet used
 
    -- Register definitions for output devices ------------------------------------
@@ -115,10 +116,10 @@ begin
               CLK      => CLK_50MHZ);
    -------------------------------------------------------------------------------
 
-   SSEG1: SEVEN_SEG
+   SSEG1: BCD7SEG_8
    PORT MAP( seg => seg,
              an  => an,
-             sw => SEVEN_SEG);
+             sw => SEVEN_SEG_IM);
 
    -------------------------------------------------------------------------------
    -- MUX for selecting what input to read ---------------------------------------
@@ -162,6 +163,6 @@ begin
    -- Register Interface Assignments ---------------------------------------------
    -- add all outputs that you added to this design
    LEDS <= r_LEDS;
-   SEVEN_SEG <= r_SevenSeg;
+   SEVEN_SEG_IM <= r_SevenSeg(3 DOWNTO 0);
 
 end Behavioral;

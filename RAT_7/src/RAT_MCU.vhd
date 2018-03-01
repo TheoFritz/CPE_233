@@ -401,7 +401,7 @@ BEGIN
 	SCR_DATA_MUX_i          : SCR_DATA_MUX
 	port map (
 	  DX_OUT       => DX_OUT,
-	  PC_COUNT     => D_IN,
+	  PC_COUNT     => ADDRESS,
 	  SCR_DATA_SEL => SCR_DATA_SEL,
 	  SCR_DATA_OUT => SCR_DATA_IN
 	);

@@ -3,6 +3,9 @@
 # 
 
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -17,6 +20,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/ALU.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/ALU_MUX.vhd
+  C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/BCD7SEG_8.vhdl
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/CONTROL_UNIT.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/C_FLAG_FF.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_7/src/FLAGS.vhd

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Mon Feb 26 17:46:02 2018
+| Date             : Wed Feb 28 20:40:48 2018
 | Host             : DPS-XPS running 64-bit major release  (build 9200)
 | Command          : report_power -file RAT_wrapper_power_routed.rpt -pb RAT_wrapper_power_summary_routed.pb -rpx RAT_wrapper_power_routed.rpx
 | Design           : RAT_wrapper
@@ -50,17 +50,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.002 |      381 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      207 |     20800 |            1.00 |
+| Slice Logic              |     0.002 |      393 |       --- |             --- |
+|   LUT as Logic           |     0.002 |      209 |     20800 |            1.00 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
 |   CARRY4                 |    <0.001 |       11 |      8150 |            0.13 |
 |   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
-|   Register               |    <0.001 |       33 |     41600 |            0.08 |
+|   Register               |    <0.001 |       37 |     41600 |            0.09 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |       18 |       --- |             --- |
-| Signals                  |     0.003 |      303 |       --- |             --- |
+| Signals                  |     0.003 |      311 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
-| I/O                      |    <0.001 |       18 |       106 |           16.98 |
+| I/O                      |    <0.001 |       30 |       106 |           28.30 |
 | Static Power             |     0.072 |          |           |                 |
 | Total                    |     0.078 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -142,7 +142,7 @@ Table of Contents
 | Name                             | Power (W) |
 +----------------------------------+-----------+
 | RAT_wrapper                      |     0.006 |
-|   CPU                            |     0.005 |
+|   CPU                            |     0.006 |
 |     ALU_i                        |    <0.001 |
 |     CU                           |    <0.001 |
 |     FLAGS_i                      |    <0.001 |
@@ -171,6 +171,7 @@ Table of Contents
 |       memoryModule_reg_0_255_9_9 |    <0.001 |
 |     prog_rom_i                   |     0.003 |
 |     stack_pointer_i              |    <0.001 |
+|   SSEG1                          |    <0.001 |
 +----------------------------------+-----------+
 
 
