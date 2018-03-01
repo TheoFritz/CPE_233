@@ -294,8 +294,6 @@ BEGIN
                         SCR_ADDR_SEL <= "10";
                         SP_INC <= '1';
                     WHEN "0100101" => -- PUSH (REG)
-                        RF_WR <= '1';
-                        RF_WR_SEL <= "01";
                         SCR_WE <= '1';
                         SCR_ADDR_SEL <= "11";
                         SP_DECR <= '1';
