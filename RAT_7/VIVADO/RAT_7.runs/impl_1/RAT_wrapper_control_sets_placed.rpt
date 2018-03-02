@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Feb 28 22:38:04 2018
+| Date         : Thu Mar  1 00:07:09 2018
 | Host         : DPS-XPS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file RAT_wrapper_control_sets_placed.rpt
 | Design       : RAT_wrapper
@@ -36,9 +36,9 @@ Table of Contents
 | No           | No                    | No                     |               7 |            5 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              12 |            5 |
+| Yes          | No                    | No                     |              12 |            7 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              18 |            7 |
+| Yes          | Yes                   | No                     |              18 |            8 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -51,9 +51,9 @@ Table of Contents
 |  CLK_IBUF_BUFG  |                                     |                  |                1 |              1 |
 |  CLK_IBUF_BUFG  | CPU/prog_rom_i/r_SevenSeg_reg[0][0] |                  |                1 |              4 |
 |  s_clk_sig_BUFG |                                     |                  |                4 |              6 |
-|  CLK_IBUF_BUFG  | CPU/prog_rom_i/r_LEDS_reg[0][0]     |                  |                4 |              8 |
-|  s_clk_sig_BUFG | CPU/prog_rom_i/E[0]                 | CPU/CU/SR[0]     |                1 |              8 |
-|  s_clk_sig_BUFG | CPU/CU/E[0]                         | CPU/CU/SR[0]     |                6 |             10 |
+|  CLK_IBUF_BUFG  | CPU/prog_rom_i/r_LEDS_reg[0][0]     |                  |                6 |              8 |
+|  s_clk_sig_BUFG | CPU/prog_rom_i/E[0]                 | CPU/CU/SR[0]     |                3 |              8 |
+|  s_clk_sig_BUFG | CPU/CU/E[0]                         | CPU/CU/SR[0]     |                5 |             10 |
 |  s_clk_sig_BUFG | CPU/prog_rom_i/RF_WR                |                  |                2 |             16 |
 |  s_clk_sig_BUFG | CPU/prog_rom_i/SCR_WE               |                  |               10 |             40 |
 +-----------------+-------------------------------------+------------------+------------------+----------------+
