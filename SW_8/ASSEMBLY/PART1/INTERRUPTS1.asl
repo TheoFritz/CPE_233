@@ -37,17 +37,23 @@ C5:  Raw line from source code.
 (0021)                       001  || .ORG 0x01                ; SET THE DATA SEGMENT COUNTER TO 0x01
 (0022)                            || 
 (0023)  CS-0x001  0x1A000         || SEI ; ENABLES INTERRUPTS
-(0024)  CS-0x002  0x36BFF         || MOV R11, 0xFF ; MOVES IN 0xFF INTO R11
-(0025)  CS-0x003  0x32A20  0x003  || MAIN: IN R10, SWITCHES ; TAKES IN A VALUE FROM THE SWITCHES
-(0026)  CS-0x004  0x00A5A         || EXOR R10, R11 ; FLIPS THE BITS ON THE VAALUE TAKEN IN ON THE SWITCHES
-(0027)  CS-0x005  0x34A42         || OUT R10, LEDS ; OUTS THAT VALUE TO THE SWITCHES
-(0028)  CS-0x006  0x08018         || BRN MAIN
-(0029)                            || 
-(0030)  CS-0x007  0x24BFF  0x007  || ISR: EXOR R11, 0xFF ; TOGGLES THE BITS IN R11
-(0031)  CS-0x008  0x1A003         || RETIE ; RETURN WITH INTERRUPTS ENABLED
-(0032)                            || 
-(0033)                       1023  || .ORG 0x3FF
-(0034)  CS-0x3FF  0x08038  0x3FF  || VECTOR: BRN ISR ; BRANCHES TO ISR WHEN THE THE PROGRAM COUNTER IS 0x3FF
+(0024)  CS-0x002  0x36B00         || MOV R11, 0x00 ; CLEARS R11
+(0025)  CS-0x003  0x32920  0x003  || MAIN: IN R9, SWITCHES ; TAKES IN A VALUE FROM THE SWITCHES
+(0026)  CS-0x004  0x04958         || CMP R9,R11; CHECKS TO SEE IF R9 AND R11 ARE EQUAL (IE IF THERE IS A NEW INPUT ON R11)
+(0027)  CS-0x005  0x08043         || BRNE NOT_EQUAL; BRANCHES IF A NEW VALUE WAS INPUTTED ON THE SWITCHES
+(0028)  CS-0x006  0x34A42         || OUT R10, LEDS ; OUTS THAT VALUE TO THE SWITCHES
+(0029)  CS-0x007  0x08018         || BRN MAIN ; BRANCHES TO MAIN
+(0030)                            || 
+(0031)  CS-0x008  0x04A49  0x008  || NOT_EQUAL: MOV R10,R9; MOVES THE VALUE IN R9 INTO R10
+(0032)  CS-0x009  0x04B51         || MOV R11,R10; MOVES THE VALUE IN R10 TO R11
+(0033)  CS-0x00A  0x34A42         || OUT R10,LEDS; OUTPUTS R10 TO THE LEDS
+(0034)  CS-0x00B  0x08018         || BRN MAIN; BRANCHES TO MAIN
+(0035)                            || 
+(0036)  CS-0x00C  0x00A5A  0x00C  || ISR: EXOR R10, R11 ; BLINKS THE LED
+(0037)  CS-0x00D  0x1A003         || RETIE ; RETURN WITH INTERRUPTS ENABLED
+(0038)                            || 
+(0039)                       1023  || .ORG 0x3FF
+(0040)  CS-0x3FF  0x08060  0x3FF  || VECTOR: BRN ISR ; BRANCHES TO ISR WHEN THE THE PROGRAM COUNTER IS 0x3FF
 
 
 
@@ -66,9 +72,10 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-ISR            0x007   (0030)  ||  0034 
-MAIN           0x003   (0025)  ||  0028 
-VECTOR         0x3FF   (0034)  ||  
+ISR            0x00C   (0036)  ||  0040 
+MAIN           0x003   (0025)  ||  0029 0034 
+NOT_EQUAL      0x008   (0031)  ||  0027 
+VECTOR         0x3FF   (0040)  ||  
 
 
 -- Directives: .BYTE
@@ -79,7 +86,7 @@ VECTOR         0x3FF   (0034)  ||
 -- Directives: .EQU
 ------------------------------------------------------------ 
 IN_PORT        0x09A   (0013)  ||  
-LEDS           0x042   (0014)  ||  0027 
+LEDS           0x042   (0014)  ||  0028 0033 
 SWITCHES       0x020   (0015)  ||  0025 
 
 
