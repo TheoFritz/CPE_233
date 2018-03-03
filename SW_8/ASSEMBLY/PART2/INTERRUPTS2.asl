@@ -39,42 +39,43 @@ C5:  Raw line from source code.
 (0023)                            || .CSEG
 (0024)                       001  || .ORG 0x01                ; SET THE DATA SEGMENT COUNTER TO 0x01
 (0025)                            || 
-(0026)  CS-0x001  0x36300         || MOV R3, 0x00
-(0027)  CS-0x002  0x36200         || MOV R2, 0x00
-(0028)  CS-0x003  0x36100         || MOV R1, 0x00
-(0029)                            || 
-(0030)  CS-0x004  0x08098         || BRN MAIN
-(0031)                            || 
-(0032)  CS-0x005  0x04200  0x005  || ISR: CMP R2, R0 ; COMAPRE CURRENT VALUE TO PREVIOUS VALUE
-(0033)  CS-0x006  0x0804B         || BRNE VALUES_NOT_EQUAL ; 
-(0034)  CS-0x007  0x28101  0x007  || VALUES_EQUAL: ADD R1, 0x01
-(0035)  CS-0x008  0x1A003         || RETIE
-(0036)  CS-0x009  0x04201  0x009  || VALUES_NOT_EQUAL: MOV R2, R0
-(0037)  CS-0x00A  0x36301         || MOV R3, 0x01
-(0038)  CS-0x00B  0x1A003         || RETIE
-(0039)                            || 
-(0040)                     0x00C  || CHECK_BTN: 
-(0041)  CS-0x00C  0x1A001         || CLI
-(0042)  CS-0x00D  0x36000         || MOV R0, 0x00
-(0043)  CS-0x00E  0x34042         || OUT R0, LEDS
-(0044)  CS-0x00F  0x32A9B         || IN R10, BUTTONS
-(0045)  CS-0x010  0x20A01         || AND R10, 0x01
-(0046)  CS-0x011  0x30A01         || CMP R10, 0x01
-(0047)  CS-0x012  0x08063         || BRNE CHECK_BTN
-(0048)                            || 
-(0049)  CS-0x013  0x1A000  0x013  || MAIN: SEI ; ENABLES INTERRUPTS
-(0050)  CS-0x014  0x36A00         || MOV R10, 0x00
-(0051)  CS-0x015  0x32020         || IN R0, SWITCHES
-(0052)  CS-0x016  0x30101         || CMP R1, 0x01
-(0053)  CS-0x017  0x08062         || BREQ CHECK_BTN
-(0054)  CS-0x018  0x30301         || CMP R3, 0x01
-(0055)  CS-0x019  0x0809B         || BRNE MAIN
-(0056)  CS-0x01A  0x34042         || OUT R0, LEDS
-(0057)  CS-0x01B  0x36300         || MOV R3, 0x00
-(0058)  CS-0x01C  0x08098         || BRN MAIN
-(0059)                            || 
-(0060)                       1023  || .ORG 0x3FF
-(0061)  CS-0x3FF  0x08028  0x3FF  || VECTOR: BRN ISR
+(0026)  CS-0x001  0x36300         || MOV R3, 0x00 ; CLEAR INTURRPET FLAG REGISTER
+(0027)  CS-0x002  0x36200         || MOV R2, 0x00 ; CLEAR PREVIOUS VALUE REGISTER
+(0028)                            || 
+(0029)  CS-0x003  0x08098         || BRN MAIN ; GO TO START OF PROGRAM
+(0030)                            || 
+(0031)  CS-0x004  0x36301  0x004  || ISR: MOV R3, 0x01 ; INTERRUPT FLAG 
+(0032)  CS-0x005  0x04200         || CMP R2, R0 ; COMAPRE CURRENT VALUE TO PREVIOUS VALUE
+(0033)  CS-0x006  0x08053         || BRNE VALUES_NOT_EQUAL ;IF CURRENT VALUE DOES NOT EQUAL PREVIOUS VALUE
+(0034)                     0x007  || VALUES_EQUAL:
+(0035)                            || ;MOV R0, 0x00 ; NO OUTPUT IF VALUES ARE EQUAL
+(0036)  CS-0x007  0x34042         || OUT R0,LEDS
+(0037)  CS-0x008  0x08060         || BRN CHECK_BTN
+(0038)  CS-0x009  0x1A003         || RETIE ; RETURN TO MAIN
+(0039)  CS-0x00A  0x04201  0x00A  || VALUES_NOT_EQUAL: MOV R2, R0 ; IF THE VALUES ARE NOT EUQAL, THEN SET THE PREVIOUS VALUE TO THE CURRENT VALUE
+(0040)  CS-0x00B  0x1A003         || RETIE
+(0041)                            || 
+(0042)                     0x00C  || CHECK_BTN:
+(0043)  CS-0x00C  0x1A001         || CLI ; CLEAR INTERRUPTS
+(0044)  CS-0x00D  0x36000         || MOV R0, 0x00 ; CLEAR OTUPUT REGISTER
+(0045)  CS-0x00E  0x34042         || OUT R0, LEDS ; OUTPUT NOTHING TO LEDS
+(0046)  CS-0x00F  0x32A9B         || IN R10, BUTTONS ; READ BUTTON PRESS
+(0047)  CS-0x010  0x20A01         || AND R10, 0x01 ; MASK BUTTON TO ONLY GET LSB
+(0048)  CS-0x011  0x30A01         || CMP R10, 0x01 ; CHECK IF BUTTON IS EQUAL TO ONE
+(0049)  CS-0x012  0x08063         || BRNE CHECK_BTN ; IF IT IS NOT, THEN BRANCH BACK TO BUTTON
+(0050)                            || 
+(0051)  CS-0x013  0x1A000  0x013  || MAIN: SEI ; ENABLES INTERRUPTS
+(0052)  CS-0x014  0x36A00         || MOV R10, 0x00 ; CLEAR BUTTON REGISTER
+(0053)  CS-0x015  0x32020         || IN R0, SWITCHES ; READ IN SWITCH VALUES
+(0054)  CS-0x016  0x37E00         || MOV R30,0X00
+(0055)  CS-0x017  0x30301         || CMP R3, 0x01 ; CHECK IF INTERRUPT FLAG IS HIGH (ONLY OUTPUT IF INTERRUPT)
+(0056)  CS-0x018  0x0809B         || BRNE MAIN ; IF IT IS NOT HIGH, RETURN TO MAIN
+(0057)  CS-0x019  0x34042         || OUT R0, LEDS ; OUTPUT SWITCH VALUES TO LEDS
+(0058)  CS-0x01A  0x36300         || MOV R3, 0x00 ; RESET INTERRUPT FLAG
+(0059)  CS-0x01B  0x08098         || BRN MAIN ; RETURN TO MAIN
+(0060)                            || 
+(0061)                       1023  || .ORG 0x3FF
+(0062)  CS-0x3FF  0x08020  0x3FF  || VECTOR: BRN ISR ; CALL ISR
 
 
 
@@ -93,12 +94,12 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-CHECK_BTN      0x00C   (0040)  ||  0047 0053 
-ISR            0x005   (0032)  ||  0061 
-MAIN           0x013   (0049)  ||  0030 0055 0058 
+CHECK_BTN      0x00C   (0042)  ||  0037 0049 
+ISR            0x004   (0031)  ||  0062 
+MAIN           0x013   (0051)  ||  0029 0056 0059 
 VALUES_EQUAL   0x007   (0034)  ||  
-VALUES_NOT_EQUAL 0x009   (0036)  ||  0033 
-VECTOR         0x3FF   (0061)  ||  
+VALUES_NOT_EQUAL 0x00A   (0039)  ||  0033 
+VECTOR         0x3FF   (0062)  ||  
 
 
 -- Directives: .BYTE
@@ -108,10 +109,10 @@ VECTOR         0x3FF   (0061)  ||
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-BUTTONS        0x09B   (0016)  ||  0044 
+BUTTONS        0x09B   (0016)  ||  0046 
 IN_PORT        0x09A   (0015)  ||  
-LEDS           0x042   (0017)  ||  0043 0056 
-SWITCHES       0x020   (0018)  ||  0051 
+LEDS           0x042   (0017)  ||  0036 0045 0057 
+SWITCHES       0x020   (0018)  ||  0053 
 
 
 -- Directives: .DEF
