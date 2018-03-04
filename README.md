@@ -1,20 +1,19 @@
-# Issues
+# CPE 233 Assignments
 
-RAT_MCU
-When the Assembly file was:
-```Assembly
-IN r10,SWITCH_PORT
-; MOV r11,0xFF
-EXOR r10,r11
-OUT r10,LED_PORT
-BRN main
-```
-the blip did not happen. However, when the assembly file was
-```Assembly
-IN r10,SWITCH_PORT
-MOV r11,0xFF
-EXOR r10,r11
-OUT r10,LED_PORT
-BRN main
-```
-The blip did occur.
+Developed by: Dominic Gaiero and Elizabeth Davis
+
+This repository contains all of the assignments for CPE 233. Throught this class, we developed a RAT MCU in VHDL that could run programs developed in the RAT assembly language.
+
+A table of the assignments is shown below:
+
+Assignment Name | Description
+--- | ---
+Rat 1 | ...
+Rat 2 | ...
+Rat 3 | ...
+Rat 4 | ...
+Rat 5 | ...
+Rat 6 | ...
+Rat 7 | ...
+Rat 8 | ...
+HW 1 | ...
