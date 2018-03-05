@@ -1,3 +1,11 @@
+----------------------------------------------------------------------------------
+--
+-- RAT ASSIGNMENT NO. 8:
+-- INTERRUPT_WRAPPER.VHD
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
+--
+-- WRAPS INTERRUPT FLAGS
+----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 

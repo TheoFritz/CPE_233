@@ -1,35 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company:
--- Engineer:
 --
--- Create Date: 02/09/2018 08:48:12 PM
--- Design Name:
--- Module Name: ALU_MUX - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
+-- RAT ASSIGNMENT NO. 8:
+-- Z_FLAG_MUX.VHD
+-- DOMINIC GAIERO AND ELIZABETH DAVIS
 --
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
+-- Modified Z_FLG_MUX file that includes the data from the shadow flags.
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Z_FLG_MUX is
     Port ( Z_IN : in STD_LOGIC;

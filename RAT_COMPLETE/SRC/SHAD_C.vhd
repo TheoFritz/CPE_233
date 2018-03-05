@@ -1,11 +1,10 @@
 ----------------------------------------------------------------------------------
 --
--- RAT ASSIGNMENT NO. 5:
--- Z_FLAG_FF.vhd
+-- RAT ASSIGNMENT NO. 8:
+-- SHAD_C.vhd
 -- DOMINIC GAIERO AND ELIZABETH DAVIS
 --
--- The Z_FLAG file creates a d flip-flop that handles
--- the Z flag within the the flags component.
+-- SHADOW FLAG FLIP-FLOP FOR C FLAG
 ----------------------------------------------------------------------------------
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -25,7 +24,7 @@ ARCHITECTURE Behavioral OF SHAD_C IS
 BEGIN
 	SHAD_C_DF : PROCESS (C_FLAG_TEMP, C, CLK, FLG_SHAD_LD)
 	BEGIN
-		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when FLG_Z_LD is high
+		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when FLG_SHAD_LD is high
 			IF FLG_SHAD_LD = '1' THEN -- the flip-flop will latch data.
 				C_FLAG_TEMP <= C;
 			ELSE
