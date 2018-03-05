@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/VIVADO/RAT.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d4dd6d7ed6024123b509a9c099040e8f"/>
@@ -204,6 +204,13 @@
       </File>
       <File Path="$PPRDIR/../SRC/RAT_WRAPPER.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../SRC/Interrupt_Driver.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
