@@ -65,6 +65,17 @@ ARCHITECTURE Behavioral OF RAT_MCU IS
 		);
 	END COMPONENT;
 
+	component INTURREPT_WRAPPER
+	port (
+	  INT   : IN  STD_LOGIC;
+	  I_SET : IN  STD_LOGIC;
+	  I_CLR : IN  STD_LOGIC;
+	  CLK   : IN  STD_LOGIC;
+	  I_OUT : OUT STD_LOGIC
+	);
+	end component INTURREPT_WRAPPER;
+
+
 	COMPONENT prog_rom
 		PORT
 		(
@@ -265,6 +276,8 @@ ARCHITECTURE Behavioral OF RAT_MCU IS
 	SIGNAL SCR_DATA_OUT     : std_logic_vector(9 DOWNTO 0);
 	SIGNAL SCR_ADDR         : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
+	SIGNAL I_OUT : STD_LOGIC;
+
 
 
 BEGIN
@@ -273,7 +286,7 @@ BEGIN
 	(
 		C_FLAG       => C_FLAG,
 		Z_FLAG       => Z_FLAG,
-		INT          => INT,
+		INT          => I_OUT,
 		RESET        => RESET,
 		OPCODE_HI_5  => OPCODE_HI_5,
 		OPCODE_LO_2  => OPCODE_LO_2,
@@ -302,6 +315,16 @@ BEGIN
 		RST          => RST,
 		IO_STRB      => IO_STRB
 	);
+
+	INTURREPT_WRAPPER_i : INTURREPT_WRAPPER
+	port map (
+	  INT   => INT,
+	  I_SET => I_SET,
+	  I_CLR => I_CLR,
+	  CLK   => CLK,
+	  I_OUT => I_OUT
+	);
+
 
 	FLAGS_i                 : FLAGS
 	PORT MAP

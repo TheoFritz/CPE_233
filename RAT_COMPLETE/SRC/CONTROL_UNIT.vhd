@@ -61,19 +61,26 @@ ENTITY CONTROL_UNIT IS
         IO_STRB      : OUT STD_LOGIC);
 END CONTROL_UNIT;
 ARCHITECTURE Behavioral OF CONTROL_UNIT IS
+
+
     -- Three different FSM states
-    TYPE state_type IS (ST_INIT, ST_FETCH, ST_EXEC);
+    TYPE state_type IS (ST_INIT, ST_FETCH, ST_EXEC, ST_INT);
     SIGNAL PS, NS       : state_type;
     --OP Code
     SIGNAL sig_opcode_7 : std_logic_vector(6 DOWNTO 0);
     SIGNAL EXEC_STATE   : STD_LOGIC_VECTOR(5 DOWNTO 0);
+
 BEGIN
+
+
+
     sync_proc : PROCESS (CLK, NS, RESET)
     BEGIN
         IF (RISING_EDGE(CLK)) THEN
-            PS <= NS;
             IF (RESET = '1') THEN
                 PS <= ST_INIT;
+            else
+                PS<= NS;
             END IF;
         END IF;
     END PROCESS sync_proc;
@@ -111,7 +118,11 @@ BEGIN
                 NS     <= ST_EXEC;
                 PC_INC <= '1';
             WHEN ST_EXEC =>
-                NS <= ST_FETCH;
+              IF (INT = '0') THEN
+                  NS <= ST_FETCH;
+              ELSE
+                  NS <= ST_INT;
+              END IF;
                 CASE SIG_OPCODE_7 IS
                     WHEN "0000100" => -- ADD (REG-REG)
                         RF_WR       <= '1';
@@ -312,10 +323,39 @@ BEGIN
                     WHEN "0101000" => -- WSP
                         SP_LD <= '1';
 
+                    WHEN "0110111" => -- RETIE
+                        PC_LD <= '1';
+                        PC_MUX_SEL <= "01";
+                        SCR_ADDR_SEL <= "11";
+                        SP_INC <= '1';
+                        I_SET <= '1';
+                        FLG_LD_SEL <= '1';
+                    WHEN "0110110" => -- RETID
+                        PC_LD <= '1';
+                        PC_MUX_SEL <= "01";
+                        SCR_ADDR_SEL <= "11";
+                        SP_INC <= '1';
+                        I_CLR <= '1';
+                        FLG_LD_SEL <= '1';
+                    WHEN "0110100" => -- SEI
+                        I_SET <= '1';
+                    WHEN "0110101" => -- CLI
+                        I_CLR <= '1';
 
                     WHEN OTHERS =>
                         NS <= ST_FETCH;
                 END CASE;
+                  WHEN ST_INT =>
+                      NS <= ST_FETCH;
+                      PC_LD <= '1';
+                      PC_MUX_SEL <= "10";
+                      SCR_WE <= '1';
+                      SCR_DATA_SEL <= '1';
+                      SCR_ADDR_SEL <= "11";
+                      SP_DECR <= '1';
+                      FLG_SHAD_LD <= '1';
+                      I_CLR <= '1';
+
             WHEN OTHERS =>
                 NS <= ST_INIT;
         END CASE;

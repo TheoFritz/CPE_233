@@ -88,8 +88,11 @@ ARCHITECTURE Behavioral OF FLAGS IS
 
 
 	signal SHAD_C_FLAG : STD_LOGIC;
+	signal SHAD_Z_FLG : std_logic;
 	SIGNAL C_FLG_DATA_OUT : STD_LOGIC;
 	SIGNAL C_FLAG_TEMP : STD_LOGIC;
+	SIGNAL Z_FLG_DATA_OUT : STD_LOGIC;
+	SIGNAL Z_FLAG_TEMP : STD_LOGIC;
 
 
 BEGIN
@@ -125,9 +128,29 @@ BEGIN
 	Z_FLAG_FF_i : Z_FLAG_FF
 	PORT MAP
 	(
-		Z        => Z,
+		Z        => Z_FLG_DATA_OUT,
 		FLG_Z_LD => FLG_Z_LD,
 		CLK      => CLK,
 		Z_FLAG   => Z_FLAG
 	);
+
+	Z_FLAG_MUX_i : Z_FLG_MUX
+	PORT MAP (
+	Z_IN           => Z,
+	SHAD_Z         => SHAD_Z_FLG,
+	FLG_LD_SEL     => FLG_LD_SEL,
+	Z_FLG_DATA_OUT => Z_FLG_DATA_OUT
+);
+
+  SHAD_Z_i: SHAD_Z
+	PORT MAP (
+	Z           => Z_FLAG_TEMP,
+	FLG_SHAD_LD => FLG_SHAD_LD,
+	CLK         => CLK,
+	SHAD_Z_FLAG => SHAD_Z_FLG
+
+	);
+
+	C_FLAG <= C_FLAG_TEMP;
+	Z_FLAG <= Z_FLAG_TEMP;
 END Behavioral;

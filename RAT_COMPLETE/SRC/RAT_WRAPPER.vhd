@@ -19,6 +19,7 @@ entity RAT_wrapper is
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
+           INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
            CLK      : in    STD_LOGIC);
 end RAT_wrapper;
@@ -59,6 +60,15 @@ architecture Behavioral of RAT_wrapper is
         );
     END COMPONENT BCD7SEG_8;
 
+    component db_1shot_FSM
+    port (
+      A    : in  STD_LOGIC;
+      CLK  : in  STD_LOGIC;
+      A_DB : out STD_LOGIC
+    );
+    end component db_1shot_FSM;
+
+
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
    signal s_input_port  : std_logic_vector (7 downto 0);
    signal s_output_port : std_logic_vector (7 downto 0);
@@ -68,7 +78,7 @@ architecture Behavioral of RAT_wrapper is
    constant MAX_COUNT_50MHZ : integer := (2);     -- clock divider
    signal CLK_50MHZ : std_logic := '0';
    signal SEVEN_SEG_IM : std_logic_vector (3 downto 0);
-   --signal s_interrupt   : std_logic; -- not yet used
+   signal s_interrupt   : std_logic;
 
    -- Register definitions for output devices ------------------------------------
    -- add signals for any added outputs
@@ -112,9 +122,18 @@ begin
               PORT_ID  => s_port_id,
               RESET    => RST,
               IO_STRB  => s_load,
-              INT      => '0',  -- s_interrupt
+              INT      => s_interrupt,
               CLK      => CLK_50MHZ);
    -------------------------------------------------------------------------------
+
+
+   db_1shot_FSM_i : db_1shot_FSM
+    port map (
+      A    => INT,
+      CLK  => CLK_50MHZ,
+      A_DB => s_interrupt
+    );
+
 
    SSEG1: BCD7SEG_8
    PORT MAP( seg => seg,
