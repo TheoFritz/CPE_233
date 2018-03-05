@@ -52,13 +52,15 @@ architecture Behavioral of RAT_wrapper is
    end component RAT_MCU;
    -------------------------------------------------------------------------------
 
-   COMPONENT BCD7SEG_8
-    PORT (
-            sw : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-            seg : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-            an : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
-        );
-    END COMPONENT BCD7SEG_8;
+   component sseg_dec
+   port (
+     ALU_VAL  : in  std_logic_vector(7 downto 0);
+     CLK      : in  std_logic;
+     DISP_EN  : out std_logic_vector(3 downto 0);
+     SEGMENTS : out std_logic_vector(7 downto 0)
+   );
+   end component sseg_dec;
+
 
     component db_1shot_FSM
     port (
@@ -135,10 +137,19 @@ begin
     );
 
 
-   SSEG1: BCD7SEG_8
-   PORT MAP( seg => seg,
-             an  => an,
-             sw => SEVEN_SEG_IM);
+    sseg_dec_i : sseg_dec
+    port map (
+      ALU_VAL  => r_SevenSeg,
+      CLK      => CLK,
+      DISP_EN  => an,
+      SEGMENTS => seg
+    );
+
+
+   -- SSEG1: BCD7SEG_8
+   -- PORT MAP( seg => seg,
+   --           an  => an,
+   --           sw => SEVEN_SEG_IM);
 
    -------------------------------------------------------------------------------
    -- MUX for selecting what input to read ---------------------------------------
