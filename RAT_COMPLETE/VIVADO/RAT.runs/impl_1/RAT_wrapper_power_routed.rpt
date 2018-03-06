@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Sun Mar  4 21:25:32 2018
+| Date             : Mon Mar  5 15:44:10 2018
 | Host             : DPS-XPS running 64-bit major release  (build 9200)
 | Command          : report_power -file RAT_wrapper_power_routed.rpt -pb RAT_wrapper_power_summary_routed.pb -rpx RAT_wrapper_power_routed.rpx
 | Design           : RAT_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.111 |
-| Dynamic (W)              | 0.039 |
+| Total On-Chip Power (W)  | 0.110 |
+| Dynamic (W)              | 0.038 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.4  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |      573 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      272 |     20800 |            1.31 |
+| Slice Logic              |     0.003 |      593 |       --- |             --- |
+|   LUT as Logic           |     0.002 |      269 |     20800 |            1.29 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      9600 |            0.50 |
 |   CARRY4                 |    <0.001 |       19 |      8150 |            0.23 |
 |   F7/F8 Muxes            |    <0.001 |       64 |     32600 |            0.20 |
-|   Register               |    <0.001 |       90 |     41600 |            0.22 |
+|   Register               |    <0.001 |      103 |     41600 |            0.25 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |       30 |       --- |             --- |
-| Signals                  |     0.004 |      393 |       --- |             --- |
+|   Others                 |     0.000 |       44 |       --- |             --- |
+| Signals                  |     0.004 |      409 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
-| I/O                      |     0.031 |       31 |       106 |           29.25 |
+| I/O                      |     0.031 |       38 |       106 |           35.85 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.111 |          |           |                 |
+| Total                    |     0.110 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.008 |      0.010 |
+| Vccint    |       1.000 |     0.017 |       0.007 |      0.010 |
 | Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
 | Vcco33    |       3.300 |     0.010 |       0.009 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,7 +141,7 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| RAT_wrapper                      |     0.039 |
+| RAT_wrapper                      |     0.038 |
 |   CPU                            |     0.006 |
 |     ALU_i                        |    <0.001 |
 |     CU                           |    <0.001 |
@@ -175,8 +175,15 @@ Table of Contents
 |       memoryModule_reg_0_255_9_9 |    <0.001 |
 |     prog_rom_i                   |     0.003 |
 |     stack_pointer_i              |    <0.001 |
-|   db_1shot_FSM_i                 |    <0.001 |
-|     bounce_counter               |    <0.001 |
+|   int_dvr_i                      |    <0.001 |
+|     I_FLAG_FF_0                  |    <0.001 |
+|     I_FLAG_FF_1                  |    <0.001 |
+|     I_FLAG_FF_2                  |    <0.001 |
+|     I_FLAG_FF_3                  |    <0.001 |
+|     I_FLAG_FF_4                  |    <0.001 |
+|     I_FLAG_FF_5                  |    <0.001 |
+|     I_FLAG_FF_6                  |    <0.001 |
+|     I_FLAG_FF_7                  |    <0.001 |
 |   sseg_dec_i                     |     0.001 |
 |     my_clk                       |    <0.001 |
 +----------------------------------+-----------+

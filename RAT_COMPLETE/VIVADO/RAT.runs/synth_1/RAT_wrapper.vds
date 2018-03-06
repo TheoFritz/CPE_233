@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sun Mar  4 21:23:21 2018
-# Process ID: 122996
+# Start of session at: Mon Mar  5 15:42:01 2018
+# Process ID: 126912
 # Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1
 # Command line: vivado.exe -log RAT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAT_wrapper.tcl
 # Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/RAT_wrapper.vds
@@ -15,43 +15,43 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 137132 
+INFO: Helper process launched with PID 131460 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 305.348 ; gain = 83.883
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 305.527 ; gain = 84.035
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:27]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
+INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
 INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:284]
 INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
 INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:113]
 INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
-INFO: [Synth 8-3491] module 'INTURREPT_WRAPPER' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:4' bound to instance 'INTURREPT_WRAPPER_i' of component 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:319]
-INFO: [Synth 8-638] synthesizing module 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:14]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_i' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:29]
+INFO: [Synth 8-3491] module 'INTURREPT_WRAPPER' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:12' bound to instance 'INTURREPT_WRAPPER_i' of component 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:319]
+INFO: [Synth 8-638] synthesizing module 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_i' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:37]
 INFO: [Synth 8-638] synthesizing module 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'I_FLAG_FF' (2#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'INTURREPT_WRAPPER' (3#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'INTURREPT_WRAPPER' (3#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
 INFO: [Synth 8-3491] module 'FLAGS' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:13' bound to instance 'FLAGS_i' of component 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:329]
 INFO: [Synth 8-638] synthesizing module 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
-INFO: [Synth 8-3491] module 'C_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:23' bound to instance 'C_FLG_MUX_i' of component 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'C_FLG_MUX' (4#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:30]
+INFO: [Synth 8-3491] module 'C_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:15' bound to instance 'C_FLG_MUX_i' of component 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'C_FLG_MUX' (4#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
 INFO: [Synth 8-3491] module 'C_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:22' bound to instance 'C_FLAG_FF_i' of component 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:108]
 INFO: [Synth 8-638] synthesizing module 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'C_FLAG_FF' (5#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
-INFO: [Synth 8-3491] module 'SHAD_C' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:13' bound to instance 'SHAD_C_i' of component 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_C' (6#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:23]
+INFO: [Synth 8-3491] module 'SHAD_C' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:12' bound to instance 'SHAD_C_i' of component 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'SHAD_C' (6#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
 INFO: [Synth 8-3491] module 'Z_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:13' bound to instance 'Z_FLAG_FF_i' of component 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:128]
 INFO: [Synth 8-638] synthesizing module 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'Z_FLAG_FF' (7#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
-INFO: [Synth 8-3491] module 'Z_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:34' bound to instance 'Z_FLAG_MUX_i' of component 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:137]
-INFO: [Synth 8-638] synthesizing module 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'Z_FLG_MUX' (8#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:41]
-INFO: [Synth 8-3491] module 'SHAD_Z' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:13' bound to instance 'SHAD_Z_i' of component 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:145]
-INFO: [Synth 8-638] synthesizing module 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_Z' (9#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:23]
+INFO: [Synth 8-3491] module 'Z_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:15' bound to instance 'Z_FLAG_MUX_i' of component 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Z_FLG_MUX' (8#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
+INFO: [Synth 8-3491] module 'SHAD_Z' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:11' bound to instance 'SHAD_Z_i' of component 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'SHAD_Z' (9#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
 WARNING: [Synth 8-3848] Net Z_FLAG_TEMP in module/entity FLAGS does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:95]
 INFO: [Synth 8-256] done synthesizing module 'FLAGS' (10#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
 INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:344]
@@ -164,13 +164,7 @@ INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/dgaiero/Documen
 INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'db_1shot_FSM' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:26' bound to instance 'db_1shot_FSM_i' of component 'db_1shot_FSM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'db_1shot_FSM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:32]
-INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:27' bound to instance 'bounce_counter' of component 'Counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'counter' (23#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'db_1shot_FSM' (24#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:32]
-INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:140]
+INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:157]
 INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
 INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:56]
 INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
@@ -178,17 +172,30 @@ WARNING: [Synth 8-6014] Unused sequential element cnt_tot_reg was removed.  [C:/
 WARNING: [Synth 8-6014] Unused sequential element msd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:165]
 WARNING: [Synth 8-6014] Unused sequential element mmsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:166]
 WARNING: [Synth 8-6014] Unused sequential element lsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:167]
-INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (25#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (23#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
 INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:236' bound to instance 'my_clk' of component 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:62]
 INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-256] done synthesizing module 'clk_div' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (24#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
 INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:112]
 WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:101]
 WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:102]
-INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (28#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
+INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
+WARNING: [Synth 8-614] signal 'INTERRUPT_STATUS' is read in the process but is not in the sensitivity list [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 356.438 ; gain = 134.973
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 355.984 ; gain = 134.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -198,7 +205,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 356.438 ; gain = 134.973
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 355.984 ; gain = 134.492
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -217,22 +224,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 657.672 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 657.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 657.672 ; gain = 436.207
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 657.176 ; gain = 435.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 657.672 ; gain = 436.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 657.176 ; gain = 435.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 657.672 ; gain = 436.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 657.176 ; gain = 435.684
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "I_SET" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I_CLR" won't be mapped to RAM because it is too sparse
@@ -254,34 +261,12 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 WARNING: [Synth 8-6014] Unused sequential element PC_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element SP_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element s_count_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:44]
-INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'db_1shot_FSM'
-WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MMSD_OUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
-WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 st_init |                              000 |                              000
-                st_a_low |                              001 |                              001
-        st_a_low_to_high |                              010 |                              010
-               st_a_high |                              011 |                              011
-        st_a_high_to_low |                              100 |                              100
-             st_one_shot |                              101 |                              101
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'db_1shot_FSM'
-WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 657.672 ; gain = 436.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 657.176 ; gain = 435.684
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,7 +283,7 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 13    
+	   2 Input      8 Bit       Adders := 12    
 	   2 Input      4 Bit       Adders := 7     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 3     
@@ -307,9 +292,9 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 5     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 15    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     10 Bit        Muxes := 1     
@@ -321,7 +306,6 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 17    
 	   5 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	  14 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	  48 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 3     
@@ -329,10 +313,10 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 5     
 	  51 Input      1 Bit        Muxes := 12    
 	  48 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 19    
-	   6 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 17    
 	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -343,12 +327,14 @@ Hierarchical RTL Component report
 Module RAT_wrapper 
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
 Module CONTROL_UNIT 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -441,18 +427,6 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Muxes : 
 	   5 Input      8 Bit        Muxes := 1     
-Module counter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-Module db_1shot_FSM 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  14 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 3     
 Module bin2bcdconv 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -506,12 +480,14 @@ INFO: [Synth 8-5546] ROM "CPU/CU/PC_MUX_SEL" won't be mapped to RAM because it i
 INFO: [Synth 8-5545] ROM "sseg_dec_i/my_clk/div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "sseg_dec_i/my_clk/tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "O390" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O360" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element db_1shot_FSM_i/bounce_counter/s_count_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:44]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 657.672 ; gain = 436.207
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 657.176 ; gain = 435.684
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -552,13 +528,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 703.621 ; gain = 482.156
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 701.734 ; gain = 480.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 716.883 ; gain = 495.418
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 715.320 ; gain = 493.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -570,7 +546,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -594,7 +570,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -607,7 +583,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -619,25 +595,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -655,19 +631,19 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BUFG       |     2|
 |2     |CARRY4     |    19|
-|3     |LUT1       |    35|
-|4     |LUT2       |    30|
-|5     |LUT3       |    34|
-|6     |LUT4       |    53|
-|7     |LUT5       |    62|
-|8     |LUT6       |   129|
+|3     |LUT1       |    34|
+|4     |LUT2       |    27|
+|5     |LUT3       |    32|
+|6     |LUT4       |    66|
+|7     |LUT5       |    63|
+|8     |LUT6       |   114|
 |9     |MUXF7      |    26|
 |10    |MUXF8      |     8|
 |11    |RAM256X1S  |    10|
 |12    |RAM32X1D   |     8|
 |13    |RAMB16_S18 |     1|
-|14    |FDRE       |    88|
-|15    |IBUF       |    11|
+|14    |FDRE       |   101|
+|15    |IBUF       |    18|
 |16    |OBUF       |    20|
 +------+-----------+------+
 
@@ -675,8 +651,8 @@ Report Instance Areas:
 +------+------------------------+------------------+------+
 |      |Instance                |Module            |Cells |
 +------+------------------------+------------------+------+
-|1     |top                     |                  |   536|
-|2     |  CPU                   |RAT_MCU           |   310|
+|1     |top                     |                  |   549|
+|2     |  CPU                   |RAT_MCU           |   317|
 |3     |    ALU_i               |ALU               |    29|
 |4     |    CU                  |CONTROL_UNIT      |    39|
 |5     |    FLAGS_i             |FLAGS             |     7|
@@ -685,25 +661,32 @@ Report Instance Areas:
 |8     |      SHAD_Z_i          |SHAD_Z            |     2|
 |9     |      Z_FLAG_FF_i       |Z_FLAG_FF         |     2|
 |10    |    INTURREPT_WRAPPER_i |INTURREPT_WRAPPER |     1|
-|11    |      I_FLAG_FF_i       |I_FLAG_FF         |     1|
+|11    |      I_FLAG_FF_i       |I_FLAG_FF_7       |     1|
 |12    |    PC                  |program_counter   |    28|
 |13    |    REG_FILE_i          |REG_FILE          |    34|
 |14    |    SCRATCH_RAM_i       |SCRATCH_RAM       |    10|
-|15    |    prog_rom_i          |prog_rom          |   139|
+|15    |    prog_rom_i          |prog_rom          |   146|
 |16    |    stack_pointer_i     |stack_pointer     |    23|
-|17    |  db_1shot_FSM_i        |db_1shot_FSM      |    35|
-|18    |    bounce_counter      |counter           |    31|
-|19    |  sseg_dec_i            |sseg_dec          |   101|
-|20    |    my_clk              |clk_div           |    83|
+|17    |  int_dvr_i             |Interrupt_Driver  |    18|
+|18    |    I_FLAG_FF_0         |I_FLAG_FF         |     2|
+|19    |    I_FLAG_FF_1         |I_FLAG_FF_0       |     2|
+|20    |    I_FLAG_FF_2         |I_FLAG_FF_1       |     2|
+|21    |    I_FLAG_FF_3         |I_FLAG_FF_2       |     2|
+|22    |    I_FLAG_FF_4         |I_FLAG_FF_3       |     2|
+|23    |    I_FLAG_FF_5         |I_FLAG_FF_4       |     2|
+|24    |    I_FLAG_FF_6         |I_FLAG_FF_5       |     4|
+|25    |    I_FLAG_FF_7         |I_FLAG_FF_6       |     2|
+|26    |  sseg_dec_i            |sseg_dec          |   101|
+|27    |    my_clk              |clk_div           |    83|
 +------+------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 727.664 ; gain = 506.199
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 727.664 ; gain = 204.965
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 727.664 ; gain = 506.199
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 725.609 ; gain = 202.926
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 725.609 ; gain = 504.117
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -713,9 +696,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
   RAMB16_S18 => RAMB18E1: 1 instances
 
-133 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+133 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 727.664 ; gain = 513.867
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 725.609 ; gain = 511.891
 INFO: [Common 17-1381] The checkpoint 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/RAT_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 727.664 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Mar  4 21:24:20 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 725.609 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  5 15:42:55 2018...
