@@ -17,39 +17,31 @@
 
 .DSEG
 .ORG 0x00
-.DB 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80
 ;--------------------------------------------------------------------------
 ;-- .ORG used in code segment
 ;--------------------------------------------------------------------------
 .CSEG
-.ORG 0x20                             ; SET THE DATA SEGMENT COUNTER TO 0x20
+.ORG 0x20                              ; SET THE DATA SEGMENT COUNTER TO 0x20
                SEI                     ; ENABLE INTERRUPTS
-               MOV R30, 0x01           ; LED HIGH
-               MOV R20, 0x00           ; LED LOW
+               MOV R20, 0x01           ; LED HIGH
+               MOV R30, 0xFF           ; LED LOW
 
-MAIN:          IN   R3, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
-               OUT  R3, INT_EN        ; ENABLE PREVIOUSLY SET INTERRUPTS
-               OUT  R30, LEDS         ; TURN LED ON
+MAIN:          IN   R0, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
+               OUT  R31, SEVEN_SEG    ; ENABLE PREVIOUSLY SET INTERRUPTS
+               OUT  R0, INT_EN        ; TURN LED ON
                CALL DELAY             ; DELAY FOR 500 ms
                OUT  R20, LEDS         ; TURN LED OFF
+			   CALL DELAY
+			   OUT R21, LEDS
 			   BRN MAIN
 
 
 
-ISR:           MOV  R1, 0x00
-ISR_MAIN_LOOP: IN   R0, INT_STATUS    ; READ IN THE INTERRUPT STATUS
-               LD   R2, (R1)          ; READ VALUE IN SCRATCH RAM TO MASK CURRENT BIT OF INTERRUPT
-               AND  R0, R2            ; MASK CURRENT BIT
-               BRNE ISR_OUTPUT        ; IF INTERRUPT IS ENABLED OUTPUT TO SEVEN SEGMENT
-ISR_OUTPUT   : OUT  R2, SEVEN_SEG     ; OUTPUT CURRENT INTERRUPT NO. TO SEVEN SEGMENT
-DELAY_ISR    : CALL DELAY             ; DELAY FOR 500 ms
-               CALL DELAY             ; DELAY FOR 500 ms
-               OUT  R2, INT_CLR       ; OUTPUT CURRENT INTERRUPT TO CLEAR LINE
-               ADD  R1, 0x01          ; INCREMENT COUNT REG
-               CMP  R1, 0x08          ; SEE IF TOTAL NO. INTERRUPT REACHED
-               BRNE ISR_MAIN_LOOP     ; IF NOT LOOP BACK TO TOP OF ISR
-               RETIE                  ; ELSE, RETURN TO MAIN PROGRAM
-
+ISR:           CLI
+               IN R10, INT_STATUS
+			   OUT R10, SEVEN_SEG
+			   CALL DELAY
+			   RETIE
 
 
 
