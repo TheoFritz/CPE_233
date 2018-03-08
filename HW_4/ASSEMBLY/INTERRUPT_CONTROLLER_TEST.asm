@@ -22,16 +22,15 @@
 ;-- .ORG used in code segment
 ;--------------------------------------------------------------------------
 .CSEG
-.ORG 0x20                             ; SET THE DATA SEGMENT COUNTER TO 0x20
+.ORG 0x20                              ; SET THE DATA SEGMENT COUNTER TO 0x20
                SEI                     ; ENABLE INTERRUPTS
                MOV R30, 0x01           ; LED HIGH
                MOV R20, 0x00           ; LED LOW
 
 MAIN:          IN   R3, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
                OUT  R3, INT_EN        ; ENABLE PREVIOUSLY SET INTERRUPTS
-               OUT  R30, LEDS         ; TURN LED ON
+               CALL BLINK_LED         ; TOGGLE LEDS
                CALL DELAY             ; DELAY FOR 500 ms
-               OUT  R20, LEDS         ; TURN LED OFF
 			   BRN MAIN
 
 
@@ -52,7 +51,9 @@ DELAY_ISR    : CALL DELAY             ; DELAY FOR 500 ms
 
 
 
-
+BLINK_LED   :	EXOR R30,0x01
+				OUT R30,LEDS
+				RET
 
 
 

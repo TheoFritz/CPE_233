@@ -26,7 +26,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd
-  C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd

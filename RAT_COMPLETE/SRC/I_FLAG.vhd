@@ -20,16 +20,18 @@ ENTITY I_FLAG_FF IS
 END I_FLAG_FF;
 
 ARCHITECTURE Behavioral OF I_FLAG_FF IS
-	SIGNAL I_FLG_TEMP : STD_LOGIC;
+	SIGNAL I_FLG_TEMP : STD_LOGIC := '0';
 
 BEGIN
 	I_FLAG_DF : PROCESS (I_FLG_TEMP, I_SET, I_CLR, CLK)
 	BEGIN
 		IF (RISING_EDGE(CLK)) THEN -- When the rising edge of the clock and when I_SET is high
-		    IF I_SET = '1' THEN
-		        I_FLG_TEMP <= '1';
-			ELSIF I_CLR = '1' THEN -- when I_Set is high then the output will go high
-				I_FLG_TEMP <= '0';
+		    IF I_CLR = '1' THEN
+		        I_FLG_TEMP <= '0';
+			ELSIF I_SET = '1' THEN -- when I_Set is high then the output will go high
+				I_FLG_TEMP <= '1';
+			ELSE
+			    I_FLG_TEMP <= I_FLG_TEMP;
 			END IF;
 		END IF;
 	END PROCESS;

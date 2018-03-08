@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Mar  7 20:47:41 2018
+| Date         : Wed Mar  7 23:46:38 2018
 | Host         : DPS-XPS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file RAT_wrapper_methodology_drc_routed.rpt -rpx RAT_wrapper_methodology_drc_routed.rpx
 | Design       : RAT_wrapper
@@ -455,42 +455,42 @@ Related violations: <none>
 
 TIMING-17#85 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_0/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#86 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_1/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_2/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_3/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_4/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_5/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#91 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_6/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Warning
 Non-clocked sequential cell  
-The clock pin int_dvr_i/I_FLAG_FF_7/I_FLG_TEMP_reg/C is not reached by a timing clock
+The clock pin int_dvr_i/s_OUTPUT_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Warning

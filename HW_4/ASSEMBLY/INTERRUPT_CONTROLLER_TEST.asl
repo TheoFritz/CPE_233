@@ -38,7 +38,7 @@ C5:  Raw line from source code.
 (0022)                            || ;-- .ORG used in code segment
 (0023)                            || ;--------------------------------------------------------------------------
 (0024)                            || .CSEG
-(0025)                       032  || .ORG 0x20                             ; SET THE DATA SEGMENT COUNTER TO 0x20
+(0025)                       032  || .ORG 0x20                              ; SET THE DATA SEGMENT COUNTER TO 0x20
 -------------------------------------------------------------------------------------------
 -STUP-  CS-0x000  0x36001  0x001  ||              MOV     r0,0x01     ; write dseg data to reg
 -STUP-  CS-0x001  0x3A000  0x000  ||              LD      r0,0x00     ; place reg data in mem 
@@ -64,60 +64,61 @@ C5:  Raw line from source code.
 (0029)                            || 
 (0030)  CS-0x023  0x32320  0x023  || MAIN:          IN   R3, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
 (0031)  CS-0x024  0x343AE         ||                OUT  R3, INT_EN        ; ENABLE PREVIOUSLY SET INTERRUPTS
-(0032)  CS-0x025  0x35E40         ||                OUT  R30, LEDS         ; TURN LED ON
-(0033)  CS-0x026  0x081B1         ||                CALL DELAY             ; DELAY FOR 500 ms
-(0034)  CS-0x027  0x35440         ||                OUT  R20, LEDS         ; TURN LED OFF
-(0035)  CS-0x028  0x08118         || 			   BRN MAIN
+(0032)  CS-0x025  0x081A9         ||                CALL BLINK_LED         ; TOGGLE LEDS
+(0033)  CS-0x026  0x081C1         ||                CALL DELAY             ; DELAY FOR 500 ms
+(0034)  CS-0x027  0x08118         || 			   BRN MAIN
+(0035)                            || 
 (0036)                            || 
 (0037)                            || 
-(0038)                            || 
-(0039)  CS-0x029  0x36100  0x029  || ISR:           MOV  R1, 0x00
-(0040)  CS-0x02A  0x320AA  0x02A  || ISR_MAIN_LOOP: IN   R0, INT_STATUS    ; READ IN THE INTERRUPT STATUS
-(0041)  CS-0x02B  0x0420A         ||                LD   R2, (R1)          ; READ VALUE IN SCRATCH RAM TO MASK CURRENT BIT OF INTERRUPT
-(0042)  CS-0x02C  0x00010         ||                AND  R0, R2            ; MASK CURRENT BIT
-(0043)  CS-0x02D  0x08173         ||                BRNE ISR_OUTPUT        ; IF INTERRUPT IS ENABLED OUTPUT TO SEVEN SEGMENT
-(0044)  CS-0x02E  0x34281  0x02E  || ISR_OUTPUT   : OUT  R2, SEVEN_SEG     ; OUTPUT CURRENT INTERRUPT NO. TO SEVEN SEGMENT
-(0045)  CS-0x02F  0x081B1  0x02F  || DELAY_ISR    : CALL DELAY             ; DELAY FOR 500 ms
-(0046)  CS-0x030  0x081B1         ||                CALL DELAY             ; DELAY FOR 500 ms
-(0047)  CS-0x031  0x342AC         ||                OUT  R2, INT_CLR       ; OUTPUT CURRENT INTERRUPT TO CLEAR LINE
-(0048)  CS-0x032  0x28101         ||                ADD  R1, 0x01          ; INCREMENT COUNT REG
-(0049)  CS-0x033  0x30108         ||                CMP  R1, 0x08          ; SEE IF TOTAL NO. INTERRUPT REACHED
-(0050)  CS-0x034  0x08153         ||                BRNE ISR_MAIN_LOOP     ; IF NOT LOOP BACK TO TOP OF ISR
-(0051)  CS-0x035  0x1A003         ||                RETIE                  ; ELSE, RETURN TO MAIN PROGRAM
+(0038)  CS-0x028  0x36100  0x028  || ISR:           MOV  R1, 0x00
+(0039)  CS-0x029  0x320AA  0x029  || ISR_MAIN_LOOP: IN   R0, INT_STATUS    ; READ IN THE INTERRUPT STATUS
+(0040)  CS-0x02A  0x0420A         ||                LD   R2, (R1)          ; READ VALUE IN SCRATCH RAM TO MASK CURRENT BIT OF INTERRUPT
+(0041)  CS-0x02B  0x00010         ||                AND  R0, R2            ; MASK CURRENT BIT
+(0042)  CS-0x02C  0x0816B         ||                BRNE ISR_OUTPUT        ; IF INTERRUPT IS ENABLED OUTPUT TO SEVEN SEGMENT
+(0043)  CS-0x02D  0x34281  0x02D  || ISR_OUTPUT   : OUT  R2, SEVEN_SEG     ; OUTPUT CURRENT INTERRUPT NO. TO SEVEN SEGMENT
+(0044)  CS-0x02E  0x081C1  0x02E  || DELAY_ISR    : CALL DELAY             ; DELAY FOR 500 ms
+(0045)  CS-0x02F  0x081C1         ||                CALL DELAY             ; DELAY FOR 500 ms
+(0046)  CS-0x030  0x342AC         ||                OUT  R2, INT_CLR       ; OUTPUT CURRENT INTERRUPT TO CLEAR LINE
+(0047)  CS-0x031  0x28101         ||                ADD  R1, 0x01          ; INCREMENT COUNT REG
+(0048)  CS-0x032  0x30108         ||                CMP  R1, 0x08          ; SEE IF TOTAL NO. INTERRUPT REACHED
+(0049)  CS-0x033  0x0814B         ||                BRNE ISR_MAIN_LOOP     ; IF NOT LOOP BACK TO TOP OF ISR
+(0050)  CS-0x034  0x1A003         ||                RETIE                  ; ELSE, RETURN TO MAIN PROGRAM
+(0051)                            || 
 (0052)                            || 
 (0053)                            || 
-(0054)                            || 
-(0055)                            || 
-(0056)                            || 
+(0054)  CS-0x035  0x25E01  0x035  || BLINK_LED   :	EXOR R30,0x01
+(0055)  CS-0x036  0x35E40         || 				OUT R30,LEDS
+(0056)  CS-0x037  0x18002         || 				RET
 (0057)                            || 
 (0058)                            || 
-(0059)                     0x036  || DELAY:
-(0060)  CS-0x036  0x3665E         || MOV R6, 0x5E ; MOVES 0x5E INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP1
-(0061)                            ||              ; USED FOR RESETING
-(0062)                            || 
-(0063)                     0x037  || LOOP1:       ; HIGHEST LOOP
-(0064)  CS-0x037  0x367FE         || MOV R7,0xFE  ; MOVES 0XFE INTO R2. INCREMENT COUNTER ASSOCIATED WITH LOOP2
-(0065)                            ||              ; USED FOR RESETING
-(0066)                            || 
-(0067)                     0x038  || LOOP2:       ; MIDDLE LOOP
-(0068)  CS-0x038  0x366FF         || MOV R6,0xFF  ; MOVES 0XFF INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP3
-(0069)                            || 
-(0070)                     0x039  || LOOP3:       ; LOWEST LOOP
-(0071)  CS-0x039  0x2C801         || SUB R8,0x01  ; DECREMENTS THE COUNTER
-(0072)  CS-0x03A  0x081CB         || BRNE LOOP3   ; CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
-(0073)                            || 
-(0074)  CS-0x03B  0x2C701         || SUB R7, 0x01 ; DECREMENTS THE COUNTER
-(0075)  CS-0x03C  0x081C3         || BRNE LOOP2   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
-(0076)                            || 
+(0059)                            || 
+(0060)                     0x038  || DELAY:
+(0061)  CS-0x038  0x3665E         || MOV R6, 0x5E ; MOVES 0x5E INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP1
+(0062)                            ||              ; USED FOR RESETING
+(0063)                            || 
+(0064)                     0x039  || LOOP1:       ; HIGHEST LOOP
+(0065)  CS-0x039  0x367FE         || MOV R7,0xFE  ; MOVES 0XFE INTO R2. INCREMENT COUNTER ASSOCIATED WITH LOOP2
+(0066)                            ||              ; USED FOR RESETING
+(0067)                            || 
+(0068)                     0x03A  || LOOP2:       ; MIDDLE LOOP
+(0069)  CS-0x03A  0x366FF         || MOV R6,0xFF  ; MOVES 0XFF INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP3
+(0070)                            || 
+(0071)                     0x03B  || LOOP3:       ; LOWEST LOOP
+(0072)  CS-0x03B  0x2C801         || SUB R8,0x01  ; DECREMENTS THE COUNTER
+(0073)  CS-0x03C  0x081DB         || BRNE LOOP3   ; CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
+(0074)                            || 
+(0075)  CS-0x03D  0x2C701         || SUB R7, 0x01 ; DECREMENTS THE COUNTER
+(0076)  CS-0x03E  0x081D3         || BRNE LOOP2   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
 (0077)                            || 
-(0078)  CS-0x03D  0x2C601         || SUB R6, 0x01 ; DECREMENTS THE COUNTER
-(0079)  CS-0x03E  0x081BB         || BRNE LOOP1   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
-(0080)                            || 
-(0081)  CS-0x03F  0x18002         || RET ; RETURNS
-(0082)                            || 
+(0078)                            || 
+(0079)  CS-0x03F  0x2C601         || SUB R6, 0x01 ; DECREMENTS THE COUNTER
+(0080)  CS-0x040  0x081CB         || BRNE LOOP1   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
+(0081)                            || 
+(0082)  CS-0x041  0x18002         || RET ; RETURNS
 (0083)                            || 
-(0084)                       1023  || .ORG 0x3FF
-(0085)  CS-0x3FF  0x08148  0x3FF  || VECTOR: BRN ISR
+(0084)                            || 
+(0085)                       1023  || .ORG 0x3FF
+(0086)  CS-0x3FF  0x08140  0x3FF  || VECTOR: BRN ISR
 
 
 
@@ -136,16 +137,17 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-DELAY          0x036   (0059)  ||  0033 0045 0046 
-DELAY_ISR      0x02F   (0045)  ||  
-ISR            0x029   (0039)  ||  0085 
-ISR_MAIN_LOOP  0x02A   (0040)  ||  0050 
-ISR_OUTPUT     0x02E   (0044)  ||  0043 
-LOOP1          0x037   (0063)  ||  0079 
-LOOP2          0x038   (0067)  ||  0075 
-LOOP3          0x039   (0070)  ||  0072 
-MAIN           0x023   (0030)  ||  0035 
-VECTOR         0x3FF   (0085)  ||  
+BLINK_LED      0x035   (0054)  ||  0032 
+DELAY          0x038   (0060)  ||  0033 0044 0045 
+DELAY_ISR      0x02E   (0044)  ||  
+ISR            0x028   (0038)  ||  0086 
+ISR_MAIN_LOOP  0x029   (0039)  ||  0049 
+ISR_OUTPUT     0x02D   (0043)  ||  0042 
+LOOP1          0x039   (0064)  ||  0080 
+LOOP2          0x03A   (0068)  ||  0076 
+LOOP3          0x03B   (0071)  ||  0073 
+MAIN           0x023   (0030)  ||  0034 
+VECTOR         0x3FF   (0086)  ||  
 
 
 -- Directives: .BYTE
@@ -155,11 +157,11 @@ VECTOR         0x3FF   (0085)  ||
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-INT_CLR        0x0AC   (0013)  ||  0047 
+INT_CLR        0x0AC   (0013)  ||  0046 
 INT_EN         0x0AE   (0015)  ||  0031 
-INT_STATUS     0x0AA   (0014)  ||  0040 
-LEDS           0x040   (0011)  ||  0032 0034 
-SEVEN_SEG      0x081   (0010)  ||  0044 
+INT_STATUS     0x0AA   (0014)  ||  0039 
+LEDS           0x040   (0011)  ||  0055 
+SEVEN_SEG      0x081   (0010)  ||  0043 
 SWITCHES       0x020   (0012)  ||  0030 
 
 

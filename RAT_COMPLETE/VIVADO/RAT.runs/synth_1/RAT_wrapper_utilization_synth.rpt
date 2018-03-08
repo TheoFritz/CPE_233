@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Mar  7 20:46:15 2018
+| Date         : Wed Mar  7 23:45:03 2018
 | Host         : DPS-XPS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file RAT_wrapper_utilization_synth.rpt -pb RAT_wrapper_utilization_synth.pb
 | Design       : RAT_wrapper
@@ -154,12 +154,12 @@ Table of Contents
 +----------+------+---------------------+
 | LUT6     |  114 |                 LUT |
 | FDRE     |  101 |        Flop & Latch |
-| LUT4     |   66 |                 LUT |
 | LUT5     |   63 |                 LUT |
+| LUT4     |   58 |                 LUT |
 | MUXF7    |   46 |               MuxFx |
 | RAMS64E  |   40 |  Distributed Memory |
+| LUT3     |   40 |                 LUT |
 | LUT1     |   34 |                 LUT |
-| LUT3     |   32 |                 LUT |
 | LUT2     |   27 |                 LUT |
 | OBUF     |   20 |                  IO |
 | CARRY4   |   19 |          CarryLogic |

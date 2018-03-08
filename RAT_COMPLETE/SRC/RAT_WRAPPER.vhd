@@ -33,6 +33,7 @@ architecture Behavioral of RAT_wrapper is
    -- to add constants here for the mux below
    CONSTANT SWITCHES_ID : STD_LOGIC_VECTOR (7 downto 0) := X"20";
    CONSTANT INT_STATUS  : STD_LOGIC_VECTOR (7 downto 0) := X"AA";
+   CONSTANT INT_EN        : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AE";
    -------------------------------------------------------------------------------
 
    -------------------------------------------------------------------------------
@@ -40,7 +41,6 @@ architecture Behavioral of RAT_wrapper is
    -- In future labs you can add more port IDs
    CONSTANT LEDS_ID       : STD_LOGIC_VECTOR (7 downto 0) := X"40";
    CONSTANT SEVEN_SEG     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
-   CONSTANT INT_EN        : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AE";
    CONSTANT INT_CLR       : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AC";
    -------------------------------------------------------------------------------
 
@@ -182,7 +182,7 @@ begin
    -- MUX for selecting what input to read ---------------------------------------
    -- add conditions and connections for any added PORT IDs
    -------------------------------------------------------------------------------
-   inputs: process(s_port_id, SWITCHES)
+   inputs: process(s_port_id, SWITCHES, INTERRUPT_STATUS)
    begin
       if (s_port_id = SWITCHES_ID) then
          s_input_port <= SWITCHES;
