@@ -2,10 +2,10 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Mar  5 14:55:19 2018
-# Process ID: 145036
+# Start of session at: Wed Mar  7 19:13:25 2018
+# Process ID: 24452
 # Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent114796 C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\RAT_COMPLETE\VIVADO\RAT.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25552 C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\RAT_COMPLETE\VIVADO\RAT.xpr
 # Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/vivado.log
 # Journal file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO\vivado.jou
 #-----------------------------------------------------------
@@ -13,44 +13,427 @@ start_gui
 open_project C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.xpr
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO'
-INFO: [Project 1-313] Project file moved from 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/VIVADO' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 740.035 ; gain = 84.465
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Process appears to be on host 'DESKTOP-LJILSIK' and cannot be killed from host 'DPS-XPS'
+
+launch_runs synth_1 -jobs 4
+[Wed Mar  7 19:18:46 2018] Launched synth_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Mar  7 19:20:05 2018] Launched impl_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar  7 19:21:39 2018] Launched impl_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.2
+  **** Build date : Jun 15 2017-18:53:26
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj simulation_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity I_FLAG_DVR_FF
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Interrupt_Driver
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTERRUPT_WRAPPER_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity simulation
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto d4dd6d7ed6024123b509a9c099040e8f --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_behav xil_defaultlib.simulation -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.I_FLAG_DVR_FF [i_flag_dvr_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.Interrupt_Driver [interrupt_driver_default]
+Compiling architecture behavioral of entity xil_defaultlib.simulation
+Built simulation snapshot simulation_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/xsim.dir/simulation_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/xsim.dir/simulation_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Mar  7 19:28:41 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar  7 19:28:41 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 990.551 ; gain = 0.344
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_behav -key {Behavioral:sim_1:Functional:simulation} -tclbatch {simulation.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source simulation.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1010.234 ; gain = 20.273
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar  7 19:32:14 2018] Launched synth_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/runme.log
+[Wed Mar  7 19:32:14 2018] Launched impl_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+add_force {/simulation/INT_IN} -radix hex {01 0ns}
+add_force {/simulation/INT_EN} -radix hex {01 0ns}
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/simulation/INT_IN} -radix hex {01 0ns}
+add_force {/simulation/INT_EN} -radix hex {01 0ns}
+run 20 ns
+add_force {/simulation/INT_CLEAR} -radix hex {01 0ns}
+run 20 ns
+set_property top RAT_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/simulation_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'RAT_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj RAT_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sseg_dec
+INFO: [VRFC 10-307] analyzing entity bin2bcdconv
+INFO: [VRFC 10-307] analyzing entity clk_div
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CONTROL_UNIT
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity C_FLAG_FF
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity C_FLG_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FLAGS
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity INTURREPT_WRAPPER
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity I_FLAG_FF
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity I_FLAG_DVR_FF
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Interrupt_Driver
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RAT_MCU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_FILE
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REG_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SCRATCH_RAM
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SCR_ADDR_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SCR_DATA_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SHAD_C
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SHAD_Z
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Z_FLAG_FF
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Z_FLG_MUX
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pc_mux
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity prog_rom
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity program_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity stack_pointer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RAT_wrapper
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto d4dd6d7ed6024123b509a9c099040e8f --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot RAT_wrapper_behav xil_defaultlib.RAT_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_textio
+Compiling architecture behavioral of entity xil_defaultlib.CONTROL_UNIT [control_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.I_FLAG_FF [i_flag_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.INTURREPT_WRAPPER [inturrept_wrapper_default]
+Compiling architecture behavioral of entity xil_defaultlib.C_FLG_MUX [c_flg_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.C_FLAG_FF [c_flag_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.SHAD_C [shad_c_default]
+Compiling architecture behavioral of entity xil_defaultlib.Z_FLAG_FF [z_flag_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.Z_FLG_MUX [z_flg_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.SHAD_Z [shad_z_default]
+Compiling architecture behavioral of entity xil_defaultlib.FLAGS [flags_default]
+Compiling architecture behavioral of entity xil_defaultlib.REG_FILE [reg_file_default]
+Compiling architecture behavioral of entity xil_defaultlib.REG_MUX [reg_mux_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(initp_00="000000000000...]
+Compiling architecture ramb16_s18_v of entity unisim.RAMB16_S18 [\RAMB16_S18(initp_00="0000000000...]
+Compiling architecture low_level_definition of entity xil_defaultlib.prog_rom [prog_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU_MUX [alu_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pc_mux [pc_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.program_counter [program_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.stack_pointer [stack_pointer_default]
+Compiling architecture behavioral of entity xil_defaultlib.SCR_DATA_MUX [scr_data_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.SCRATCH_RAM [scratch_ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.SCR_ADDR_MUX [scr_addr_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.RAT_MCU [rat_mcu_default]
+Compiling architecture my_ckt of entity xil_defaultlib.bin2bcdconv [bin2bcdconv_default]
+Compiling architecture my_clk_div of entity xil_defaultlib.clk_div [clk_div_default]
+Compiling architecture my_sseg of entity xil_defaultlib.sseg_dec [sseg_dec_default]
+Compiling architecture behavioral of entity xil_defaultlib.I_FLAG_DVR_FF [i_flag_dvr_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.Interrupt_Driver [interrupt_driver_default]
+Compiling architecture behavioral of entity xil_defaultlib.rat_wrapper
+Built simulation snapshot RAT_wrapper_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/xsim.dir/RAT_wrapper_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav/xsim.dir/RAT_wrapper_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Mar  7 19:39:22 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar  7 19:39:22 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.105 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "RAT_wrapper_behav -key {Behavioral:sim_1:Functional:RAT_wrapper} -tclbatch {RAT_wrapper.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source RAT_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'RAT_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1034.871 ; gain = 7.766
+add_force {/RAT_wrapper/SWITCHES} -radix hex {01 0ns}
+add_force {/RAT_wrapper/RST} -radix hex {0 0ns}
+add_force {/RAT_wrapper/CLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/RAT_wrapper/INT_IN} -radix hex {01 0ns}
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 20 ms
+run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1043.656 ; gain = 2.090
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 20 ms
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1049.816 ; gain = 0.613
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 20 ms
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1054.020 ; gain = 1.184
+run 20 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 20 ms
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1057.723 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711518A
 synth_design -rtl -name rtl_1
 Command: synth_design -rtl -name rtl_1
 Starting synth_design
 Using part: xc7a35tcpg236-1
 Top: RAT_wrapper
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 847.332 ; gain = 89.410
----------------------------------------------------------------------------------
-ERROR: [Synth 8-2029] formal int_in has no actual or default value [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:163]
-INFO: [Synth 8-994] int_in is declared here [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:77]
-INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:27]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 881.777 ; gain = 123.855
----------------------------------------------------------------------------------
-RTL Elaboration failed
-2 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
-synth_design failed
-ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a35tcpg236-1
-Top: RAT_wrapper
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 881.777 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.113 ; gain = 58.695
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:137]
+INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
 INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:284]
 INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
@@ -93,7 +476,7 @@ INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/dgaiero/
 INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:366]
 INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
 	Parameter INIT bound to: 20'b00000000000000000000 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111110100111110000010001000101110111000001000100011111111111110111011100000111110010011001111110111111100000000000000000000000000000000 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100100010001011101110110100111100110011001111111111010000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -102,10 +485,10 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/S
 	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_01 bound to: 256'b1000000010011000100000011000100001101011111111110100001101000000000000110111111110100000000000011000001000101010000000101111111110000001000000000110101111111111010000110100000001100011100000001010000000000000010000011000000101100010000000000110000100000000 
-	Parameter INIT_02 bound to: 256'b1000000100000011001010110000000010000001000100110010110000000000100000010010001101111111111111110111111111111111011111111111111101111111111111110111111111111111011111111111111111001101000000010110110111111111110011000000000101101100111111111100101100000001 
-	Parameter INIT_03 bound to: 256'b1000001000001010000000010001010001000001100000011000000100000001100000001001100010000001100010110010101100000000100000011001101100101100000000001000000110101011110011010000000101101101111111111100110000000001011011001111111111001011000000011000000011000000 
-	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000100010100010100000000000100110001011111111010000110100000001100011000000011010000000000011 
+	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_02 bound to: 256'b0111110100110000101000000000001110000001011110010100101010000001001010101010101010000001000110000101010101000000100000010111100101010100010000001000000101111001010000001010111001011111100000010010000000100000011111101111111101110100000000011010000000000000 
+	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000101000000110000011001111010000000010000001100100110011110000000000100000011010001111011011000000010111101100110100110111000000000101111100001100101101110100000001 
+	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -164,7 +547,7 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/S
 	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3F bound to: 256'b1000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3F bound to: 256'b1000000101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SRVAL bound to: 20'b00000000000000000000 
 	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
 INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:194]
@@ -194,7 +577,7 @@ INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/dgaiero/Documen
 INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:156]
+INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:157]
 INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
 INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:56]
 INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
@@ -210,29 +593,23 @@ INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/Scho
 WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:101]
 WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:102]
 INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:164]
+INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:165]
 INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[7]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[6]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[5]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[4]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[3]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[2]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[1]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[0]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'I_FLAG_DVR_FF' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:22]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
+WARNING: [Synth 8-614] signal 'INTERRUPT_STATUS' is read in the process but is not in the sensitivity list [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (28#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 882.168 ; gain = 0.391
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1150.605 ; gain = 88.188
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -242,7 +619,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 882.168 ; gain = 0.391
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1150.605 ; gain = 88.188
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -252,53 +629,11 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[0]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'INT'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[0]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[1]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[1]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[2]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[2]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[3]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[3]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[4]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[4]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[5]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[5]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[6]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[6]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[7]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[7]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'INT'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:114]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
 Completed Processing XDC Constraints
@@ -308,276 +643,86 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1225.102 ; gain = 343.324
-97 Infos, 32 Warnings, 16 Critical Warnings and 0 Errors encountered.
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 1497.992 ; gain = 435.574
+99 Infos, 10 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1225.102 ; gain = 343.324
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1235.227 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:137]
-INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:284]
-INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
-INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:113]
-INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
-INFO: [Synth 8-3491] module 'INTURREPT_WRAPPER' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:12' bound to instance 'INTURREPT_WRAPPER_i' of component 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:319]
-INFO: [Synth 8-638] synthesizing module 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_i' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'I_FLAG_FF' (2#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'INTURREPT_WRAPPER' (3#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
-INFO: [Synth 8-3491] module 'FLAGS' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:13' bound to instance 'FLAGS_i' of component 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:329]
-INFO: [Synth 8-638] synthesizing module 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
-INFO: [Synth 8-3491] module 'C_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:15' bound to instance 'C_FLG_MUX_i' of component 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'C_FLG_MUX' (4#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'C_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:22' bound to instance 'C_FLAG_FF_i' of component 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'C_FLAG_FF' (5#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
-INFO: [Synth 8-3491] module 'SHAD_C' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:12' bound to instance 'SHAD_C_i' of component 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_C' (6#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
-INFO: [Synth 8-3491] module 'Z_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:13' bound to instance 'Z_FLAG_FF_i' of component 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:128]
-INFO: [Synth 8-638] synthesizing module 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'Z_FLAG_FF' (7#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
-INFO: [Synth 8-3491] module 'Z_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:15' bound to instance 'Z_FLAG_MUX_i' of component 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:137]
-INFO: [Synth 8-638] synthesizing module 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'Z_FLG_MUX' (8#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'SHAD_Z' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:11' bound to instance 'SHAD_Z_i' of component 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:145]
-INFO: [Synth 8-638] synthesizing module 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_Z' (9#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
-WARNING: [Synth 8-3848] Net Z_FLAG_TEMP in module/entity FLAGS does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'FLAGS' (10#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
-INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:344]
-INFO: [Synth 8-638] synthesizing module 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'REG_FILE' (11#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
-INFO: [Synth 8-3491] module 'REG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:11' bound to instance 'REG_MUX_i' of component 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:356]
-INFO: [Synth 8-638] synthesizing module 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
-INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:366]
-INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
-	Parameter INIT bound to: 20'b00000000000000000000 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111110100111110000010001000101110111000001000100011111111111110111011100000111110010011001111110111111100000000000000000000000000000000 
-	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_01 bound to: 256'b1000000010011000100000011000100001101011111111110100001101000000000000110111111110100000000000011000001000101010000000101111111110000001000000000110101111111111010000110100000001100011100000001010000000000000010000011000000101100010000000000110000100000000 
-	Parameter INIT_02 bound to: 256'b1000000100000011001010110000000010000001000100110010110000000000100000010010001101111111111111110111111111111111011111111111111101111111111111110111111111111111011111111111111111001101000000010110110111111111110011000000000101101100111111111100101100000001 
-	Parameter INIT_03 bound to: 256'b1000001000001010000000010001010001000001100000011000000100000001100000001001100010000001100010110010101100000000100000011001101100101100000000001000000110101011110011010000000101101101111111111100110000000001011011001111111111001011000000011000000011000000 
-	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000100010100010100000000000100110001011111111010000110100000001100011000000011010000000000011 
-	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_08 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_09 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_10 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_11 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_12 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_13 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_14 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_15 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_16 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_17 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_18 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_19 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_1F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_20 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_21 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_22 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_23 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_24 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_25 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_26 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_27 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_28 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_29 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_2F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_30 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_31 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_32 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_33 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_34 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_35 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_36 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_37 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_38 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_39 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3F bound to: 256'b1000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SRVAL bound to: 20'b00000000000000000000 
-	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
-INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:194]
-INFO: [Synth 8-256] done synthesizing module 'prog_rom' (13#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
-INFO: [Synth 8-3491] module 'ALU_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:34' bound to instance 'ALU_MUX_i' of component 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:374]
-INFO: [Synth 8-638] synthesizing module 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'ALU_MUX' (14#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
-INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:15' bound to instance 'ALU_i' of component 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:382]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (15#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
-INFO: [Synth 8-3491] module 'pc_mux' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:21' bound to instance 'PC_MUX_1' of component 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:394]
-INFO: [Synth 8-638] synthesizing module 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'pc_mux' (16#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
-INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:24' bound to instance 'PC' of component 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:402]
-INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'program_counter' (17#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
-INFO: [Synth 8-3491] module 'stack_pointer' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:24' bound to instance 'stack_pointer_i' of component 'stack_pointer' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:413]
-INFO: [Synth 8-638] synthesizing module 'stack_pointer' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'stack_pointer' (18#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
-INFO: [Synth 8-3491] module 'SCR_DATA_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:15' bound to instance 'SCR_DATA_MUX_i' of component 'SCR_DATA_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:424]
-INFO: [Synth 8-638] synthesizing module 'SCR_DATA_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'SCR_DATA_MUX' (19#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'SCRATCH_RAM' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:16' bound to instance 'SCRATCH_RAM_i' of component 'SCRATCH_RAM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:432]
-INFO: [Synth 8-638] synthesizing module 'SCRATCH_RAM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'SCRATCH_RAM' (20#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
-INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:14' bound to instance 'SCR_ADDR_MUX_i' of component 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:441]
-INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:156]
-INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:56]
-INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
-WARNING: [Synth 8-6014] Unused sequential element cnt_tot_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:154]
-WARNING: [Synth 8-6014] Unused sequential element msd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:165]
-WARNING: [Synth 8-6014] Unused sequential element mmsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:166]
-WARNING: [Synth 8-6014] Unused sequential element lsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:167]
-INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (23#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
-INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:236' bound to instance 'my_clk' of component 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:62]
-INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-256] done synthesizing module 'clk_div' (24#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:112]
-WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:101]
-WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:102]
-INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:164]
-INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1271.563 ; gain = 36.336
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1271.563 ; gain = 36.336
----------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[0]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[0]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[1]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[1]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[2]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[2]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[3]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[3]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[4]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[4]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[5]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[5]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[6]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[6]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[7]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'INT_EN[7]'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 1272.016 ; gain = 36.789
-refresh_design
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1280.617 ; gain = 8.602
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 1498.008 ; gain = 435.590
 reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1
+
 launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Mon Mar  5 15:41:58 2018] Launched synth_1...
+[Wed Mar  7 20:33:28 2018] Launched synth_1...
 Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/runme.log
-[Mon Mar  5 15:41:58 2018] Launched impl_1...
+[Wed Mar  7 20:33:28 2018] Launched impl_1...
 Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/runme.log
-open_hw
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Mar  7 20:45:11 2018] Launched synth_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/runme.log
+[Wed Mar  7 20:45:11 2018] Launched impl_1...
+Run output will be captured here: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711518A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711518A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1507.676 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  7 21:40:58 2018...

@@ -1,77 +1,14 @@
-**Rat Assignment #1**
+# **Rat Assignment #1**
 
-**Elizabeth Davis**
-
-**Dominic Gaiero**
-
-**Part 1 Table**
-
-<table>
-  <tr>
-    <td>PC</td>
-    <td>Instruction</td>
-    <td>Destination Register Value</td>
-    <td>C=?</td>
-    <td>Z=?</td>
-    <td>Output (ADDR) (OUR instr)</td>
-  </tr>
-  <tr>
-    <td>040</td>
-    <td>MOV R10,0x05</td>
-    <td>R10 = 0x05</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>041</td>
-    <td>MOV R11,0x64</td>
-    <td>R11 = 0x64</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>042</td>
-    <td>ADD R10,R11</td>
-    <td>R10 = 0x69</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>043</td>
-    <td>ADD R10,0x14</td>
-    <td>R10 = 0x7D</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>044</td>
-    <td>MOV R20,R10</td>
-    <td>R20 = 0x7D</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-  <tr>
-    <td>045</td>
-    <td>OUT R20,LED_PORT</td>
-    <td>--</td>
-    <td>0</td>
-    <td>0</td>
-    <td>7D</td>
-  </tr>
-  <tr>
-    <td>046</td>
-    <td>BRN main_loop</td>
-    <td>--</td>
-    <td>0</td>
-    <td>0</td>
-    <td>--</td>
-  </tr>
-</table>
+|`PC`|`Instruction`|`Destination Register Value`|`C=?`|`Z=?`|`Output (ADDR) (OUR instr)`|
+|---|---|---|---|---|---|
+|`040`|`MOV R10,0x05`|`R10 = 0x05`|`0`|`0`|`--`|
+|`041`|`MOV R11,0x64`|`R11 = 0x64`|`0`|`0`|`--`|
+|`042`|`ADD R10,R11`|`R10 = 0x69`|`0`|`0`|`--`|
+|`043`|`ADD R10,0x14`|`R10 = 0x7D`|`0`|`0`|`--`|
+|`044`|`MOV R20,R10`|`R20 = 0x7D`|`0`|`0`|`--`|
+|`045`|`OUT R20,LED_PORT`|`--`|`0`|`0`|`7D`|
+|`046`|`BRN main_loop`|`--`|`0`|`0`|`--`|
 
 
 ; ----------------------------------------------------
@@ -409,4 +346,3 @@ QUESTIONS
 3. Describe a system other than the examples given in the link above in which reverse engineering could or has led to a significant business advantage?
 
     3. A manufacturer in China called BYD has become known for reverse engineering electronics, batteries, or cars to be more efficient and cost effective. Other Chinese companies work to create products that are influenced by other products, but BYD works to make a profit by finding out how other products are made and finding a way to produce them cheaper and more efficient.
-

@@ -2,23 +2,123 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Mar  5 14:55:19 2018
-# Process ID: 145036
+# Start of session at: Wed Mar  7 19:13:25 2018
+# Process ID: 24452
 # Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent114796 C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\RAT_COMPLETE\VIVADO\RAT.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25552 C:\Users\dgaiero\Documents\School\College\Year_2\Quarter_2\CPE_233\RAT_COMPLETE\VIVADO\RAT.xpr
 # Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/vivado.log
 # Journal file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.xpr
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
-refresh_design
-refresh_design
 reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+launch_simulation
+source simulation.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+add_force {/simulation/INT_IN} -radix hex {01 0ns}
+add_force {/simulation/INT_EN} -radix hex {01 0ns}
+restart
+add_force {/simulation/INT_IN} -radix hex {01 0ns}
+add_force {/simulation/INT_EN} -radix hex {01 0ns}
+run 20 ns
+add_force {/simulation/INT_CLEAR} -radix hex {01 0ns}
+run 20 ns
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RAT_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source RAT_wrapper.tcl
+add_force {/RAT_wrapper/SWITCHES} -radix hex {01 0ns}
+add_force {/RAT_wrapper/RST} -radix hex {0 0ns}
+add_force {/RAT_wrapper/CLK} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/RAT_wrapper/INT_IN} -radix hex {01 0ns}
+restart
+run 20 ms
+restart
+run 20 ms
+restart
+run 20 ms
+run 20 ms
+restart
+run 20 ms
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/impl_1/RAT_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+close_sim

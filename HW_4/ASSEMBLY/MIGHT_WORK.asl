@@ -45,41 +45,41 @@ C5:  Raw line from source code.
 (0029)  CS-0x023  0x32020  0x023  || MAIN:          IN   R0, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
 (0030)  CS-0x024  0x35F81         ||                OUT  R31, SEVEN_SEG    ; ENABLE PREVIOUSLY SET INTERRUPTS
 (0031)  CS-0x025  0x340AE         ||                OUT  R0, INT_EN        ; TURN LED ON
-(0032)  CS-0x026  0x08181         ||                CALL DELAY             ; DELAY FOR 500 ms
+(0032)  CS-0x026  0x08179         ||                CALL DELAY             ; DELAY FOR 500 ms
 (0033)  CS-0x027  0x35440         ||                OUT  R20, LEDS         ; TURN LED OFF
-(0034)  CS-0x028  0x08181         || 			   CALL DELAY
+(0034)  CS-0x028  0x08179         || 			   CALL DELAY
 (0035)  CS-0x029  0x35540         || 			   OUT R21, LEDS
 (0036)  CS-0x02A  0x08118         || 			   BRN MAIN
 (0037)                            || 
 (0038)                            || 
 (0039)                            || 
-(0040)  CS-0x02B  0x1A001  0x02B  || ISR:           CLI
-(0041)  CS-0x02C  0x32AAA         ||                IN R10, INT_STATUS
-(0042)  CS-0x02D  0x34A81         || 			   OUT R10, SEVEN_SEG
-(0043)  CS-0x02E  0x08181         || 			   CALL DELAY
-(0044)  CS-0x02F  0x1A003         || 			   RETIE
+(0040)                     0x02B  || ISR:
+(0041)  CS-0x02B  0x32AAA         ||                IN R10, INT_STATUS
+(0042)  CS-0x02C  0x34A81         || 			   OUT R10, SEVEN_SEG
+(0043)  CS-0x02D  0x08179         || 			   CALL DELAY
+(0044)  CS-0x02E  0x1A003         || 			   RETIE
 (0045)                            || 
 (0046)                            || 
 (0047)                            || 
 (0048)                            || 
 (0049)                            || 
 (0050)                            || 
-(0051)  CS-0x030  0x37D31  0x030  || DELAY:        MOV   R29, OUTSIDE
-(0052)  CS-0x031  0x2DD01  0x031  || OUTSIDE:      SUB   R29, 0x01
-(0053)  CS-0x032  0x37C33         || 			  MOV   R28, MIDDLE 
-(0054)                            || 
-(0055)  CS-0x033  0x2DC01  0x033  || MIDDLE:       SUB   R28, 0x01
-(0056)  CS-0x034  0x37B35         ||               MOV   R27, INSIDE
-(0057)                            || 
-(0058)  CS-0x035  0x2DB01  0x035  || INSIDE:       SUB   R27, 0x01
-(0059)  CS-0x036  0x081AB         ||               BRNE  INSIDE
-(0060)                            || 
-(0061)  CS-0x037  0x23C00         ||               OR    R28, 0x00
-(0062)  CS-0x038  0x0819B         ||               BRNE  MIDDLE
-(0063)                            || 
-(0064)  CS-0x039  0x23D00         ||               OR    R29, 0x00
-(0065)  CS-0x03A  0x0818B         ||               BRNE  OUTSIDE
-(0066)  CS-0x03B  0x18002         ||               RET
+(0051)                            || ; DELAY:        MOV   R29, OUTSIDE
+(0052)                            || ; OUTSIDE:      SUB   R29, 0x01
+(0053)                            || ; 			  MOV   R28, MIDDLE
+(0054)                            || ;
+(0055)                            || ; MIDDLE:       SUB   R28, 0x01
+(0056)                            || ;               MOV   R27, INSIDE
+(0057)                            || ;
+(0058)                            || ; INSIDE:       SUB   R27, 0x01
+(0059)                            || ;               BRNE  INSIDE
+(0060)                            || ;
+(0061)                            || ;               OR    R28, 0x00
+(0062)                            || ;               BRNE  MIDDLE
+(0063)                            || ;
+(0064)                            || ;               OR    R29, 0x00
+(0065)                            || ;               BRNE  OUTSIDE
+(0066)  CS-0x02F  0x18002  0x02F  || DELAY:              RET
 (0067)                            || 
 (0068)                            || 
 (0069)                       1023  || .ORG 0x3FF
@@ -102,12 +102,9 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-DELAY          0x030   (0051)  ||  0032 0034 0043 
-INSIDE         0x035   (0058)  ||  0056 0059 
+DELAY          0x02F   (0066)  ||  0032 0034 0043 
 ISR            0x02B   (0040)  ||  0070 
 MAIN           0x023   (0029)  ||  0036 
-MIDDLE         0x033   (0055)  ||  0053 0062 
-OUTSIDE        0x031   (0052)  ||  0051 0065 
 VECTOR         0x3FF   (0070)  ||  
 
 

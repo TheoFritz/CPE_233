@@ -19,7 +19,7 @@ entity RAT_wrapper is
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
-           INT      : in    STD_LOGIC;
+--           INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
            CLK      : in    STD_LOGIC;
            INT_IN   : in    STD_LOGIC_VECTOR (7 DOWNTO 0));

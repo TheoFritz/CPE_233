@@ -37,7 +37,7 @@ MAIN:          IN   R0, SWITCHES      ; READ WHAT INTERRUPTS TO ENABLE
 
 
 
-ISR:           CLI
+ISR:
                IN R10, INT_STATUS
 			   OUT R10, SEVEN_SEG
 			   CALL DELAY
@@ -48,22 +48,22 @@ ISR:           CLI
 
 
 
-DELAY:        MOV   R29, OUTSIDE
-OUTSIDE:      SUB   R29, 0x01
-			  MOV   R28, MIDDLE 
-
-MIDDLE:       SUB   R28, 0x01
-              MOV   R27, INSIDE
-
-INSIDE:       SUB   R27, 0x01
-              BRNE  INSIDE
-
-              OR    R28, 0x00
-              BRNE  MIDDLE
-
-              OR    R29, 0x00
-              BRNE  OUTSIDE
-              RET
+; DELAY:        MOV   R29, OUTSIDE
+; OUTSIDE:      SUB   R29, 0x01
+; 			  MOV   R28, MIDDLE
+;
+; MIDDLE:       SUB   R28, 0x01
+;               MOV   R27, INSIDE
+;
+; INSIDE:       SUB   R27, 0x01
+;               BRNE  INSIDE
+;
+;               OR    R28, 0x00
+;               BRNE  MIDDLE
+;
+;               OR    R29, 0x00
+;               BRNE  OUTSIDE
+DELAY:              RET
 
 
 .ORG 0x3FF

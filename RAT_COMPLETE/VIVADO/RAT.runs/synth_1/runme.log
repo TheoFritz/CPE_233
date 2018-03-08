@@ -14,55 +14,55 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11172 
+INFO: Helper process launched with PID 24328 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 307.438 ; gain = 83.695
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 304.859 ; gain = 82.914
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:138]
-INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:284]
-INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
-INFO: [Synth 8-226] default block is never used [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:113]
-INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
-INFO: [Synth 8-3491] module 'INTURREPT_WRAPPER' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:12' bound to instance 'INTURREPT_WRAPPER_i' of component 'INTURREPT_WRAPPER' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:319]
-INFO: [Synth 8-638] synthesizing module 'INTURREPT_WRAPPER' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_i' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'I_FLAG_FF' (2#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'INTURREPT_WRAPPER' (3#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
-INFO: [Synth 8-3491] module 'FLAGS' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:13' bound to instance 'FLAGS_i' of component 'FLAGS' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:329]
-INFO: [Synth 8-638] synthesizing module 'FLAGS' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
-INFO: [Synth 8-3491] module 'C_FLG_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:15' bound to instance 'C_FLG_MUX_i' of component 'C_FLG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'C_FLG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'C_FLG_MUX' (4#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'C_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:22' bound to instance 'C_FLAG_FF_i' of component 'C_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'C_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'C_FLAG_FF' (5#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
-INFO: [Synth 8-3491] module 'SHAD_C' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:12' bound to instance 'SHAD_C_i' of component 'SHAD_C' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'SHAD_C' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_C' (6#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
-INFO: [Synth 8-3491] module 'Z_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:13' bound to instance 'Z_FLAG_FF_i' of component 'Z_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:128]
-INFO: [Synth 8-638] synthesizing module 'Z_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'Z_FLAG_FF' (7#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
-INFO: [Synth 8-3491] module 'Z_FLG_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:15' bound to instance 'Z_FLAG_MUX_i' of component 'Z_FLG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:137]
-INFO: [Synth 8-638] synthesizing module 'Z_FLG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'Z_FLG_MUX' (8#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'SHAD_Z' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:11' bound to instance 'SHAD_Z_i' of component 'SHAD_Z' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:145]
-INFO: [Synth 8-638] synthesizing module 'SHAD_Z' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'SHAD_Z' (9#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
-WARNING: [Synth 8-3848] Net Z_FLAG_TEMP in module/entity FLAGS does not have driver. [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'FLAGS' (10#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
-INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:344]
-INFO: [Synth 8-638] synthesizing module 'REG_FILE' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'REG_FILE' (11#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
-INFO: [Synth 8-3491] module 'REG_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:11' bound to instance 'REG_MUX_i' of component 'REG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:356]
-INFO: [Synth 8-638] synthesizing module 'REG_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
-INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:366]
-INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
+INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
+INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
+INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (1#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/CONTROL_UNIT.vhd:63]
+INFO: [Synth 8-3491] module 'INTURREPT_WRAPPER' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:12' bound to instance 'INTURREPT_WRAPPER_i' of component 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:319]
+INFO: [Synth 8-638] synthesizing module 'INTURREPT_WRAPPER' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
+INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_i' of component 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'I_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'I_FLAG_FF' (2#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'INTURREPT_WRAPPER' (3#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/INTURREPT_WRAPPER.vhd:22]
+INFO: [Synth 8-3491] module 'FLAGS' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:13' bound to instance 'FLAGS_i' of component 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:329]
+INFO: [Synth 8-638] synthesizing module 'FLAGS' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
+INFO: [Synth 8-3491] module 'C_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:15' bound to instance 'C_FLG_MUX_i' of component 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'C_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'C_FLG_MUX' (4#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLG_MUX.vhd:22]
+INFO: [Synth 8-3491] module 'C_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:22' bound to instance 'C_FLAG_FF_i' of component 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'C_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'C_FLAG_FF' (5#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/C_FLAG_FF.vhd:34]
+INFO: [Synth 8-3491] module 'SHAD_C' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:12' bound to instance 'SHAD_C_i' of component 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'SHAD_C' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'SHAD_C' (6#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_C.vhd:22]
+INFO: [Synth 8-3491] module 'Z_FLAG_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:13' bound to instance 'Z_FLAG_FF_i' of component 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'Z_FLAG_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'Z_FLAG_FF' (7#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLAG_FF.vhd:23]
+INFO: [Synth 8-3491] module 'Z_FLG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:15' bound to instance 'Z_FLAG_MUX_i' of component 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'Z_FLG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Z_FLG_MUX' (8#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Z_FLG_MUX.vhd:22]
+INFO: [Synth 8-3491] module 'SHAD_Z' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:11' bound to instance 'SHAD_Z_i' of component 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'SHAD_Z' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'SHAD_Z' (9#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SHAD_Z.vhd:21]
+WARNING: [Synth 8-3848] Net Z_FLAG_TEMP in module/entity FLAGS does not have driver. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'FLAGS' (10#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/FLAGS.vhd:30]
+INFO: [Synth 8-3491] module 'REG_FILE' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:14' bound to instance 'REG_FILE_i' of component 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'REG_FILE' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'REG_FILE' (11#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_FILE.vhd:26]
+INFO: [Synth 8-3491] module 'REG_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:11' bound to instance 'REG_MUX_i' of component 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'REG_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/REG_MUX.vhd:21]
+INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:366]
+INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
 	Parameter INIT bound to: 20'b00000000000000000000 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010010001000101110111011010011110100110011001111111111010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001000100010111011101101111100000000111111110000000000000000000000111011110100000000000000000000000000000000 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -71,9 +71,9 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_02 bound to: 256'b1010000000000011100000011000000101001010100000010010101010101010101000000000000110000001000110000101010101000000100000011000000101010100010000001000000110000001010000001010111001011111100000010010000000100000011111101111111101110100000000011010000000000000 
-	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000100000000000001010000001100010110011110100000000100000011001101100111100000000001000000110101011110110110000000101111011001101011101110000000001011111000011001111011101000000010111110100110001 
+	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010001000100000010101100101000011010000000100001100000001010000010100001000100001001000001010000000000000 
+	Parameter INIT_02 bound to: 256'b0111101101000000110111000000000101111100111111111101110100000001011111011111111110100000000000110100010001000001011001000000000010000001010110011000000101011001100000010101100110000001010110010100010001000001011001001111111101000010100000010010001000100001 
+	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000010100000010110001100111101000000001000000101110011001111000000000010000001100000111101101100000001 
 	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -133,68 +133,69 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3F bound to: 256'b1000000101011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3F bound to: 256'b1000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SRVAL bound to: 20'b00000000000000000000 
 	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
-INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:194]
-INFO: [Synth 8-256] done synthesizing module 'prog_rom' (13#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
-INFO: [Synth 8-3491] module 'ALU_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:34' bound to instance 'ALU_MUX_i' of component 'ALU_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:374]
-INFO: [Synth 8-638] synthesizing module 'ALU_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'ALU_MUX' (14#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
-INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:15' bound to instance 'ALU_i' of component 'ALU' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:382]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (15#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
-INFO: [Synth 8-3491] module 'pc_mux' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:21' bound to instance 'PC_MUX_1' of component 'pc_mux' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:394]
-INFO: [Synth 8-638] synthesizing module 'pc_mux' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'pc_mux' (16#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
-INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:24' bound to instance 'PC' of component 'program_counter' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:402]
-INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'program_counter' (17#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
-INFO: [Synth 8-3491] module 'stack_pointer' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:24' bound to instance 'stack_pointer_i' of component 'stack_pointer' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:413]
-INFO: [Synth 8-638] synthesizing module 'stack_pointer' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'stack_pointer' (18#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
-INFO: [Synth 8-3491] module 'SCR_DATA_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:15' bound to instance 'SCR_DATA_MUX_i' of component 'SCR_DATA_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:424]
-INFO: [Synth 8-638] synthesizing module 'SCR_DATA_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'SCR_DATA_MUX' (19#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
-INFO: [Synth 8-3491] module 'SCRATCH_RAM' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:16' bound to instance 'SCRATCH_RAM_i' of component 'SCRATCH_RAM' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:432]
-INFO: [Synth 8-638] synthesizing module 'SCRATCH_RAM' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'SCRATCH_RAM' (20#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
-INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:14' bound to instance 'SCR_ADDR_MUX_i' of component 'SCR_ADDR_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:441]
-INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:157]
-INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:56]
-INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
-WARNING: [Synth 8-6014] Unused sequential element cnt_tot_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:154]
-WARNING: [Synth 8-6014] Unused sequential element msd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:165]
-WARNING: [Synth 8-6014] Unused sequential element mmsd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:166]
-WARNING: [Synth 8-6014] Unused sequential element lsd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:167]
-INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (23#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
-INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:236' bound to instance 'my_clk' of component 'clk_div' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:62]
-INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-256] done synthesizing module 'clk_div' (24#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-226] default block is never used [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:112]
-WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:101]
-WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:102]
-INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:165]
-INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
-INFO: [Synth 8-3491] module 'I_FLAG_FF' declared at 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/I_FLAG.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_FF' [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (26#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
-WARNING: [Synth 8-614] signal 'INTERRUPT_STATUS' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:185]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
+INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'prog_rom' (13#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/prog_rom.vhd:29]
+INFO: [Synth 8-3491] module 'ALU_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:34' bound to instance 'ALU_MUX_i' of component 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'ALU_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ALU_MUX' (14#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU_MUX.vhd:41]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:15' bound to instance 'ALU_i' of component 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:382]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (15#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:26]
+INFO: [Synth 8-3491] module 'pc_mux' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:21' bound to instance 'PC_MUX_1' of component 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:394]
+INFO: [Synth 8-638] synthesizing module 'pc_mux' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'pc_mux' (16#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/pc_mux.vhd:29]
+INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:24' bound to instance 'PC' of component 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:402]
+INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'program_counter' (17#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:35]
+INFO: [Synth 8-3491] module 'stack_pointer' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:24' bound to instance 'stack_pointer_i' of component 'stack_pointer' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'stack_pointer' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'stack_pointer' (18#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:36]
+INFO: [Synth 8-3491] module 'SCR_DATA_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:15' bound to instance 'SCR_DATA_MUX_i' of component 'SCR_DATA_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:424]
+INFO: [Synth 8-638] synthesizing module 'SCR_DATA_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'SCR_DATA_MUX' (19#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_DATA_MUX.vhd:22]
+INFO: [Synth 8-3491] module 'SCRATCH_RAM' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:16' bound to instance 'SCRATCH_RAM_i' of component 'SCRATCH_RAM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:432]
+INFO: [Synth 8-638] synthesizing module 'SCRATCH_RAM' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'SCRATCH_RAM' (20#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCRATCH_RAM.vhd:26]
+INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:14' bound to instance 'SCR_ADDR_MUX_i' of component 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:441]
+INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/SCR_ADDR_MUX.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_MCU.vhd:29]
+INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
+INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:56]
+INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
+WARNING: [Synth 8-6014] Unused sequential element cnt_tot_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:154]
+WARNING: [Synth 8-6014] Unused sequential element msd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:165]
+WARNING: [Synth 8-6014] Unused sequential element mmsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:166]
+WARNING: [Synth 8-6014] Unused sequential element lsd_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:167]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (23#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:146]
+INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:236' bound to instance 'my_clk' of component 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:62]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (24#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:241]
+INFO: [Synth 8-226] default block is never used [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:112]
+WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:101]
+WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:102]
+INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/BCD7SEG_8.vhdl:32]
+INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:15' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_0' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'I_FLAG_DVR_FF' (26#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:22]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_1' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:46]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_2' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:53]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_3' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:60]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_4' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:67]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_5' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:74]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_6' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:81]
+INFO: [Synth 8-3491] module 'I_FLAG_DVR_FF' declared at 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/I_FLG_DVR_FF.vhd:12' bound to instance 'I_FLAG_FF_7' of component 'I_FLAG_DVR_FF' [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (27#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Interrupt_Driver.vhd:24]
+WARNING: [Synth 8-614] signal 'INTERRUPT_STATUS' is read in the process but is not in the sensitivity list [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (28#1) [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/RAT_WRAPPER.vhd:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 357.602 ; gain = 133.859
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 355.895 ; gain = 133.949
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -204,7 +205,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 357.602 ; gain = 133.859
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 355.895 ; gain = 133.949
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -213,9 +214,15 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RAT_wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'INT'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'INT'. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/Basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RAT_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/RAT_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -223,22 +230,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 659.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 656.063 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 659.484 ; gain = 435.742
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 656.063 ; gain = 434.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 659.484 ; gain = 435.742
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 656.063 ; gain = 434.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 659.484 ; gain = 435.742
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 656.063 ; gain = 434.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "I_SET" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I_CLR" won't be mapped to RAM because it is too sparse
@@ -256,16 +263,16 @@ INFO: [Synth 8-5546] ROM "FLG_C_SET" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "FLG_C_CLR" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FLG_LD_SEL" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "IO_STRB" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/ALU.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element PC_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element SP_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
 INFO: [Synth 8-5544] ROM "MMSD_OUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 659.484 ; gain = 435.742
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 656.063 ; gain = 434.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -460,6 +467,10 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   4 Input      4 Bit        Muxes := 1     
+Module I_FLAG_DVR_FF 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -482,11 +493,10 @@ INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too spars
 INFO: [Synth 8-5546] ROM "O360" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
-WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT
+WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/program_counter.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/SRC/stack_pointer.vhd:49]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 659.484 ; gain = 435.742
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 656.063 ; gain = 434.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -527,13 +537,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 706.164 ; gain = 482.422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 702.895 ; gain = 480.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 719.547 ; gain = 495.805
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 716.313 ; gain = 494.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -545,7 +555,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -569,7 +579,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -582,7 +592,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -594,25 +604,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -660,30 +670,30 @@ Report Instance Areas:
 |8     |      SHAD_Z_i          |SHAD_Z            |     2|
 |9     |      Z_FLAG_FF_i       |Z_FLAG_FF         |     2|
 |10    |    INTURREPT_WRAPPER_i |INTURREPT_WRAPPER |     1|
-|11    |      I_FLAG_FF_i       |I_FLAG_FF_7       |     1|
+|11    |      I_FLAG_FF_i       |I_FLAG_FF         |     1|
 |12    |    PC                  |program_counter   |    28|
 |13    |    REG_FILE_i          |REG_FILE          |    34|
 |14    |    SCRATCH_RAM_i       |SCRATCH_RAM       |    10|
 |15    |    prog_rom_i          |prog_rom          |   146|
 |16    |    stack_pointer_i     |stack_pointer     |    23|
 |17    |  int_dvr_i             |Interrupt_Driver  |    18|
-|18    |    I_FLAG_FF_0         |I_FLAG_FF         |     2|
-|19    |    I_FLAG_FF_1         |I_FLAG_FF_0       |     2|
-|20    |    I_FLAG_FF_2         |I_FLAG_FF_1       |     2|
-|21    |    I_FLAG_FF_3         |I_FLAG_FF_2       |     2|
-|22    |    I_FLAG_FF_4         |I_FLAG_FF_3       |     2|
-|23    |    I_FLAG_FF_5         |I_FLAG_FF_4       |     2|
-|24    |    I_FLAG_FF_6         |I_FLAG_FF_5       |     4|
-|25    |    I_FLAG_FF_7         |I_FLAG_FF_6       |     2|
+|18    |    I_FLAG_FF_0         |I_FLAG_DVR_FF     |     2|
+|19    |    I_FLAG_FF_1         |I_FLAG_DVR_FF_0   |     2|
+|20    |    I_FLAG_FF_2         |I_FLAG_DVR_FF_1   |     2|
+|21    |    I_FLAG_FF_3         |I_FLAG_DVR_FF_2   |     2|
+|22    |    I_FLAG_FF_4         |I_FLAG_DVR_FF_3   |     2|
+|23    |    I_FLAG_FF_5         |I_FLAG_DVR_FF_4   |     2|
+|24    |    I_FLAG_FF_6         |I_FLAG_DVR_FF_5   |     4|
+|25    |    I_FLAG_FF_7         |I_FLAG_DVR_FF_6   |     2|
 |26    |  sseg_dec_i            |sseg_dec          |   101|
 |27    |    my_clk              |clk_div           |    83|
 +------+------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 729.395 ; gain = 505.652
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 729.395 ; gain = 203.770
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 729.395 ; gain = 505.652
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 726.594 ; gain = 204.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 726.594 ; gain = 504.648
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -695,9 +705,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
   RAMB16_S18 => RAMB18E1: 1 instances
 
-133 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+135 Infos, 14 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 729.395 ; gain = 513.418
-INFO: [Common 17-1381] The checkpoint 'C:/Users/edavis/Documents/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/RAT_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 729.395 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar  7 18:39:06 2018...
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 726.594 ; gain = 512.406
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/RAT_COMPLETE/VIVADO/RAT.runs/synth_1/RAT_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 726.594 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  7 20:46:15 2018...
