@@ -64,33 +64,26 @@ C5:  Raw line from source code.
 (0048)                            || 
 (0049)                            || 
 (0050)                            || 
-(0051)                     0x030  || DELAY:
-(0052)  CS-0x030  0x3665E         || MOV R6, 0x5E ; MOVES 0x5E INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP1
-(0053)                            ||              ; USED FOR RESETING
+(0051)  CS-0x030  0x37D31  0x030  || DELAY:        MOV   R29, OUTSIDE
+(0052)  CS-0x031  0x2DD01  0x031  || OUTSIDE:      SUB   R29, 0x01
+(0053)  CS-0x032  0x37C33         || 			  MOV   R28, MIDDLE 
 (0054)                            || 
-(0055)                     0x031  || LOOP1:       ; HIGHEST LOOP
-(0056)  CS-0x031  0x367FE         || MOV R7,0xFE  ; MOVES 0XFE INTO R2. INCREMENT COUNTER ASSOCIATED WITH LOOP2
-(0057)                            ||              ; USED FOR RESETING
-(0058)                            || 
-(0059)                     0x032  || LOOP2:       ; MIDDLE LOOP
-(0060)  CS-0x032  0x366FF         || MOV R6,0xFF  ; MOVES 0XFF INTO R1. INCREMENT COUNTER ASSOCIATED WITH LOOP3
-(0061)                            || 
-(0062)                     0x033  || LOOP3:       ; LOWEST LOOP
-(0063)  CS-0x033  0x2C801         || SUB R8,0x01  ; DECREMENTS THE COUNTER
-(0064)  CS-0x034  0x0819B         || BRNE LOOP3   ; CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
-(0065)                            || 
-(0066)  CS-0x035  0x2C701         || SUB R7, 0x01 ; DECREMENTS THE COUNTER
-(0067)  CS-0x036  0x08193         || BRNE LOOP2   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
+(0055)  CS-0x033  0x2DC01  0x033  || MIDDLE:       SUB   R28, 0x01
+(0056)  CS-0x034  0x37B35         ||               MOV   R27, INSIDE
+(0057)                            || 
+(0058)  CS-0x035  0x2DB01  0x035  || INSIDE:       SUB   R27, 0x01
+(0059)  CS-0x036  0x081AB         ||               BRNE  INSIDE
+(0060)                            || 
+(0061)  CS-0x037  0x23C00         ||               OR    R28, 0x00
+(0062)  CS-0x038  0x0819B         ||               BRNE  MIDDLE
+(0063)                            || 
+(0064)  CS-0x039  0x23D00         ||               OR    R29, 0x00
+(0065)  CS-0x03A  0x0818B         ||               BRNE  OUTSIDE
+(0066)  CS-0x03B  0x18002         ||               RET
+(0067)                            || 
 (0068)                            || 
-(0069)                            || 
-(0070)  CS-0x037  0x2C601         || SUB R6, 0x01 ; DECREMENTS THE COUNTER
-(0071)  CS-0x038  0x0818B         || BRNE LOOP1   ;CHECKS THE ZERO FLAG TO SEE IF THE PROGRAM CAN MOVE TO THE NEXT LOOP
-(0072)                            || 
-(0073)  CS-0x039  0x18002         || RET ; RETURNS
-(0074)                            || 
-(0075)                            || 
-(0076)                       1023  || .ORG 0x3FF
-(0077)  CS-0x3FF  0x08158  0x3FF  || VECTOR: BRN ISR
+(0069)                       1023  || .ORG 0x3FF
+(0070)  CS-0x3FF  0x08158  0x3FF  || VECTOR: BRN ISR
 
 
 
@@ -110,12 +103,12 @@ C4+: source code line number of where symbol is referenced
 -- Labels
 ------------------------------------------------------------ 
 DELAY          0x030   (0051)  ||  0032 0034 0043 
-ISR            0x02B   (0040)  ||  0077 
-LOOP1          0x031   (0055)  ||  0071 
-LOOP2          0x032   (0059)  ||  0067 
-LOOP3          0x033   (0062)  ||  0064 
+INSIDE         0x035   (0058)  ||  0056 0059 
+ISR            0x02B   (0040)  ||  0070 
 MAIN           0x023   (0029)  ||  0036 
-VECTOR         0x3FF   (0077)  ||  
+MIDDLE         0x033   (0055)  ||  0053 0062 
+OUTSIDE        0x031   (0052)  ||  0051 0065 
+VECTOR         0x3FF   (0070)  ||  
 
 
 -- Directives: .BYTE
