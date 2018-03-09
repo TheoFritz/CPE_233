@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar  9 15:05:57 2018
+# Process ID: 52552
+# Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1
+# Command line: vivado.exe -log RAT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAT_wrapper.tcl
+# Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1/RAT_wrapper.vds
+# Journal file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RAT_wrapper.tcl -notrace
