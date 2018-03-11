@@ -18,6 +18,10 @@ entity RAT_wrapper is
     Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
+           RAND     : in    STD_LOGIC_VECTOR (7 downto 0);
+           BTN_STATUS : in  STD_LOGIC_VECTOR (3 downto 0);
+           INTERRUPT_LED : in STD_LOGIC_VECTOR (7 DOWNTO 0);
+           LED_STATUS : STD_LOGIC_VECTOR (3 DOWNTO 0);
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
            INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
@@ -32,6 +36,12 @@ architecture Behavioral of RAT_wrapper is
    -- In future labs you can add more port IDs, and you'll have
    -- to add constants here for the mux below
    CONSTANT SWITCHES_ID : STD_LOGIC_VECTOR (7 downto 0) := X"20";
+   CONSTANT RAND_ID     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"22";
+   CONSTANT BTN_STATUS_ID  : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"35";
+   CONSTANT INTERRUPT_LED_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"37";
+   CONSTANT LED_STATUS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"41";
+   
+   
    -------------------------------------------------------------------------------
 
    -------------------------------------------------------------------------------
@@ -70,7 +80,7 @@ architecture Behavioral of RAT_wrapper is
       A_DB : out STD_LOGIC
     );
     end component db_1shot_FSM;
-
+    
 
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
    signal s_input_port  : std_logic_vector (7 downto 0);
@@ -145,6 +155,7 @@ begin
       DISP_EN  => an,
       SEGMENTS => seg
     );
+    
 
 
    -- SSEG1: BCD7SEG_8
@@ -156,12 +167,21 @@ begin
    -- MUX for selecting what input to read ---------------------------------------
    -- add conditions and connections for any added PORT IDs
    -------------------------------------------------------------------------------
-   inputs: process(s_port_id, SWITCHES)
+   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS, INTERRUPT_LED, LED_STATUS)
    begin
-      if (s_port_id = SWITCHES_ID) then
+      if (s_port_id = RAND_ID) THEN
+         s_input_port <= RAND;
+      elsif (s_port_id = BTN_STATUS_ID) THEN
+         s_input_port <= BTN_STATUS;
+      elsif (s_port_id = INTERRUPT_LED_ID) THEN
+         s_input_port <= INTERRUPT_LED;
+      elsif (s_port_id = LED_STATUS_ID) THEN
+         s_input_port <= LED_STATUS;     
+      elsif (s_port_id = SWITCHES_ID) then
          s_input_port <= SWITCHES;
       else
          s_input_port <= x"00";
+      
       end if;
    end process inputs;
    -------------------------------------------------------------------------------
