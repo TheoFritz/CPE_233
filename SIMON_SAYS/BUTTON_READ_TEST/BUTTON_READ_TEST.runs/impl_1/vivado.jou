@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Mar 11 01:21:49 2018
+# Process ID: 76932
+# Current directory: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/BUTTON_READ_TEST/BUTTON_READ_TEST.runs/impl_1
+# Command line: vivado.exe -log READ_BUTTON.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source READ_BUTTON.tcl -notrace
+# Log file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/BUTTON_READ_TEST/BUTTON_READ_TEST.runs/impl_1/READ_BUTTON.vdi
+# Journal file: C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/BUTTON_READ_TEST/BUTTON_READ_TEST.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source READ_BUTTON.tcl -notrace
