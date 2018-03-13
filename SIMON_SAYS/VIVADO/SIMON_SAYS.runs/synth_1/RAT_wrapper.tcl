@@ -23,6 +23,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/FLAGS.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/INTURREPT_WRAPPER.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/I_FLAG.vhd
+  C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/LATCH.vhd
+  C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/REG_FILE.vhd
   C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/REG_MUX.vhd

@@ -18,10 +18,11 @@ entity RAT_wrapper is
     Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
-           RAND     : in    STD_LOGIC_VECTOR (7 downto 0);
            BTN_STATUS : in  STD_LOGIC_VECTOR (3 downto 0);
-           INTERRUPT_LED : in STD_LOGIC_VECTOR (7 DOWNTO 0);
-           LED_STATUS : STD_LOGIC_VECTOR (3 DOWNTO 0);
+           INT_BTN_PRESS : IN STD_LOGIC;
+           LED_STATUS : out STD_LOGIC_VECTOR (3 DOWNTO 0);
+           INT_LED_SET : OUT STD_LOGIC;
+           INT_LED_CLR : OUT STD_LOGIC;
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
            INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
@@ -38,16 +39,19 @@ architecture Behavioral of RAT_wrapper is
    CONSTANT SWITCHES_ID : STD_LOGIC_VECTOR (7 downto 0) := X"20";
    CONSTANT RAND_ID     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"22";
    CONSTANT BTN_STATUS_ID  : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"35";
-   CONSTANT INTERRUPT_LED_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"37";
-   CONSTANT LED_STATUS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"41";
-   
-   
+   CONSTANT INT_BTN_PRESS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"39";
+
+
+
    -------------------------------------------------------------------------------
 
    -------------------------------------------------------------------------------
    -- OUTPUT PORT IDS ------------------------------------------------------------
    -- In future labs you can add more port IDs
    CONSTANT LEDS_ID       : STD_LOGIC_VECTOR (7 downto 0) := X"40";
+   CONSTANT LED_STATUS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"41";
+   CONSTANT INT_LED_SET_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"37";
+   CONSTANT INT_LED_CLR_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"38";
    CONSTANT SEVEN_SEG     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
    -------------------------------------------------------------------------------
 
@@ -80,7 +84,31 @@ architecture Behavioral of RAT_wrapper is
       A_DB : out STD_LOGIC
     );
     end component db_1shot_FSM;
-    
+
+    component LATCH
+    port (
+    din : in std_logic_vector (4 downto 0);
+    reset : in std_logic;
+    dout: out std_logic_vector (4 downto 0);
+    en : in std_logic
+    );
+  end component LATCH;
+
+  component RandGen is
+      Port ( Clk : in STD_LOGIC;     -- Clock to change random value, should be fast (100 MHz)
+             Reset : in STD_LOGIC;   -- Reset to preset Seed value when high
+             Random : out STD_LOGIC_VECTOR (7 downto 0)); -- 8 bit random binary output
+  end component RandGen;
+
+  component latch_16
+  port (
+    din   : in  std_logic_vector(3 downto 0);
+    reset : in  std_logic;
+    dout  : out std_logic_vector(3 downto 0);
+    en    : in  std_logic
+  );
+  end component latch_16;
+
 
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
    signal s_input_port  : std_logic_vector (7 downto 0);
@@ -97,8 +125,15 @@ architecture Behavioral of RAT_wrapper is
    -- add signals for any added outputs
    signal r_LEDS        : std_logic_vector (7 downto 0);
    signal r_SevenSeg    : std_logic_vector (7 downto 0);
+   signal r_LED_Status  : std_logic_vector (7 downto 0);
+   signal r_INT_LED_SET : std_logic_vector (7 downto 0);
+   signal r_INT_LED_CLR : std_logic_vector (7 downto 0);
    -------------------------------------------------------------------------------
 
+
+   signal RAND : std_logic_vector (7 downto 0);
+   signal BTN_STATUS_LATCHED : std_logic_vector (3 downto 0);
+   signal LED_INT_MASTER : std_logic;
 begin
 
    -- Clock Divider Process ------------------------------------------------------
@@ -147,6 +182,10 @@ begin
    --    A_DB => s_interrupt
    --  );
 
+   randNum1: RandGen
+   port map( Clk => CLK_50MHZ,
+             Reset => '0',
+             Random => RAND);
 
     sseg_dec_i : sseg_dec
     port map (
@@ -155,7 +194,7 @@ begin
       DISP_EN  => an,
       SEGMENTS => seg
     );
-    
+
 
 
    -- SSEG1: BCD7SEG_8
@@ -167,25 +206,22 @@ begin
    -- MUX for selecting what input to read ---------------------------------------
    -- add conditions and connections for any added PORT IDs
    -------------------------------------------------------------------------------
-   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS, INTERRUPT_LED, LED_STATUS)
+   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS, BTN_STATUS_LATCHED,INT_BTN_PRESS)
    begin
       if (s_port_id = RAND_ID) THEN
          s_input_port <= RAND;
       elsif (s_port_id = BTN_STATUS_ID) THEN
-         s_input_port <= BTN_STATUS;
-      elsif (s_port_id = INTERRUPT_LED_ID) THEN
-         s_input_port <= INTERRUPT_LED;
-      elsif (s_port_id = LED_STATUS_ID) THEN
-         s_input_port <= LED_STATUS;     
+         s_input_port <= "0000" & BTN_STATUS_LATCHED; --Because the BTN_STATUS needs to be a vector
+     elsif (s_port_id = INT_BTN_PRESS_ID) THEN
+         s_input_port <= "0000000" & INT_BTN_PRESS; --Because the LED_STATUS needs to be a vector
       elsif (s_port_id = SWITCHES_ID) then
          s_input_port <= SWITCHES;
       else
          s_input_port <= x"00";
-      
+
       end if;
    end process inputs;
    -------------------------------------------------------------------------------
-
 
    -------------------------------------------------------------------------------
    -- MUX for updating output registers ------------------------------------------
@@ -201,12 +237,36 @@ begin
                r_LEDS <= s_output_port;
             elsif (s_port_id = SEVEN_SEG) then
                r_SevenSeg <= s_output_port;
+            elsif (s_port_id = LED_STATUS_ID) THEN
+               r_LED_Status <= s_output_port;
+            elsif (s_port_id = INT_LED_SET_ID) then
+               r_INT_LED_SET <= s_output_port;
+            elsif (s_port_id = INT_LED_CLR_ID) then
+               r_INT_LED_CLR <= s_output_port;
             end if;
          end if;
       end if;
    end process outputs;
    -------------------------------------------------------------------------------
+   INT_LED_SET <= r_INT_LED_SET(0);
+   INT_LED_CLR <= r_INT_LED_CLR(0);
+   LED_INT_MASTER <= r_INT_LED_SET(0) OR r_INT_LED_CLR(0);
 
+   LATCH_LED_STATUS_OUTPUT : latch_16
+    port map (
+      din   => r_LED_Status (3 DOWNTO 0),
+      reset => '0',
+      dout  => LED_STATUS,
+      en    => LED_INT_MASTER
+    );
+
+    LATCH_BTN_STATUS_INPUT : latch_16
+    port map (
+      din   => BTN_STATUS,
+      reset => '0',
+      dout  => BTN_STATUS_LATCHED,
+      en    => INT_BTN_PRESS
+    );
 
 
    -- Register Interface Assignments ---------------------------------------------

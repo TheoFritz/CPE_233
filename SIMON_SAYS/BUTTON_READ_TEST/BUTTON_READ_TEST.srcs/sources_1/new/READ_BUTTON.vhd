@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 03/10/2018 11:36:15 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: READ_BUTTON - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -33,8 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity READ_BUTTON is
     Port ( BUTTON_STATUS, sw : in STD_LOGIC_VECTOR (3 downto 0);
-           INT_LED_SET, INT_LED_CLR, INT_BTN_PRESS : in STD_LOGIC;
-           INT_LED_SET_OUT, INT_LED_CLR_OUT, BTN_INT_STATUS : out STD_LOGIC;
+           INT_LED_SET, INT_LED_CLR, INT_BTN_PRESS : in STD_LOGIC; -- FROM ARDUINO (INT_LED_SET = INTERRUPT to SET; INT_LED_CLR = INTERRUPT to CLEAR)
+           INT_LED_SET_OUT, INT_LED_CLR_OUT, BTN_INT_STATUS : out STD_LOGIC; -- TO ARDUINO (INT_LED_SET_OUT = INTERRUPT TO SET; INT_LED_CLR = INTERRUPT TO CLEAR)
            seg : out std_logic_vector (7 downto 0);
            LED_STATUS, led, an : out STD_LOGIC_VECTOR (3 downto 0));
 end READ_BUTTON;
@@ -64,8 +64,8 @@ begin
             WHEN "1111" => seg <= "10001110";
             WHEN OTHERS => seg <= "11111111";
        END CASE;
- 
- 
+
+
 	 END PROCESS SEVENSEG;
 an <= "1110";
 LED_STATUS <= sw;
