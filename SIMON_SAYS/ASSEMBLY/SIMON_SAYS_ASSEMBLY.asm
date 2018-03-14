@@ -38,39 +38,77 @@ BRN MAIN ; ELSE IT WILL CONTINUE TO LOOP
 
 SHOW_LED:
 MOV R2,0x00
-MOV R6,0x01
+MOV R6, 0x01
+
+SHOW_LED_MAIN_LOOP:
 LD R3,(R2)
 OUT R3, LED_STATUS; OUTPUT THE VALUE IN R3 TO THE SIMON SAYS LEDS
-OUT R5, INT_LED_SET
-;DELAY 0.25 SECONDS HERE
-OUT R5, INT_LED_CLR
+OUT R6, INT_LED_SET
+CALL QRT_SEC_DEL
+OUT R6, INT_LED_CLR
 CMP R1,R2
-;ADD TO R2 IF NOT EQUAL
-;RETURN OTHERWISE
+BRNE ADD_ONE_SHOW_LED
+RET
+
+ADD_ONE_SHOW_LED:
+ADD R1,0x01
+BRN SHOW_LED_MAIN_LOOP
 
 READ_VALUES:
 MOV R2,0x00
+
+READ_VALUES_MAIN_LOOP:
 IN R5, INT_BTN_PRESS
 CMP R5, 0x01
-BRNE READ_VALUES
+BRNE READ_VALUES_MAIN_LOOP
 IN R4, BTN_STATUS
 LD R3, (R2)
 CMP R3, R4
 BRNE PROGRAM_END
 CMP R2,R1
-; NOT EQUAL LD FROM SR LOCATION STORED IN R2 INTO R3
-; IF EQUAL RETURN 
+BRNE ADD_ONE_READ_VALUES
+RET
 
-
+ADD_ONE_READ_VALUES:
+ADD R2, 0x01
+LD R3, (R2)
+BRN READ_VALUES_MAIN_LOOP
 
 PROGRAM_END: MOV R7, 0x0F
 OUT R7, LED_STATUS
-; DELAY 0.25 SECONDS HERE
+CALL QRT_SEC_DEL
 MOV R8, 0x00
 OUT R8, LED_STATUS
-; DELAY 0.25 SECONDS HERE
+CALL QRT_SEC_DEL
 OUT R7, LED_STATUS
 BRN MAIN
 
- 
+
+QRT_SEC_DEL :	;- initialize to 0
+				MOV R12,0x00
+				MOV R13,0x00
+				MOV R14,0x00
+
+clock_delay1 :	ADD R12,0x01 ;- add 1 (1 clock cycle)
+				CMP R12,0xFF
+				;- if R12 = 190, zero flag is set, branch to clock_delay2
+				BREQ clock_delay2
+				;- otherwise, run this loop again
+				BRN clock_delay1
+
+clock_delay2 :	ADD R13,0x01 ;- add 1 (1 clock cycle)
+				CMP R13,0xFF
+				;- if R13 = 190, zero flag is set, return to main
+				BREQ clock_delay3
+				;- otherwise, run clock_delay1
+				BRN clock_delay1
+
+clock_delay3 :	ADD R14,0x01 ;- add 1 (1 clock cycle)
+				CMP R14,0x18
+				;- if R14 = value that works, zero flag is set, return to main
+				BREQ return
+				;- otherwise, run clock_delay1
+				BRN clock_delay1
+
+return :		RET 
  
