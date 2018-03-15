@@ -23,6 +23,7 @@ entity RAT_wrapper is
            LED_STATUS : out STD_LOGIC_VECTOR (3 DOWNTO 0);
            INT_LED_SET : out STD_LOGIC;
            INT_LED_CLR : out STD_LOGIC;
+           INT        : IN STD_LOGIC;
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
            RST      : in    STD_LOGIC;
            CLK      : in    STD_LOGIC);
@@ -169,7 +170,7 @@ begin
               PORT_ID  => s_port_id,
               RESET    => RST,
               IO_STRB  => s_load,
-              INT      => '0',
+              INT      => INT,
               CLK      => CLK_50MHZ);
    -------------------------------------------------------------------------------
 
