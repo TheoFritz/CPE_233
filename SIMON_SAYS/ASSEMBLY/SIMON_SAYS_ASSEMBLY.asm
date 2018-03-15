@@ -110,5 +110,4 @@ clock_delay3 :	ADD R14,0x01 ;- add 1 (1 clock cycle)
 				;- otherwise, run clock_delay1
 				BRN clock_delay1
 
-return :		RET 
- 
+return :		RET

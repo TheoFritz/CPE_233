@@ -9,7 +9,7 @@
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/BUTTON_READ_TEST/BUTTON_READ_TEST.runs/impl_1/READ_BUTTON.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/RAT_wrapper.bit"/>
     </Object>
   </ObjectList>
   <probeset name="hw project" active="false"/>

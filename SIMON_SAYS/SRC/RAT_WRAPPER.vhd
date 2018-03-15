@@ -19,15 +19,13 @@ entity RAT_wrapper is
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
            BTN_STATUS : in  STD_LOGIC_VECTOR (3 downto 0);
-           INT_BTN_PRESS : IN STD_LOGIC;
+           INT_BTN_PRESS : in STD_LOGIC;
            LED_STATUS : out STD_LOGIC_VECTOR (3 DOWNTO 0);
-           INT_LED_SET : OUT STD_LOGIC;
-           INT_LED_CLR : OUT STD_LOGIC;
+           INT_LED_SET : out STD_LOGIC;
+           INT_LED_CLR : out STD_LOGIC;
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
-           INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
-           CLK      : in    STD_LOGIC;
-           INT_IN   : in    STD_LOGIC_VECTOR (7 DOWNTO 0));
+           CLK      : in    STD_LOGIC);
 end RAT_wrapper;
 
 architecture Behavioral of RAT_wrapper is
@@ -48,11 +46,11 @@ architecture Behavioral of RAT_wrapper is
    -------------------------------------------------------------------------------
    -- OUTPUT PORT IDS ------------------------------------------------------------
    -- In future labs you can add more port IDs
-   CONSTANT LEDS_ID       : STD_LOGIC_VECTOR (7 downto 0) := X"40";
-   CONSTANT LED_STATUS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"41";
+   CONSTANT LEDS_ID        : STD_LOGIC_VECTOR (7 downto 0) := X"40";
+   CONSTANT LED_STATUS_ID  : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"41";
    CONSTANT INT_LED_SET_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"37";
    CONSTANT INT_LED_CLR_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"38";
-   CONSTANT SEVEN_SEG     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
+   CONSTANT SEVEN_SEG      : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
    -------------------------------------------------------------------------------
 
    -- Declare RAT_CPU ------------------------------------------------------------
@@ -105,7 +103,8 @@ architecture Behavioral of RAT_wrapper is
     din   : in  std_logic_vector(3 downto 0);
     reset : in  std_logic;
     dout  : out std_logic_vector(3 downto 0);
-    en    : in  std_logic
+    en    : in  std_logic;
+    CLK   : in  std_logic
   );
   end component latch_16;
 
@@ -170,7 +169,7 @@ begin
               PORT_ID  => s_port_id,
               RESET    => RST,
               IO_STRB  => s_load,
-              INT      => s_interrupt,
+              INT      => '0',
               CLK      => CLK_50MHZ);
    -------------------------------------------------------------------------------
 
@@ -252,21 +251,27 @@ begin
    INT_LED_CLR <= r_INT_LED_CLR(0);
    LED_INT_MASTER <= r_INT_LED_SET(0) OR r_INT_LED_CLR(0);
 
-   LATCH_LED_STATUS_OUTPUT : latch_16
-    port map (
-      din   => r_LED_Status (3 DOWNTO 0),
-      reset => '0',
-      dout  => LED_STATUS,
-      en    => LED_INT_MASTER
-    );
+--   LATCH_LED_STATUS_OUTPUT : latch_16
+--    port map (
+--      din   => r_LED_Status (3 DOWNTO 0),
+--      reset => '0',
+--      dout  => LED_STATUS,
+--      en    => LED_INT_MASTER,
+--      CLK   => CLK_50MHZ
+--    );
+    
+    LED_STATUS <= r_LED_STATUS (3 DOWNTO 0);
 
-    LATCH_BTN_STATUS_INPUT : latch_16
-    port map (
-      din   => BTN_STATUS,
-      reset => '0',
-      dout  => BTN_STATUS_LATCHED,
-      en    => INT_BTN_PRESS
-    );
+--    LATCH_BTN_STATUS_INPUT : latch_16
+--    port map (
+--      din   => BTN_STATUS,
+--      reset => '0',
+--      dout  => BTN_STATUS_LATCHED,
+--      en    => INT_BTN_PRESS,
+--      CLK   => CLK_50MHZ
+--    );
+    
+    BTN_STATUS_LATCHED <= BTN_STATUS;
 
 
    -- Register Interface Assignments ---------------------------------------------
