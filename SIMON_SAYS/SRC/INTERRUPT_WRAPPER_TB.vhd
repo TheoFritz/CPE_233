@@ -17,43 +17,61 @@ end simulation;
 architecture Behavioral of simulation is
 
     -- Component Declaration for the Unit Under Test (UUT) (the module you are testing)
-    component Interrupt_Driver
-port (
-  INT_IN     : in  STD_LOGIC_VECTOR (7 downto 0);
-  INT_CLEAR  : in  STD_LOGIC_VECTOR (7 downto 0);
-  INT_EN     : in  STD_LOGIC_VECTOR (7 downto 0);
-  CLK        : in  STD_LOGIC;
-  INT_OUT    : out STD_LOGIC;
-  INT_STATUS : out STD_LOGIC_VECTOR (7 downto 0)
-);
-end component Interrupt_Driver;
+COMPONENT RAT_wrapper_no is
+        Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
+               an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
+               seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
+               BTN_STATUS : in  STD_LOGIC_VECTOR (3 downto 0);
+               INT_BTN_PRESS : in STD_LOGIC;
+               LED_STATUS : out STD_LOGIC_VECTOR (3 DOWNTO 0);
+               INT_LED_SET : out STD_LOGIC;
+               INT_LED_CLR : out STD_LOGIC;
+               INT        : IN STD_LOGIC;
+               SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
+               RST      : in    STD_LOGIC;
+               CLK      : in    STD_LOGIC);
+    end COMPONENT;
 
 
 
     --Signal declarions - can be the same names as the ports
-    signal INT_IN     : STD_LOGIC_VECTOR (7 downto 0);
-    signal INT_CLEAR  : STD_LOGIC_VECTOR (7 downto 0);
-    signal INT_EN     : STD_LOGIC_VECTOR (7 downto 0);
-    signal CLK        : STD_LOGIC;
-    signal INT_OUT    : STD_LOGIC;
-    signal INT_STATUS : STD_LOGIC_VECTOR (7 downto 0);
+    signal LEDS          : STD_LOGIC_VECTOR (7 downto 0);
+    signal an            : STD_LOGIC_VECTOR (3 DOWNTO 0);
+    signal seg           : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    signal BTN_STATUS    : STD_LOGIC_VECTOR (3 downto 0);
+    signal INT_BTN_PRESS : STD_LOGIC;
+    signal LED_STATUS    : STD_LOGIC_VECTOR (3 DOWNTO 0);
+    signal INT_LED_SET   : STD_LOGIC;
+    signal INT_LED_CLR   : STD_LOGIC;
+    signal INT           : STD_LOGIC;
+    signal SWITCHES      : STD_LOGIC_VECTOR (7 downto 0);
+    signal RST           : STD_LOGIC;
+    signal CLK           : STD_LOGIC;
+
 
 
 	--For designs with a CLK uncomment the following
-	constant CLK_period: time := 10 ns;
+	constant CLK_period: time := 20 ns;
 
     begin
 
 		-- Map the UUT's ports to the signals
-        uut : Interrupt_Driver
+        uut : RAT_wrapper
         port map (
-          INT_IN     => INT_IN,
-          INT_CLEAR  => INT_CLEAR,
-          INT_EN     => INT_EN,
-          CLK        => CLK,
-          INT_OUT    => INT_OUT,
-          INT_STATUS => INT_STATUS
+          LEDS          => LEDS,
+          an            => an,
+          seg           => seg,
+          BTN_STATUS    => BTN_STATUS,
+          INT_BTN_PRESS => INT_BTN_PRESS,
+          LED_STATUS    => LED_STATUS,
+          INT_LED_SET   => INT_LED_SET,
+          INT_LED_CLR   => INT_LED_CLR,
+          INT           => INT,
+          SWITCHES      => SWITCHES,
+          RST           => RST,
+          CLK           => CLK
         );
+
 
 
 		--For designs with a CLK uncomment the following
@@ -73,12 +91,18 @@ end component Interrupt_Driver;
 			-- are representative of different inputs for your circuit
 			-- if you can do an exhaustive test (like those that have only 8
 			-- or 16 possible input combinations) - do an exhaustive test
-            INT_IN <= X"08";
-            INT_CLEAR <= "00000000";
-            INT_CLEAR(7) <= '0';
-            INT_EN <= X"08";
-            WAIT FOR 1000 ms;
-            INT_CLEAR <= X"08";
+            INT <= '1';
+            BTN_STATUS <= "1111";
+            WAIT FOR 40 ns;
+            INT <= '0';
+            WAIT FOR 40 ns;
+            INT <= '1';
+            BTN_STATUS <= "0100";
+            WAIT FOR 40 ns;
+            INT <= '0';
+            WAIT FOR 40 ns;
+            INT <= '1';
+            BTN_STATUS <= "1011";               
 
         end process;
 end Behavioral;

@@ -39,24 +39,20 @@ C5:  Raw line from source code.
 (0023)                            || .CSEG
 (0024)                       001  || .ORG 0x01                ; SET THE DATA SEGMENT COUNTER TO 0x01
 (0025)                            || 
-(0026)  CS-0x001  0x36000  0x001  || INIT: MOV R0, 0x00
-(0027)  CS-0x002  0x36200         || MOV R2, 0x00
-(0028)  CS-0x003  0x32122         || IN R1, RAND
-(0029)  CS-0x004  0x34181         || OUT R1, SEVEN_SEG
-(0030)  CS-0x005  0x1A000         || SEI
-(0031)  CS-0x006  0x04208  0x006  || MAIN: CMP R2, R1
-(0032)  CS-0x007  0x0800A         || BREQ INIT
-(0033)  CS-0x008  0x08030         || BRN MAIN
-(0034)                            || 
-(0035)                            || 
-(0036)                     0x009  || ISR:
-(0037)  CS-0x009  0x32735         || IN R7, BTN_STATUS
-(0038)  CS-0x00A  0x02238         || ADD R2, R7
-(0039)  CS-0x00B  0x34281         || OUT R2, SEVEN_SEG
-(0040)  CS-0x00C  0x1A003         || RETIE
-(0041)                            || 
-(0042)                       1023  || .ORG 0x3FF
-(0043)  CS-0x3FF  0x08048  0x3FF  || VECTOR: BRN ISR
+(0026)                            || 
+(0027)  CS-0x001  0x1A000         || SEI
+(0028)                            || 
+(0029)                     0x002  || MAIN:
+(0030)  CS-0x002  0x08010         || BRN MAIN
+(0031)                            || 
+(0032)                            || 
+(0033)                     0x003  || ISR:
+(0034)  CS-0x003  0x32735         || IN R7, BTN_STATUS
+(0035)  CS-0x004  0x34740         || OUT R7, LEDS
+(0036)  CS-0x005  0x18002         || RET
+(0037)                            || 
+(0038)                       1023  || .ORG 0x3FF
+(0039)  CS-0x3FF  0x08018  0x3FF  || VECTOR: BRN ISR
 
 
 
@@ -75,10 +71,9 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-INIT           0x001   (0026)  ||  0032 
-ISR            0x009   (0036)  ||  0043 
-MAIN           0x006   (0031)  ||  0033 
-VECTOR         0x3FF   (0043)  ||  
+ISR            0x003   (0033)  ||  0039 
+MAIN           0x002   (0029)  ||  0030 
+VECTOR         0x3FF   (0039)  ||  
 
 
 -- Directives: .BYTE
@@ -88,14 +83,14 @@ VECTOR         0x3FF   (0043)  ||
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-BTN_STATUS     0x035   (0012)  ||  0037 
+BTN_STATUS     0x035   (0012)  ||  0034 
 INT_BTN_PRESS  0x039   (0013)  ||  
 INT_LED_CLR    0x038   (0017)  ||  
 INT_LED_SET    0x037   (0016)  ||  
-LEDS           0x040   (0014)  ||  
+LEDS           0x040   (0014)  ||  0035 
 LED_STATUS     0x041   (0015)  ||  
-RAND           0x022   (0011)  ||  0028 
-SEVEN_SEG      0x081   (0018)  ||  0029 0039 
+RAND           0x022   (0011)  ||  
+SEVEN_SEG      0x081   (0018)  ||  
 SWITCHES       0x020   (0010)  ||  
 
 

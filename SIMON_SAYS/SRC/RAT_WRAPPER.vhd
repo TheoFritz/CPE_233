@@ -132,7 +132,6 @@ architecture Behavioral of RAT_wrapper is
 
 
    signal RAND : std_logic_vector (7 downto 0);
-   signal BTN_STATUS_LATCHED : std_logic_vector (3 downto 0);
    signal LED_INT_MASTER : std_logic;
 begin
 
@@ -206,12 +205,12 @@ begin
    -- MUX for selecting what input to read ---------------------------------------
    -- add conditions and connections for any added PORT IDs
    -------------------------------------------------------------------------------
-   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS, BTN_STATUS_LATCHED,INT_BTN_PRESS)
+   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS,INT_BTN_PRESS)
    begin
       if (s_port_id = RAND_ID) THEN
          s_input_port <= RAND;
       elsif (s_port_id = BTN_STATUS_ID) THEN
-         s_input_port <= "0000" & BTN_STATUS_LATCHED; --Because the BTN_STATUS needs to be a vector
+         s_input_port <= "0000" & BTN_STATUS; --Because the BTN_STATUS needs to be a vector
      elsif (s_port_id = INT_BTN_PRESS_ID) THEN
          s_input_port <= "0000000" & INT_BTN_PRESS; --Because the LED_STATUS needs to be a vector
       elsif (s_port_id = SWITCHES_ID) then
@@ -271,8 +270,6 @@ begin
 --      en    => INT_BTN_PRESS,
 --      CLK   => CLK_50MHZ
 --    );
-    
-    BTN_STATUS_LATCHED <= BTN_STATUS;
 
 
    -- Register Interface Assignments ---------------------------------------------
