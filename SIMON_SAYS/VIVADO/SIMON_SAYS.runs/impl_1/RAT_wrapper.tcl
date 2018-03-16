@@ -42,22 +42,20 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.cache/wt [current_project]
-  set_property parent.project_path C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.xpr [current_project]
-  set_property ip_output_repo C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.cache/wt [current_project]
+  set_property parent.project_path C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.xpr [current_project]
+  set_property ip_output_repo C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1/RAT_wrapper.dcp
-  read_xdc C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/Basys3_constraints.xdc
+  add_files -quiet C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1/RAT_wrapper.dcp
+  read_xdc C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/SRC/Basys3_constraints.xdc
   link_design -top RAT_wrapper -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
