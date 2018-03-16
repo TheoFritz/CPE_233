@@ -38,39 +38,39 @@ C5:  Raw line from source code.
 (0022)  CS-0x001  0x08088         || BRN MAIN
 (0023)                            || 
 (0024)                     0x002  || DIVIDE_BY_100:
-(0025)  CS-0x002  0x30164         || CMP R1, FACTOR_100
-(0026)  CS-0x003  0x0A080         || BRCS UNDERFLOW
-(0027)  CS-0x004  0x2C164         || SUB R1, FACTOR_100
-(0028)  CS-0x005  0x28601         || ADD R6, 0x01
-(0029)  CS-0x006  0x30164         || CMP R1, FACTOR_100
-(0030)  CS-0x007  0x0A011         || BRCC DIVIDE_BY_100
-(0031)  CS-0x008  0x18002         || RET
+(0025)  CS-0x002  0x30164         || CMP R1, FACTOR_100; Does an initial compare to see if the number is smaller than the divisor
+(0026)  CS-0x003  0x0A080         || BRCS UNDERFLOW; If it is less than it doesn't divide and jumps to Underflow
+(0027)  CS-0x004  0x2C164         || SUB R1, FACTOR_100; Subtracts 100 from the input number
+(0028)  CS-0x005  0x28601         || ADD R6, 0x01; Adds one to the count register which is the result of the division
+(0029)  CS-0x006  0x30164         || CMP R1, FACTOR_100; Compares R1 after the initial subtraction with 100 to check for underflow
+(0030)  CS-0x007  0x0A011         || BRCC DIVIDE_BY_100; If the carry is cleared it continues to subtract from the input value
+(0031)  CS-0x008  0x18002         || RET; Returns from the subroutine
 (0032)                            || 
 (0033)                     0x009  || DIVIDE_BY_10:
-(0034)  CS-0x009  0x3020A         || CMP R2, FACTOR_10
-(0035)  CS-0x00A  0x0A080         || BRCS UNDERFLOW
-(0036)  CS-0x00B  0x2C20A         || SUB R2, FACTOR_10
-(0037)  CS-0x00C  0x28601         || ADD R6, 0x01
-(0038)  CS-0x00D  0x3020A         || CMP R2, FACTOR_10
-(0039)  CS-0x00E  0x0A049         || BRCC DIVIDE_BY_10
-(0040)  CS-0x00F  0x18002         || RET
+(0034)  CS-0x009  0x3020A         || CMP R2, FACTOR_10; Does an initial compare to see if the number is smaller than the divisor
+(0035)  CS-0x00A  0x0A080         || BRCS UNDERFLOW; If it is less than it doesn't divide and jumps to Underflow
+(0036)  CS-0x00B  0x2C20A         || SUB R2, FACTOR_10; Subtracts 10 from the input number
+(0037)  CS-0x00C  0x28601         || ADD R6, 0x01; Adds one to the count register which is the result of the division
+(0038)  CS-0x00D  0x3020A         || CMP R2, FACTOR_10; Compares R1 after the initial subtraction with 100 to check for underflow
+(0039)  CS-0x00E  0x0A049         || BRCC DIVIDE_BY_10; If the carry is cleared it continues to subtract from the input value
+(0040)  CS-0x00F  0x18002         || RET; Returnd from the subroutine
 (0041)                            || 
 (0042)                     0x010  || UNDERFLOW:
-(0043)  CS-0x010  0x18002         || RET
+(0043)  CS-0x010  0x18002         || RET ; Returns from the subroutine
 (0044)                            || 
-(0045)  CS-0x011  0x3219A  0x011  || MAIN: IN R1, IN_PORT
-(0046)  CS-0x012  0x36600         || MOV R6, 0x00
-(0047)  CS-0x013  0x08011         || CALL DIVIDE_BY_100
-(0048)  CS-0x014  0x04209         || MOV R2, R1
-(0049)  CS-0x015  0x04131         || MOV R1, R6
-(0050)  CS-0x016  0x36600         || MOV R6, 0x00
-(0051)  CS-0x017  0x08049         || CALL DIVIDE_BY_10
-(0052)  CS-0x018  0x04311         || MOV R3, R2
-(0053)  CS-0x019  0x04231         || MOV R2, R6
+(0045)  CS-0x011  0x3219A  0x011  || MAIN: IN R1, IN_PORT ; Takes in an initial value
+(0046)  CS-0x012  0x36600         || MOV R6, 0x00 ; Makes a counter register
+(0047)  CS-0x013  0x08011         || CALL DIVIDE_BY_100 ; Calls the DIVIDE_BY_100 subroutine
+(0048)  CS-0x014  0x04209         || MOV R2, R1; Moves the value of R1 into R2 because it is the remainder of the division operation
+(0049)  CS-0x015  0x04131         || MOV R1, R6; Moves the value of the count register into R1 because it is the hundreths digit
+(0050)  CS-0x016  0x36600         || MOV R6, 0x00; Clears the count register
+(0051)  CS-0x017  0x08049         || CALL DIVIDE_BY_10; Calls the DIVIDE_BY_10 subroutine
+(0052)  CS-0x018  0x04311         || MOV R3, R2; Moves the value of R2 into R3 because it is the remainder of the division operation
+(0053)  CS-0x019  0x04231         || MOV R2, R6; Moves the value in the count register into R2 because it is the tenths digit
 (0054)                            || 
-(0055)  CS-0x01A  0x34142         || OUT R1, OUT_PORT
-(0056)  CS-0x01B  0x34242         || OUT R2, OUT_PORT
-(0057)  CS-0x01C  0x34342         || OUT R3, OUT_PORT
+(0055)  CS-0x01A  0x34142         || OUT R1, OUT_PORT; Outputs the hundreths digit
+(0056)  CS-0x01B  0x34242         || OUT R2, OUT_PORT; Outputs the tenths digit
+(0057)  CS-0x01C  0x34342         || OUT R3, OUT_PORT; Outputs the ones digit
 
 
 
