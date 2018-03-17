@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Mar 13 12:01:23 2018
+# Process ID: 4700
+# Current directory: C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6472 C:\Users\edavis\Documents\CPE_233\SIMON_SAYS\VIVADO\SIMON_SAYS.xpr
+# Log file: C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/vivado.log
+# Journal file: C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.xprIINFO: [Project 1-313] Project file moved from 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO' since last save.
+Scanning sources...
+Finished scanning sourcesWWARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.ip_user_files', nor could it be found using path 'C:/Users/dgaiero/Documents/School/College/Year_2/Quarter_2/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.ip_user_files'.INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+IINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_Vivado/Vivado/2017.2/data/ip'.oopen_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 735.418 ; gain = 57.234uupdate_compile_order -fileset sources_1exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 13 14:47:26 2018...
+
