@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Mar 16 18:26:51 2018
-# Process ID: 5056
+# Start of session at: Sat Mar 17 01:48:09 2018
+# Process ID: 1408
 # Current directory: C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1
 # Command line: vivado.exe -log RAT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAT_wrapper.tcl
 # Log file: C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1/RAT_wrapper.vds
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22568 
+INFO: Helper process launched with PID 16324 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 307.512 ; gain = 83.656
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 307.566 ; gain = 83.621
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:32]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:33]
+INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:170]
 INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:29]
 INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:284]
 INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/CONTROL_UNIT.vhd:63]
@@ -63,7 +63,7 @@ INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/edavis/D
 INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:366]
 INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/prog_rom.vhd:29]
 	Parameter INIT bound to: 20'b00000000000000000000 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000011100000111000001110111111011111110011001111110010010000000011011011000111110011010011100000101111111100 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000011100000111000001110111111001100111111111111001111111100001001000000001100100011111111001001000010111110110011110011110000111000000010111100 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -71,11 +71,11 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0111011100001111010101111000000110000000010110100001011100000000101000000000000010000000000110110000010000000110100001000000000110000000101010010101111100100011000111110000111100111111001000100100010001000000011101110000111101100100000000000000000000000000 
-	Parameter INIT_01 bound to: 256'b0100001000110111010000110100000101100010000000011000000010110000100001010000000110000000000000101000000011011011010001000010100010000000111010010100001100101010011001010000000010100000000000111001011100001111001101110011010110000000000010001010000000000001 
-	Parameter INIT_02 bound to: 256'b0000110111111111100011010000000110000001010100001000000101110010000011001111111110001100000000010110111000000000011011010000000001101100000000001000000000000010010000100011100001000010001101110110001000000000100000010011100101000010001110001000000100111001 
-	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000010100000010101000010000001101100100000111000011000100011100000000110000001010100001000000110010010 
-	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_00 bound to: 256'b0100011000110111010000110100000101000011000100100110011000000001011000100000000010000000000100001000000101011010000000011100100010000001000000011000000011011001100000000101100101000000000010110000000000001111001000000010001001100001000000000000000000000000 
+	Parameter INIT_01 bound to: 256'b1000000011100011000001010000000001000101010000000010010100110101011000100000000010000000011010001000001000000001100000000000001010000000110010110100000100010000010001100000000101000110001110000100011000110111010001100000000101000110001110001000000111001001 
+	Parameter INIT_02 bound to: 256'b1000000111001001010001110100000101000110001101110110011000000001011001110000111110000000111000000100001100010010100000100000000110000000000000101000000101000011010000100000100010000001010110110100001100100000010000001000000101000011000100101100010100000001 
+	Parameter INIT_03 bound to: 256'b1000000111100000100000100000001000001100111111111000110000000001011011100000000001101101000000000110110000000000100000000001000001000111010000011000000111001001010010000100000101101000000000000100011000111000010001100011011101100110000000000100011000111000 
+	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000001010000001111000001000001001000010000011100001100010001110000000011000000111100000100000100010001000001101111111111000110100000001 
 	Parameter INIT_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -134,7 +134,7 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3F bound to: 256'b1000000010010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SRVAL bound to: 20'b00000000000000000000 
 	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
 INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/prog_rom.vhd:194]
@@ -164,10 +164,10 @@ INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/edavis/Document
 INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd:29]
-INFO: [Synth 8-3491] module 'RandGen' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd:19' bound to instance 'randNum1' of component 'RandGen' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:184]
+INFO: [Synth 8-3491] module 'RandGen' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd:19' bound to instance 'randNum1' of component 'RandGen' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:188]
 INFO: [Synth 8-638] synthesizing module 'RandGen' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd:25]
 INFO: [Synth 8-256] done synthesizing module 'RandGen' (23#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd:25]
-INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:189]
+INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:193]
 INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:32]
 INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:56]
 INFO: [Synth 8-638] synthesizing module 'bin2bcdconv' [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:146]
@@ -183,9 +183,17 @@ INFO: [Synth 8-226] default block is never used [C:/Users/edavis/Documents/CPE_2
 WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:101]
 WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:102]
 INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (26#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (27#1) [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:33]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[7]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[6]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[5]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[3]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[2]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[1]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[0]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_BTN_PRESS
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 358.500 ; gain = 134.645
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 358.512 ; gain = 134.566
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +203,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 358.500 ; gain = 134.645
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 358.512 ; gain = 134.566
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -214,22 +222,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 665.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 665.652 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 665.039 ; gain = 441.184
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 665.652 ; gain = 441.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 665.039 ; gain = 441.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 665.652 ; gain = 441.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 665.039 ; gain = 441.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 665.652 ; gain = 441.707
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "I_SET" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I_CLR" won't be mapped to RAM because it is too sparse
@@ -254,12 +262,12 @@ WARNING: [Synth 8-6014] Unused sequential element SP_COUNT_TMP_reg was removed. 
 INFO: [Synth 8-5544] ROM "MMSD_OUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3936] Found unconnected internal register 'r_INT_LED_CLR_reg' and it is trimmed from '8' to '1' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:244]
-WARNING: [Synth 8-3936] Found unconnected internal register 'r_INT_LED_SET_reg' and it is trimmed from '8' to '1' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:242]
-WARNING: [Synth 8-3936] Found unconnected internal register 'r_LED_Status_reg' and it is trimmed from '8' to '4' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:240]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_INT_LED_CLR_reg' and it is trimmed from '8' to '1' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:276]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_INT_LED_SET_reg' and it is trimmed from '8' to '1' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:274]
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_LED_Status_reg' and it is trimmed from '8' to '4' bits. [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_WRAPPER.vhd:272]
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 665.039 ; gain = 441.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 665.652 ; gain = 441.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,6 +285,7 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 12    
+	   2 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 7     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 3     
@@ -295,8 +304,9 @@ Detailed RTL Component Info :
 	   4 Input     10 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 2     
 	  16 Input      9 Bit        Muxes := 2     
-	   5 Input      8 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 22    
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 23    
+	   3 Input      8 Bit        Muxes := 1     
 	  51 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 17    
 	   5 Input      4 Bit        Muxes := 1     
@@ -322,13 +332,15 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module RAT_wrapper 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   5 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
@@ -491,8 +503,16 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 INFO: [Synth 8-5546] ROM "O410" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/program_counter.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/stack_pointer.vhd:49]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[7]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[6]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port LEDS_UPPER[5]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[3]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[2]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[1]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port BTN_STATUS[0]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_BTN_PRESS
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 665.039 ; gain = 441.184
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 665.652 ; gain = 441.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -533,13 +553,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 704.781 ; gain = 480.926
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 706.141 ; gain = 482.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 718.285 ; gain = 494.430
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 720.098 ; gain = 496.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -551,7 +571,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -575,7 +595,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -588,7 +608,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -600,25 +620,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -652,11 +672,11 @@ Report Cell Usage:
 |1     |BUFG       |     2|
 |2     |CARRY4     |    19|
 |3     |LUT1       |    34|
-|4     |LUT2       |    27|
-|5     |LUT3       |    33|
-|6     |LUT4       |    50|
+|4     |LUT2       |    28|
+|5     |LUT3       |    34|
+|6     |LUT4       |    54|
 |7     |LUT5       |    67|
-|8     |LUT6       |   124|
+|8     |LUT6       |   131|
 |9     |MUXF7      |    26|
 |10    |MUXF8      |     8|
 |11    |RAM256X1S  |    10|
@@ -665,15 +685,16 @@ Report Cell Usage:
 |14    |SRL16E     |     2|
 |15    |FDRE       |    93|
 |16    |IBUF       |    16|
-|17    |OBUF       |    26|
+|17    |OBUF       |    31|
+|18    |OBUFT      |     3|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+------------------------+------------------+------+
 |      |Instance                |Module            |Cells |
 +------+------------------------+------------------+------+
-|1     |top                     |                  |   546|
-|2     |  CPU                   |RAT_MCU           |   325|
+|1     |top                     |                  |   567|
+|2     |  CPU                   |RAT_MCU           |   335|
 |3     |    ALU_i               |ALU               |    29|
 |4     |    CU                  |CONTROL_UNIT      |    39|
 |5     |    FLAGS_i             |FLAGS             |     7|
@@ -684,20 +705,20 @@ Report Instance Areas:
 |10    |    INTURREPT_WRAPPER_i |INTURREPT_WRAPPER |     1|
 |11    |      I_FLAG_FF_i       |I_FLAG_FF         |     1|
 |12    |    PC                  |program_counter   |    28|
-|13    |    REG_FILE_i          |REG_FILE          |    34|
+|13    |    REG_FILE_i          |REG_FILE          |    36|
 |14    |    SCRATCH_RAM_i       |SCRATCH_RAM       |    10|
-|15    |    prog_rom_i          |prog_rom          |   154|
+|15    |    prog_rom_i          |prog_rom          |   162|
 |16    |    stack_pointer_i     |stack_pointer     |    23|
 |17    |  randNum1              |RandGen           |    13|
 |18    |  sseg_dec_i            |sseg_dec          |   101|
 |19    |    my_clk              |clk_div           |    83|
 +------+------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 728.723 ; gain = 198.328
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 728.723 ; gain = 504.867
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 731.051 ; gain = 199.965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 731.051 ; gain = 507.105
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -709,9 +730,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
   RAMB16_S18 => RAMB18E1: 1 instances
 
-126 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 728.723 ; gain = 512.449
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 731.051 ; gain = 515.012
 INFO: [Common 17-1381] The checkpoint 'C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/VIVADO/SIMON_SAYS.runs/synth_1/RAT_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 728.723 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 16 18:27:41 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 731.051 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 17 01:49:01 2018...

@@ -39,12 +39,13 @@ C5:  Raw line from source code.
 (0023)                            || .CSEG
 (0024)                       001  || .ORG 0x01                ; SET THE DATA SEGMENT COUNTER TO 0x01
 (0025)                            || 
-(0026)  CS-0x001  0x32539  0x001  || MAIN: IN R5, INT_BTN_PRESS
-(0027)  CS-0x002  0x30501         || CMP R5, 0x01
-(0028)  CS-0x003  0x0800B         || BRNE MAIN
-(0029)  CS-0x004  0x32435         || IN R4, BTN_STATUS
-(0030)  CS-0x005  0x34481         || OUT R4, SEVEN_SEG
-(0031)  CS-0x006  0x08008         || BRN MAIN
+(0026)  CS-0x001  0x32535  0x001  || MAIN: IN R5, BTN_STATUS
+(0027)  CS-0x002  0x04531         || MOV R5, R6
+(0028)  CS-0x003  0x20510         || AND R5, 0x10
+(0029)  CS-0x004  0x30510         || CMP R5, 0x10
+(0030)  CS-0x005  0x0800B         || BRNE MAIN
+(0031)  CS-0x006  0x34681         || OUT R6, SEVEN_SEG
+(0032)  CS-0x007  0x08008         || BRN MAIN
 
 
 
@@ -63,7 +64,7 @@ C4+: source code line number of where symbol is referenced
 
 -- Labels
 ------------------------------------------------------------ 
-MAIN           0x001   (0026)  ||  0028 0031 
+MAIN           0x001   (0026)  ||  0030 0032 
 
 
 -- Directives: .BYTE
@@ -73,14 +74,14 @@ MAIN           0x001   (0026)  ||  0028 0031
 
 -- Directives: .EQU
 ------------------------------------------------------------ 
-BTN_STATUS     0x035   (0012)  ||  0029 
-INT_BTN_PRESS  0x039   (0013)  ||  0026 
+BTN_STATUS     0x035   (0012)  ||  0026 
+INT_BTN_PRESS  0x039   (0013)  ||  
 INT_LED_CLR    0x038   (0017)  ||  
 INT_LED_SET    0x037   (0016)  ||  
 LEDS           0x040   (0014)  ||  
 LED_STATUS     0x041   (0015)  ||  
 RAND           0x022   (0011)  ||  
-SEVEN_SEG      0x081   (0018)  ||  0030 
+SEVEN_SEG      0x081   (0018)  ||  0031 
 SWITCHES       0x020   (0010)  ||  
 
 

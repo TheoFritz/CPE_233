@@ -24,6 +24,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/FLAGS.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/INTURREPT_WRAPPER.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/I_FLAG.vhd
+  C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/LATCH.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAND_NUM_GEN.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/RAT_MCU.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/REG_FILE.vhd
@@ -35,6 +36,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/SHAD_Z.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/Z_FLAG_FF.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/Z_FLG_MUX.vhd
+  C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd
+  C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/pc_mux.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/prog_rom.vhd
   C:/Users/edavis/Documents/CPE_233/SIMON_SAYS/SRC/program_counter.vhd

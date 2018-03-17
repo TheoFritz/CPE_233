@@ -16,10 +16,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RAT_wrapper is
     Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
+           LEDS_UPPER : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
-           BTN_STATUS : in  STD_LOGIC_VECTOR (3 downto 0);
-           INT_BTN_PRESS : in STD_LOGIC;
+           BTN_STATUS, BTN_TEST : in  STD_LOGIC_VECTOR (3 downto 0);
+           INT_BTN_PRESS, INT_BTN_TEST : in STD_LOGIC;
            LED_STATUS : out STD_LOGIC_VECTOR (3 DOWNTO 0);
            INT_LED_SET : out STD_LOGIC;
            INT_LED_CLR : out STD_LOGIC;
@@ -38,7 +39,7 @@ architecture Behavioral of RAT_wrapper is
    CONSTANT SWITCHES_ID : STD_LOGIC_VECTOR (7 downto 0) := X"20";
    CONSTANT RAND_ID     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"22";
    CONSTANT BTN_STATUS_ID  : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"35";
-   CONSTANT INT_BTN_PRESS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"39";
+   --CONSTANT INT_BTN_PRESS_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"39";
 
 
 
@@ -128,6 +129,9 @@ architecture Behavioral of RAT_wrapper is
    signal r_LED_Status  : std_logic_vector (7 downto 0);
    signal r_INT_LED_SET : std_logic_vector (7 downto 0);
    signal r_INT_LED_CLR : std_logic_vector (7 downto 0);
+   
+   signal BTN_STATUS_ADD_1 : std_logic_vector (4 downto 0);
+       SIGNAL BTN_STATUS_ADD_1_TEMP : STD_LOGIC_VECTOR (4 DOWNTO 0);
    -------------------------------------------------------------------------------
 
 
@@ -205,14 +209,42 @@ begin
    -- MUX for selecting what input to read ---------------------------------------
    -- add conditions and connections for any added PORT IDs
    -------------------------------------------------------------------------------
-   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS,INT_BTN_PRESS)
+   
+   
+   
+--   BTN_STATUS_PROC : PROCESS (BTN_STATUS, INT_BTN_PRESS)
+
+--   BEGIN
+--   IF (INT_BTN_PRESS = '1') THEN
+--    BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'&BTN_STATUS) + 1);
+--   ELSE
+--    BTN_STATUS_ADD_1_TEMP <= "00000";
+--   END IF;
+   
+--   END PROCESS;
+
+   BTN_STATUS_PROC : PROCESS (BTN_TEST, INT_BTN_TEST)
+
+   BEGIN
+   IF (INT_BTN_TEST = '1') THEN
+    BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'&BTN_TEST) + 1);
+   ELSE
+    BTN_STATUS_ADD_1_TEMP <= "00000";
+   END IF;
+   
+   END PROCESS;
+   
+   BTN_STATUS_ADD_1 <= BTN_STATUS_ADD_1_TEMP;
+   LEDS_UPPER (4 DOWNTO 0) <= BTN_STATUS_ADD_1;
+   
+   inputs: process(s_port_id, SWITCHES, RAND, BTN_STATUS_ADD_1)
    begin
       if (s_port_id = RAND_ID) THEN
          s_input_port <= RAND;
       elsif (s_port_id = BTN_STATUS_ID) THEN
-         s_input_port <= "0000" & BTN_STATUS; --Because the BTN_STATUS needs to be a vector
-     elsif (s_port_id = INT_BTN_PRESS_ID) THEN
-         s_input_port <= "0000000" & INT_BTN_PRESS; --Because the LED_STATUS needs to be a vector
+         s_input_port <= "000" & BTN_STATUS_ADD_1; --Because the BTN_STATUS needs to be a vector
+    -- elsif (s_port_id = INT_BTN_PRESS_ID) THEN
+      --   s_input_port <= "0000000" & INT_BTN_PRESS; --Because the LED_STATUS needs to be a vector
       elsif (s_port_id = SWITCHES_ID) then
          s_input_port <= SWITCHES;
       else
