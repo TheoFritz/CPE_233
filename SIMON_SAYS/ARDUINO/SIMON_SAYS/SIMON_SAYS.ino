@@ -22,8 +22,8 @@ void setup() {
   trellis.begin(0x70); // PASS I2C ADDRESS
   trellis.clear(); //CLEAR ALL LEDS
   trellis.writeDisplay(); //WRITE CHANGES TO DISPLAY
-  DDRB = DDRB & 0x1F; //SET PORT B (DIGITAL 8-13) AS OUTPUT TO SEMD BUTTON DATA
-  DDRC = DDRC | 0xF0; //SET PORT C (ANALOG 0-5) AS INPUT TO RECIEVE LED DATA
+  DDRB = DDRB & 0xF0; //SET PORT B (DIGITAL 8-13) AS INPUT TO RECIEVE LED SIGNAL
+  DDRC = DDRC | 0x0F; //SET PORT C (ANALOG 0-5) AS OUTPUT TO SEND BUTTON DATA
   attachInterrupt(digitalPinToInterrupt(3), LED_SET_ISR, RISING); //ATTACH INTERRUPT TO DIGITAL PIN 3 (SET AN LED)
   attachInterrupt(digitalPinToInterrupt(2), LED_CLR_ISR, RISING); //ATTACH INTERRUPT TO DIGITAL PIN2 (CLEAR AN LED)
   // LIGHT UP ALL LEDS
@@ -47,12 +47,11 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(13, LOW); //INTERRUPT PIN FOR BUTTON PRESS
 
   delay(30);
 
   if (LED_SET_STATE) { //CHECK IF LED SET INTERRUPT WAS SET
-    int LED_STATUS = PINC; //READ FROM PORTB (FROM ASM VALUE TO SET LED)
+    int LED_STATUS = PINB; //READ FROM PORTB (FROM ASM VALUE TO SET LED)
     if (LED_STATUS > 15) {
       LED_STATUS -= 15;
     }
@@ -67,7 +66,7 @@ void loop() {
     LED_SET_STATE = false; //REEST INTERRUPT STATUS
   }
   if (LED_CLR_STATE) { //CHECK IF LED CLR INTERRUPT WAS SET
-    int LED_STATUS = PINC; //READ FROM PORTB (FROM ASM VALUE TO SET LED)
+    int LED_STATUS = PINB; //READ FROM PORTB (FROM ASM VALUE TO SET LED)
     if (LED_STATUS > 15) {
       LED_STATUS -= 15;
     }
@@ -88,11 +87,14 @@ void loop() {
       if (trellis.justPressed(i)) {
         //        Serial.printf(" %02d       S      PRESS\n", i);
         Serial.print("v"); Serial.println(i);
-        PORTB = i+1;
+        delayMicroseconds(1000);
+        digitalWrite(13, HIGH);
+        PORTC = i;
         trellis.setLED(i);
       }
       if (trellis.justReleased(i)) {
         Serial.print("^"); Serial.println(i);
+          digitalWrite(13, LOW); //INTERRUPT PIN FOR BUTTON PRESS
         //       Serial.printf(" %02d       S      RELEASE\n", i);
         trellis.clrLED(i);
       }
