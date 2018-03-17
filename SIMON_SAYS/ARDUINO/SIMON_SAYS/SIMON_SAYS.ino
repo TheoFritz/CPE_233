@@ -87,14 +87,13 @@ void loop() {
       if (trellis.justPressed(i)) {
         //        Serial.printf(" %02d       S      PRESS\n", i);
         Serial.print("v"); Serial.println(i);
-        delayMicroseconds(1000);
-        digitalWrite(13, HIGH);
+        digitalWrite(13, LOW);
         PORTC = i;
         trellis.setLED(i);
       }
       if (trellis.justReleased(i)) {
         Serial.print("^"); Serial.println(i);
-          digitalWrite(13, LOW); //INTERRUPT PIN FOR BUTTON PRESS
+          digitalWrite(13, HIGH); //INTERRUPT PIN FOR BUTTON PRESS
         //       Serial.printf(" %02d       S      RELEASE\n", i);
         trellis.clrLED(i);
       }
