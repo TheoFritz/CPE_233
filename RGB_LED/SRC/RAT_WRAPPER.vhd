@@ -95,8 +95,8 @@ architecture Behavioral of RAT_wrapper is
         Port ( sw       : in STD_LOGIC_VECTOR (7 downto 0);
            sig      : out STD_LOGIC;
            RST      : in STD_LOGIC;
-           CLK      : in STD_LOGIC;
-           LED      : out STD_LOGIC);
+           CLK      : in STD_LOGIC
+           );
     end component PWM;
     
 

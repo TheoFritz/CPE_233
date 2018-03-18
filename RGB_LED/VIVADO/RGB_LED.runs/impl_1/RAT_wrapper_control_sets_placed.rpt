@@ -1,0 +1,76 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Sat Mar 17 23:38:44 2018
+| Host         : DESKTOP-LJILSIK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file RAT_wrapper_control_sets_placed.rpt
+| Design       : RAT_wrapper
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    23 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            8 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              34 |           10 |
+| Yes          | No                    | No                     |              48 |           14 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              18 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-----------------------------------------+---------------------------+------------------+----------------+
+|      Clock Signal      |              Enable Signal              |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++------------------------+-----------------------------------------+---------------------------+------------------+----------------+
+|  sseg_dec_i/my_clk/CLK |                                         |                           |                2 |              2 |
+|  CLK_IBUF_BUFG         |                                         |                           |                2 |              3 |
+|  CLK_IBUF_BUFG         |                                         | RST_IBUF                  |                2 |              3 |
+|  CLK_IBUF_BUFG         | CPU/prog_rom_i/E[0]                     |                           |                3 |              8 |
+|  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_SevenSeg_reg[0][0]     |                           |                3 |              8 |
+|  s_clk_sig_BUFG        |                                         |                           |                4 |              8 |
+|  s_clk_sig_BUFG        | CPU/prog_rom_i/SP_COUNT_TMP_reg[0]_0[0] | CPU/CU/SR[0]              |                1 |              8 |
+|  s_clk_sig_BUFG        | CPU/CU/E[0]                             | CPU/CU/SR[0]              |                5 |             10 |
+|  s_clk_sig_BUFG        | CPU/prog_rom_i/RF_WR                    |                           |                2 |             16 |
+|  CLK_IBUF_BUFG         |                                         | sseg_dec_i/my_clk/tmp_clk |                8 |             31 |
+|  CLK_IBUF_BUFG         | pwm_red/sel                             |                           |                8 |             32 |
+|  s_clk_sig_BUFG        | CPU/prog_rom_i/SCR_WE                   |                           |               10 |             40 |
++------------------------+-----------------------------------------+---------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 2      |                     1 |
+| 3      |                     2 |
+| 8      |                     4 |
+| 10     |                     1 |
+| 16+    |                     4 |
++--------+-----------------------+
+
+
