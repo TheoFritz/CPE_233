@@ -128,13 +128,25 @@ architecture Behavioral of RAT_wrapper is
 begin
 
    -- Clock Divider Process ------------------------------------------------------
-  clkdiv: process(CLK)
-   begin
-       if RISING_EDGE(CLK) then
-           s_clk_sig <= NOT s_clk_sig;
-       end if;
-   end process clkdiv;
+  -- clkdiv: process(CLK)
+  --  begin
+  --      if RISING_EDGE(CLK) then
+  --          s_clk_sig <= NOT s_clk_sig;
+  --      end if;
+  --  end process clkdiv;
    -------------------------------------------------------------------------------
+   CLK_50MHZ_PROC: process (clk)
+         --variable div_cnt : integer := 0;
+      begin
+         if (rising_edge(clk)) then
+            --if (div_cnt = MAX_COUNT_50MHZ) then
+               s_clk_sig <= not s_clk_sig;
+               --div_cnt := 0;
+            --else
+               --div_cnt := div_cnt + 1;
+            --end if;
+         end if;
+      end process CLK_50MHZ_PROC;
       CLK_50MHZ <= s_clk_sig;
 
 
