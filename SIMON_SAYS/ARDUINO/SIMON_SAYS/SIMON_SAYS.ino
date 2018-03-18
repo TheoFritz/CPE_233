@@ -94,6 +94,8 @@ void loop() {
       if (trellis.justReleased(i)) {
         Serial.print("^"); Serial.println(i);
           digitalWrite(13, HIGH); //INTERRUPT PIN FOR BUTTON PRESS
+          delayMicroseconds(10);
+          digitalWrite(13, LOW);
         //       Serial.printf(" %02d       S      RELEASE\n", i);
         trellis.clrLED(i);
       }
