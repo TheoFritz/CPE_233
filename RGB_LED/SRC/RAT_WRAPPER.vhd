@@ -18,7 +18,11 @@ entity RAT_wrapper is
     Port ( LEDS     : out   STD_LOGIC_VECTOR (7 downto 0);
            an       : out   STD_LOGIC_VECTOR (3 DOWNTO 0);
            seg      : out   STD_LOGIC_VECTOR (7 DOWNTO 0);
+           RED      : OUT   STD_LOGIC;
+           GREEN    : OUT   STD_LOGIC;
+           BLUE     : OUT   STD_LOGIC;
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
+           BUTTON   : IN    STD_LOGIC;           
 --           INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
            CLK      : in    STD_LOGIC;
@@ -32,16 +36,20 @@ architecture Behavioral of RAT_wrapper is
    -- In future labs you can add more port IDs, and you'll have
    -- to add constants here for the mux below
    CONSTANT SWITCHES_ID : STD_LOGIC_VECTOR (7 downto 0) := X"20";
-   CONSTANT INT_STATUS  : STD_LOGIC_VECTOR (7 downto 0) := X"AA";
-   CONSTANT INT_EN        : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AE";
+   CONSTANT BUTTON_ID : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"22";
+--   CONSTANT INT_STATUS  : STD_LOGIC_VECTOR (7 downto 0) := X"AA";
+--   CONSTANT INT_EN        : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AE";
    -------------------------------------------------------------------------------
 
    -------------------------------------------------------------------------------
    -- OUTPUT PORT IDS ------------------------------------------------------------
    -- In future labs you can add more port IDs
    CONSTANT LEDS_ID       : STD_LOGIC_VECTOR (7 downto 0) := X"40";
-   CONSTANT SEVEN_SEG     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
-   CONSTANT INT_CLR       : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AC";
+   CONSTANT SEVEN_SEG_ID     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
+   CONSTANT RED_ID           : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"52";
+   CONSTANT GREEN_ID         : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"53";
+   CONSTANT BLUE_ID          : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"54";   
+--   CONSTANT INT_CLR       : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AC";
    -------------------------------------------------------------------------------
 
    -- Declare RAT_CPU ------------------------------------------------------------
@@ -82,6 +90,15 @@ architecture Behavioral of RAT_wrapper is
                INT_OUT : out STD_LOGIC;
                INT_STATUS : out STD_LOGIC_VECTOR (7 downto 0));
     end component Interrupt_Driver;
+    
+    component PWM is
+        Port ( sw       : in STD_LOGIC_VECTOR (7 downto 0);
+           sig      : out STD_LOGIC;
+           RST      : in STD_LOGIC;
+           CLK      : in STD_LOGIC;
+           LED      : out STD_LOGIC);
+    end component PWM;
+    
 
 
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
@@ -101,6 +118,9 @@ architecture Behavioral of RAT_wrapper is
    -- add signals for any added outputs
    signal r_LEDS        : std_logic_vector (7 downto 0);
    signal r_SevenSeg    : std_logic_vector (7 downto 0);
+   signal r_red       : std_logic_vector (7 downto 0 );
+   signal r_green     : std_logic_vector (7 downto 0);
+   signal r_blue      : std_logic_vector (7 downto 0);
    signal r_INT_EN    : std_logic_vector (7 downto 0);
    signal r_INT_CLR    : std_logic_vector (7 downto 0);
    -------------------------------------------------------------------------------
@@ -171,6 +191,32 @@ begin
         INT_OUT => s_interrupt,
         INT_STATUS => INTERRUPT_STATUS
     );
+    
+    pwm_red : PWM
+    port map (
+        sw => SWITCHES,
+        sig => RED,
+        RST => RST,
+        CLK => CLK
+    );
+    
+    pwm_green : PWM
+    port map (
+        sw => SWITCHES,
+        sig => GREEN,
+        RST => RST,
+        CLK => CLK
+    );
+
+    pwm_blue : PWM
+    port map (
+        sw => SWITCHES,
+        sig => BLUE,
+        RST => RST,
+        CLK => CLK
+    );
+        
+        
 
 
    -- SSEG1: BCD7SEG_8
@@ -186,8 +232,10 @@ begin
    begin
       if (s_port_id = SWITCHES_ID) then
          s_input_port <= SWITCHES;
-     elsif (s_port_id = INT_STATUS) then
-         s_input_port <=  INTERRUPT_STATUS;
+     --elsif (s_port_id = INT_STATUS) then
+         --s_input_port <=  INTERRUPT_STATUS;
+      elsif (s_port_id = BUTTON_ID) THEN
+         s_input_port <= "0000000" & BUTTON;    
       else
          s_input_port <= x"00";
       end if;
@@ -207,12 +255,19 @@ begin
             -- the register definition for the LEDS
             if (s_port_id = LEDS_ID) then
                r_LEDS <= s_output_port;
-            elsif (s_port_id = SEVEN_SEG) then
+            elsif (s_port_id = SEVEN_SEG_ID) then
                r_SevenSeg <= s_output_port;
-           elsif (s_port_id = INT_EN) then
-               r_INT_EN <= s_output_port;
-           elsif (s_port_id = INT_CLR) then
-               r_INT_CLR <= s_output_port;
+--           elsif (s_port_id = INT_EN) then
+--               r_INT_EN <= s_output_port;
+--           elsif (s_port_id = INT_CLR) then
+--               r_INT_CLR <= s_output_port;
+             ELSIF (S_PORT_ID = RED_ID) THEN
+               r_red <= s_output_port;
+             elsif (s_port_id = BLUE_ID) THEN
+               r_blue <= s_output_port;
+             elsif (s_port_id = GREEN_ID) THEN
+               r_green <= s_output_port;
+               
             end if;
 
          end if;
@@ -225,7 +280,6 @@ begin
    -- Register Interface Assignments ---------------------------------------------
    -- add all outputs that you added to this design
    LEDS <= r_LEDS;
-   SEVEN_SEG_IM <= r_SevenSeg(3 DOWNTO 0);
 
 
 end Behavioral;

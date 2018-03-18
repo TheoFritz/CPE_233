@@ -212,27 +212,27 @@ begin
    
    
    
-   BTN_STATUS_PROC : PROCESS (BTN_STATUS, INT_BTN_PRESS)
-
-   BEGIN
-   IF (INT_BTN_PRESS = '1') THEN
-    BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'&BTN_STATUS) + 1);
-   ELSE
-    BTN_STATUS_ADD_1_TEMP <= "00000";
-   END IF;
-   
-   END PROCESS;
-
---   BTN_STATUS_PROC : PROCESS (BTN_TEST, INT_BTN_TEST)
+--   BTN_STATUS_PROC : PROCESS (BTN_STATUS, INT_BTN_PRESS)
 
 --   BEGIN
---   IF (INT_BTN_TEST = '1') THEN
---    BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'&BTN_TEST) + 1);
+--   IF (INT_BTN_PRESS = '1') THEN
+--    BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'&BTN_STATUS) + 1);
 --   ELSE
 --    BTN_STATUS_ADD_1_TEMP <= "00000";
 --   END IF;
    
 --   END PROCESS;
+
+   BTN_STATUS_PROC : PROCESS (BTN_TEST, INT_BTN_TEST)
+
+   BEGIN
+   IF (INT_BTN_TEST = '1') THEN
+     BTN_STATUS_ADD_1_TEMP <= std_logic_vector(unsigned('0'& BTN_TEST) + 1); 
+   ELSE
+     BTN_STATUS_ADD_1_TEMP <= "00000";
+   END IF;
+   
+   END PROCESS;
    
    BTN_STATUS_ADD_1 <= BTN_STATUS_ADD_1_TEMP;
    LEDS_UPPER (4 DOWNTO 0) <= BTN_STATUS_ADD_1;
