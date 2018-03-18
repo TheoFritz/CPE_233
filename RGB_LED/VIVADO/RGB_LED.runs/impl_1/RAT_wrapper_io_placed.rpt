@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Sat Mar 17 23:38:44 2018
+| Date                      : Sun Mar 18 01:48:53 2018
 | Host                      : DESKTOP-LJILSIK running 64-bit major release  (build 9200)
 | Command                   : report_io -file RAT_wrapper_io_placed.rpt
 | Design                    : RAT_wrapper
@@ -214,7 +214,7 @@ Table of Contents
 | T2         |             | High Range | IO_L1N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | T3         |             | High Range | IO_L2N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | T17        |             | High Range | IO_L17P_T2_A14_D30_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |
-| T18        | BUTTON      | High Range | IO_L17N_T2_A13_D29_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
+| T18        |             | High Range | IO_L17N_T2_A13_D29_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |
 | T19        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | U1         |             | High Range | IO_L3N_T0_DQS_34             | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | U2         | an[3]       | High Range | IO_L9N_T1_DQS_34             | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
@@ -272,7 +272,7 @@ Table of Contents
 | W16        | SWITCHES[2] | High Range | IO_L20P_T3_A08_D24_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | W17        | SWITCHES[3] | High Range | IO_L20N_T3_A07_D23_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | W18        | LEDS[4]     | High Range | IO_L16P_T2_CSI_B_14          | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| W19        |             | High Range | IO_L16N_T2_A15_D31_14        | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |
+| W19        | BUTTON      | High Range | IO_L16N_T2_A15_D31_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 +------------+-------------+------------+------------------------------+---------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+------+------------------+
 * Default value
 ** Special VCCO requirements may apply. Please consult the device family datasheet for specific guideline on VCCO requirements.

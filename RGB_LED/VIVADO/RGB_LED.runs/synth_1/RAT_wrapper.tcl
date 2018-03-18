@@ -24,7 +24,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/FLAGS.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/INTURREPT_WRAPPER.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/I_FLAG.vhd
-  C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Interrupt_Driver.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/REG_FILE.vhd
@@ -36,6 +35,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/SHAD_Z.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Z_FLAG_FF.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Z_FLG_MUX.vhd
+  C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd
+  C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/pc_mux.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/prog_rom.vhd
   C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/program_counter.vhd

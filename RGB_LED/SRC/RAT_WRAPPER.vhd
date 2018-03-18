@@ -82,14 +82,14 @@ architecture Behavioral of RAT_wrapper is
     );
     end component db_1shot_FSM;
 
-    component Interrupt_Driver is
-        Port ( INT_IN : in STD_LOGIC_VECTOR (7 downto 0);
-               INT_CLEAR : in STD_LOGIC_VECTOR (7 downto 0);
-               INT_EN : in STD_LOGIC_VECTOR (7 downto 0);
-               CLK : in STD_LOGIC;
-               INT_OUT : out STD_LOGIC;
-               INT_STATUS : out STD_LOGIC_VECTOR (7 downto 0));
-    end component Interrupt_Driver;
+--    component Interrupt_Driver is
+--        Port ( INT_IN : in STD_LOGIC_VECTOR (7 downto 0);
+--               INT_CLEAR : in STD_LOGIC_VECTOR (7 downto 0);
+--               INT_EN : in STD_LOGIC_VECTOR (7 downto 0);
+--               CLK : in STD_LOGIC;
+--               INT_OUT : out STD_LOGIC;
+--               INT_STATUS : out STD_LOGIC_VECTOR (7 downto 0));
+--    end component Interrupt_Driver;
 
     component PWM is
         Port ( sw       : in STD_LOGIC_VECTOR (7 downto 0);
@@ -168,10 +168,10 @@ begin
     port map (
       A    => BUTTON,
       CLK  => CLK_50MHZ,
-      A_DB => s_BUTTON
+      A_DB => s_interrupt
     );
 
-    s_interrupt <= s_BUTTON;
+--    s_interrupt <= s_BUTTON;
 
 
     sseg_dec_i : sseg_dec
@@ -182,22 +182,22 @@ begin
       SEGMENTS => seg
     );
 
-    int_dvr_i : Interrupt_Driver
-    port map (
-        INT_IN => INT_IN,
-        INT_CLEAR => r_INT_CLR,
-        INT_EN => r_INT_EN,
-        CLK => CLK_50MHZ,
-        INT_OUT => s_interrupt,
-        INT_STATUS => INTERRUPT_STATUS
-    );
+--    int_dvr_i : Interrupt_Driver
+--    port map (
+--        INT_IN => INT_IN,
+--        INT_CLEAR => r_INT_CLR,
+--        INT_EN => r_INT_EN,
+--        CLK => CLK_50MHZ,
+--        INT_OUT => s_interrupt,
+--        INT_STATUS => INTERRUPT_STATUS
+--    );
 
     pwm_red : PWM
     port map (
         sw => r_red,
         sig => RED,
         RST => RST,
-        CLK => CLK
+        CLK => CLK_50MHZ
     );
 
     pwm_green : PWM
@@ -205,7 +205,7 @@ begin
         sw => r_green,
         sig => GREEN,
         RST => RST,
-        CLK => CLK
+        CLK => CLK_50MHZ
     );
 
     pwm_blue : PWM
@@ -213,7 +213,7 @@ begin
         sw => r_blue,
         sig => BLUE,
         RST => RST,
-        CLK => CLK
+        CLK => CLK_50MHZ
     );
 
    -------------------------------------------------------------------------------

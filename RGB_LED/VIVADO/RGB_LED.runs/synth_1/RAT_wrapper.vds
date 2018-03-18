@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Mar 17 23:37:08 2018
-# Process ID: 9300
+# Start of session at: Sun Mar 18 01:47:12 2018
+# Process ID: 17436
 # Current directory: C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.runs/synth_1
 # Command line: vivado.exe -log RAT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAT_wrapper.tcl
 # Log file: C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.runs/synth_1/RAT_wrapper.vds
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3240 
+INFO: Helper process launched with PID 11404 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 307.805 ; gain = 83.961
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 307.426 ; gain = 83.730
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:32]
-INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:158]
+INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:29]
 INFO: [Synth 8-3491] module 'CONTROL_UNIT' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/CONTROL_UNIT.vhd:29' bound to instance 'CU' of component 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:284]
 INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/CONTROL_UNIT.vhd:63]
@@ -63,7 +63,7 @@ INFO: [Synth 8-256] done synthesizing module 'REG_MUX' (12#1) [C:/Users/edavis/D
 INFO: [Synth 8-3491] module 'prog_rom' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/prog_rom.vhd:21' bound to instance 'prog_rom_i' of component 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:366]
 INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/prog_rom.vhd:29]
 	Parameter INIT bound to: 20'b00000000000000000000 
-	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100011111111001111111100001111111100001111111100 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100011111100000000000000001100110011001111110100 
 	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -71,8 +71,8 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_00 bound to: 256'b0010000000100010010000101000000100101000001000001000000010111001100000000100001100000000000000010010000000100010010000101000000100100111001000001000000010111001100000000001001100000000000000010010000000100010010000101000000101100010000000000000000000000000 
-	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000001010000010000000011000000000001000010010010101010001001000010100110100011101010010001010010010000010000000011100110000000000000001 
+	Parameter INIT_00 bound to: 256'b0100010000001001100000000001100001000011000010011000000000010000100000001001101000000000000001001000000010001010000000000000001110000000011110100000000000000010100000000110101000000000000000010010000100100000011000000000000010100000000000000000000000000000 
+	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000011010000001000000110000000000000011000000000010000010001010101010001000100010100110100001101010010100000000001100001000101000010011000000000011000 
 	Parameter INIT_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -134,7 +134,7 @@ INFO: [Synth 8-638] synthesizing module 'prog_rom' [C:/Users/edavis/Documents/CP
 	Parameter INIT_3C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_3F bound to: 256'b1000000010111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SRVAL bound to: 20'b00000000000000000000 
 	Parameter WRITE_MODE bound to: WRITE_FIRST - type: string 
 INFO: [Synth 8-113] binding component instance 'ram_1024_x_18' to cell 'RAMB16_S18' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/prog_rom.vhd:194]
@@ -164,6 +164,12 @@ INFO: [Synth 8-3491] module 'SCR_ADDR_MUX' declared at 'C:/Users/edavis/Document
 INFO: [Synth 8-638] synthesizing module 'SCR_ADDR_MUX' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'SCR_ADDR_MUX' (21#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/SCR_ADDR_MUX.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'RAT_MCU' (22#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:29]
+INFO: [Synth 8-3491] module 'db_1shot_FSM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:26' bound to instance 'db_1shot_FSM_i' of component 'db_1shot_FSM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'db_1shot_FSM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:32]
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:27' bound to instance 'bounce_counter' of component 'Counter' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'counter' (23#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'db_1shot_FSM' (24#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:32]
 INFO: [Synth 8-3491] module 'sseg_dec' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:22' bound to instance 'sseg_dec_i' of component 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:177]
 INFO: [Synth 8-638] synthesizing module 'sseg_dec' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:32]
 INFO: [Synth 8-3491] module 'bin2bcdconv' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:136' bound to instance 'my_conv' of component 'bin2bcdconv' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:56]
@@ -172,33 +178,34 @@ WARNING: [Synth 8-6014] Unused sequential element cnt_tot_reg was removed.  [C:/
 WARNING: [Synth 8-6014] Unused sequential element msd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:165]
 WARNING: [Synth 8-6014] Unused sequential element mmsd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:166]
 WARNING: [Synth 8-6014] Unused sequential element lsd_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:167]
-INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (23#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:146]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcdconv' (25#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:146]
 INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:236' bound to instance 'my_clk' of component 'clk_div' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:62]
 INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:241]
-INFO: [Synth 8-256] done synthesizing module 'clk_div' (24#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:241]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (26#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:241]
 INFO: [Synth 8-226] default block is never used [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:112]
 WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:101]
 WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:102]
-INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (25#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'Interrupt_Driver' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Interrupt_Driver.vhd:11' bound to instance 'int_dvr_i' of component 'Interrupt_Driver' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-INFO: [Synth 8-638] synthesizing module 'Interrupt_Driver' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Interrupt_Driver.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'Interrupt_Driver' (26#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/Interrupt_Driver.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (27#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:32]
 INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_red' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:195]
 INFO: [Synth 8-638] synthesizing module 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:33]
 WARNING: [Synth 8-614] signal 'sw' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:37]
 WARNING: [Synth 8-6014] Unused sequential element swVAR_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'PWM' (27#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'PWM' (28#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:33]
 INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_green' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:203]
 INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_blue' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:211]
-WARNING: [Synth 8-614] signal 'BUTTON' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:231]
-WARNING: [Synth 8-6014] Unused sequential element r_red_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:265]
-WARNING: [Synth 8-6014] Unused sequential element r_blue_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:267]
-WARNING: [Synth 8-6014] Unused sequential element r_green_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:269]
-WARNING: [Synth 8-3848] Net r_INT_CLR in module/entity RAT_wrapper does not have driver. [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:125]
-WARNING: [Synth 8-3848] Net r_INT_EN in module/entity RAT_wrapper does not have driver. [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:124]
-INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (28#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:32]
+WARNING: [Synth 8-614] signal 's_BUTTON' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:223]
+WARNING: [Synth 8-3848] Net s_BUTTON in module/entity RAT_wrapper does not have driver. [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (29#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:32]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[7]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[6]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[5]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[4]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[3]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[2]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[1]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 358.742 ; gain = 134.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.922 ; gain = 134.227
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -207,27 +214,11 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[7] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[6] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[5] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[4] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[3] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[2] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[1] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_CLEAR[0] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[7] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[6] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[5] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[4] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[3] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[2] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[1] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
-WARNING: [Synth 8-3295] tying undriven pin int_dvr_i:INT_EN[0] to constant 0 [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:185]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 358.742 ; gain = 134.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 357.922 ; gain = 134.227
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -243,22 +234,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 670.852 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 667.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 670.852 ; gain = 447.008
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 667.117 ; gain = 443.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 670.852 ; gain = 447.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 667.117 ; gain = 443.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 670.852 ; gain = 447.008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 667.117 ; gain = 443.422
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "I_SET" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I_CLR" won't be mapped to RAM because it is too sparse
@@ -280,18 +271,37 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 WARNING: [Synth 8-6014] Unused sequential element PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/program_counter.vhd:48]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/stack_pointer.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/stack_pointer.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element s_count_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:44]
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'db_1shot_FSM'
+WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MMSD_OUT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "INT_OUT" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "countVar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 st_init |                              000 |                              000
+                st_a_low |                              001 |                              001
+        st_a_low_to_high |                              010 |                              010
+               st_a_high |                              011 |                              011
+        st_a_high_to_low |                              100 |                              100
+             st_one_shot |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'db_1shot_FSM'
+WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 670.852 ; gain = 447.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 667.117 ; gain = 443.422
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'pwm_red' (PWM) to 'pwm_green'
-INFO: [Synth 8-223] decloning instance 'pwm_red' (PWM) to 'pwm_blue'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -303,11 +313,11 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 4     
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 12    
+	   2 Input      8 Bit       Adders := 13    
 	   2 Input      4 Bit       Adders := 7     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 3     
@@ -316,11 +326,11 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 7     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 8     
+	                1 Bit    Registers := 10    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
 	   4 Input     10 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 2     
 	  16 Input      9 Bit        Muxes := 2     
@@ -330,6 +340,7 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 17    
 	   5 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	  48 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 3     
@@ -337,9 +348,11 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 5     
 	  51 Input      1 Bit        Muxes := 12    
 	  48 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 19    
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 20    
+	   6 Input      1 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -350,12 +363,15 @@ Hierarchical RTL Component report
 Module RAT_wrapper 
 Detailed RTL Component Info : 
 +---Registers : 
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 Module CONTROL_UNIT 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -448,6 +464,18 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Muxes : 
 	   5 Input      8 Bit        Muxes := 1     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module db_1shot_FSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	  14 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 3     
 Module bin2bcdconv 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -482,12 +510,6 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
 	   4 Input      4 Bit        Muxes := 1     
-Module Interrupt_Driver 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module PWM 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -514,25 +536,30 @@ Start Cross Boundary and Area Optimization
 INFO: [Synth 8-5546] ROM "CPU/CU/PC_MUX_SEL" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "sseg_dec_i/my_clk/div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "sseg_dec_i/my_clk/tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "int_dvr_i/INT_OUT" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "pwm_red/countVar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pwm_green/countVar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pwm_blue/countVar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "O360" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O390" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/program_counter.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/stack_pointer.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element db_1shot_FSM_i/bounce_counter/s_count_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:44]
 WARNING: [Synth 8-6014] Unused sequential element pwm_red/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[6]' (FD) to 'int_dvr_i/s_OUTPUT_reg[7]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[7]' (FD) to 'int_dvr_i/s_OUTPUT_reg[5]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[5]' (FD) to 'int_dvr_i/s_OUTPUT_reg[4]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[4]' (FD) to 'int_dvr_i/s_OUTPUT_reg[3]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[3]' (FD) to 'int_dvr_i/s_OUTPUT_reg[2]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[2]' (FD) to 'int_dvr_i/s_OUTPUT_reg[1]'
-INFO: [Synth 8-3886] merging instance 'int_dvr_i/s_OUTPUT_reg[1]' (FD) to 'int_dvr_i/s_OUTPUT_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\int_dvr_i/s_OUTPUT_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (CPU/INTURREPT_WRAPPER_i/I_FLAG_FF_i/I_FLG_TEMP_reg) is unused and will be removed from module RAT_wrapper.
-WARNING: [Synth 8-3332] Sequential element (int_dvr_i/s_OUTPUT_reg[0]) is unused and will be removed from module RAT_wrapper.
+WARNING: [Synth 8-6014] Unused sequential element pwm_green/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element pwm_blue/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[7]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[6]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[5]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[4]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[3]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[2]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[1]
+WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 670.852 ; gain = 447.008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 667.117 ; gain = 443.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -573,13 +600,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 702.469 ; gain = 478.625
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 710.676 ; gain = 486.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 748.859 ; gain = 525.016
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 725.531 ; gain = 501.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -591,7 +618,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -615,7 +642,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -628,7 +655,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -640,25 +667,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -675,53 +702,59 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |CARRY4     |    39|
-|3     |LUT1       |    66|
-|4     |LUT2       |    47|
-|5     |LUT3       |    36|
-|6     |LUT4       |    89|
-|7     |LUT5       |    63|
-|8     |LUT6       |   108|
-|9     |MUXF7      |    25|
+|2     |CARRY4     |    79|
+|3     |LUT1       |   129|
+|4     |LUT2       |    69|
+|5     |LUT3       |    37|
+|6     |LUT4       |   185|
+|7     |LUT5       |    68|
+|8     |LUT6       |   138|
+|9     |MUXF7      |    26|
 |10    |MUXF8      |     8|
 |11    |RAM256X1S  |    10|
 |12    |RAM32X1D   |     8|
 |13    |RAMB16_S18 |     1|
-|14    |FDRE       |   109|
+|14    |FDRE       |   211|
 |15    |IBUF       |    11|
 |16    |OBUF       |    23|
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+--------------------+----------------+------+
-|      |Instance            |Module          |Cells |
-+------+--------------------+----------------+------+
-|1     |top                 |                |   645|
-|2     |  CPU               |RAT_MCU         |   305|
-|3     |    ALU_i           |ALU             |    29|
-|4     |    CU              |CONTROL_UNIT    |    38|
-|5     |    FLAGS_i         |FLAGS           |     8|
-|6     |      C_FLAG_FF_i   |C_FLAG_FF       |     2|
-|7     |      SHAD_C_i      |SHAD_C          |     2|
-|8     |      SHAD_Z_i      |SHAD_Z          |     2|
-|9     |      Z_FLAG_FF_i   |Z_FLAG_FF       |     2|
-|10    |    PC              |program_counter |    28|
-|11    |    REG_FILE_i      |REG_FILE        |    34|
-|12    |    SCRATCH_RAM_i   |SCRATCH_RAM     |    10|
-|13    |    prog_rom_i      |prog_rom        |   135|
-|14    |    stack_pointer_i |stack_pointer   |    23|
-|15    |  pwm_red           |PWM             |   146|
-|16    |  sseg_dec_i        |sseg_dec        |   101|
-|17    |    my_clk          |clk_div         |    83|
-+------+--------------------+----------------+------+
++------+------------------------+------------------+------+
+|      |Instance                |Module            |Cells |
++------+------------------------+------------------+------+
+|1     |top                     |                  |  1005|
+|2     |  CPU                   |RAT_MCU           |   316|
+|3     |    ALU_i               |ALU               |    29|
+|4     |    CU                  |CONTROL_UNIT      |    39|
+|5     |    FLAGS_i             |FLAGS             |     7|
+|6     |      C_FLAG_FF_i       |C_FLAG_FF         |     2|
+|7     |      SHAD_C_i          |SHAD_C            |     1|
+|8     |      SHAD_Z_i          |SHAD_Z            |     2|
+|9     |      Z_FLAG_FF_i       |Z_FLAG_FF         |     2|
+|10    |    INTURREPT_WRAPPER_i |INTURREPT_WRAPPER |     1|
+|11    |      I_FLAG_FF_i       |I_FLAG_FF         |     1|
+|12    |    PC                  |program_counter   |    28|
+|13    |    REG_FILE_i          |REG_FILE          |    34|
+|14    |    SCRATCH_RAM_i       |SCRATCH_RAM       |    10|
+|15    |    prog_rom_i          |prog_rom          |   145|
+|16    |    stack_pointer_i     |stack_pointer     |    23|
+|17    |  db_1shot_FSM_i        |db_1shot_FSM      |    35|
+|18    |    bounce_counter      |counter           |    31|
+|19    |  pwm_blue              |PWM               |   146|
+|20    |  pwm_green             |PWM_0             |   145|
+|21    |  pwm_red               |PWM_1             |   145|
+|22    |  sseg_dec_i            |sseg_dec          |   101|
+|23    |    my_clk              |clk_div           |    83|
++------+------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 757.887 ; gain = 221.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 757.887 ; gain = 534.043
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 740.152 ; gain = 207.262
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 740.152 ; gain = 516.457
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -731,9 +764,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
   RAMB16_S18 => RAMB18E1: 1 instances
 
-142 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+145 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 757.887 ; gain = 541.953
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 740.152 ; gain = 524.309
 INFO: [Common 17-1381] The checkpoint 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.runs/synth_1/RAT_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 757.887 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 17 23:38:00 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 740.152 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 18 01:48:07 2018...
