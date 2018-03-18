@@ -22,7 +22,7 @@ entity RAT_wrapper is
            GREEN    : OUT   STD_LOGIC;
            BLUE     : OUT   STD_LOGIC;
            SWITCHES : in    STD_LOGIC_VECTOR (7 downto 0);
-           BUTTON   : IN    STD_LOGIC;           
+           BUTTON   : IN    STD_LOGIC;
 --           INT      : in    STD_LOGIC;
            RST      : in    STD_LOGIC;
            CLK      : in    STD_LOGIC;
@@ -48,7 +48,7 @@ architecture Behavioral of RAT_wrapper is
    CONSTANT SEVEN_SEG_ID     : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"81";
    CONSTANT RED_ID           : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"52";
    CONSTANT GREEN_ID         : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"53";
-   CONSTANT BLUE_ID          : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"54";   
+   CONSTANT BLUE_ID          : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"54";
 --   CONSTANT INT_CLR       : STD_LOGIC_VECTOR (7 DOWNTO 0) := X"AC";
    -------------------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ architecture Behavioral of RAT_wrapper is
                INT_OUT : out STD_LOGIC;
                INT_STATUS : out STD_LOGIC_VECTOR (7 downto 0));
     end component Interrupt_Driver;
-    
+
     component PWM is
         Port ( sw       : in STD_LOGIC_VECTOR (7 downto 0);
            sig      : out STD_LOGIC;
@@ -98,7 +98,7 @@ architecture Behavioral of RAT_wrapper is
            CLK      : in STD_LOGIC
            );
     end component PWM;
-    
+
 
 
    -- Signals for connecting RAT_CPU to RAT_wrapper -------------------------------
@@ -110,7 +110,7 @@ architecture Behavioral of RAT_wrapper is
    constant MAX_COUNT_50MHZ : integer := (2);     -- clock divider
    signal CLK_50MHZ : std_logic := '0';
    signal SEVEN_SEG_IM : std_logic_vector (3 downto 0);
-   signal s_interrupt   : std_logic;
+   signal s_interrupt, s_BUTTON   : std_logic;
 
    signal INTERRUPT_STATUS : std_logic_vector (7 downto 0);
 
@@ -128,27 +128,13 @@ architecture Behavioral of RAT_wrapper is
 begin
 
    -- Clock Divider Process ------------------------------------------------------
---   clkdiv: process(CLK)
---    begin
---        if RISING_EDGE(CLK) then
---            s_clk_sig <= NOT s_clk_sig;
---        end if;
---    end process clkdiv;
+  clkdiv: process(CLK)
+   begin
+       if RISING_EDGE(CLK) then
+           s_clk_sig <= NOT s_clk_sig;
+       end if;
+   end process clkdiv;
    -------------------------------------------------------------------------------
-
-
-   CLK_50MHZ_PROC: process (clk)
-         --variable div_cnt : integer := 0;
-      begin
-         if (rising_edge(clk)) then
-            --if (div_cnt = MAX_COUNT_50MHZ) then
-               s_clk_sig <= not s_clk_sig;
-               --div_cnt := 0;
-            --else
-               --div_cnt := div_cnt + 1;
-            --end if;
-         end if;
-      end process CLK_50MHZ_PROC;
       CLK_50MHZ <= s_clk_sig;
 
 
@@ -166,12 +152,14 @@ begin
    -------------------------------------------------------------------------------
 
 
-   -- db_1shot_FSM_i : db_1shot_FSM
-   --  port map (
-   --    A    => INT,
-   --    CLK  => CLK_50MHZ,
-   --    A_DB => s_interrupt
-   --  );
+   db_1shot_FSM_i : db_1shot_FSM
+    port map (
+      A    => BUTTON,
+      CLK  => CLK_50MHZ,
+      A_DB => s_BUTTON
+    );
+
+    s_interrupt <= s_BUTTON;
 
 
     sseg_dec_i : sseg_dec
@@ -191,18 +179,18 @@ begin
         INT_OUT => s_interrupt,
         INT_STATUS => INTERRUPT_STATUS
     );
-    
+
     pwm_red : PWM
     port map (
-        sw => SWITCHES,
+        sw => r_red,
         sig => RED,
         RST => RST,
         CLK => CLK
     );
-    
+
     pwm_green : PWM
     port map (
-        sw => SWITCHES,
+        sw => r_green,
         sig => GREEN,
         RST => RST,
         CLK => CLK
@@ -210,19 +198,11 @@ begin
 
     pwm_blue : PWM
     port map (
-        sw => SWITCHES,
+        sw => r_blue,
         sig => BLUE,
         RST => RST,
         CLK => CLK
     );
-        
-        
-
-
-   -- SSEG1: BCD7SEG_8
-   -- PORT MAP( seg => seg,
-   --           an  => an,
-   --           sw => SEVEN_SEG_IM);
 
    -------------------------------------------------------------------------------
    -- MUX for selecting what input to read ---------------------------------------
@@ -235,7 +215,7 @@ begin
      --elsif (s_port_id = INT_STATUS) then
          --s_input_port <=  INTERRUPT_STATUS;
       elsif (s_port_id = BUTTON_ID) THEN
-         s_input_port <= "0000000" & BUTTON;    
+         s_input_port <= "0000000" & s_BUTTON;
       else
          s_input_port <= x"00";
       end if;
@@ -267,7 +247,7 @@ begin
                r_blue <= s_output_port;
              elsif (s_port_id = GREEN_ID) THEN
                r_green <= s_output_port;
-               
+
             end if;
 
          end if;
