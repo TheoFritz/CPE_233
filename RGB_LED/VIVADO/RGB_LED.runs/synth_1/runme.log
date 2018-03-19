@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9672 
+INFO: Helper process launched with PID 15020 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 306.723 ; gain = 82.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 307.590 ; gain = 83.813
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'RAT_wrapper' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:32]
 INFO: [Synth 8-3491] module 'RAT_MCU' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_MCU.vhd:16' bound to instance 'CPU' of component 'RAT_MCU' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:156]
@@ -185,13 +185,13 @@ INFO: [Synth 8-226] default block is never used [C:/Users/edavis/Documents/CPE_2
 WARNING: [Synth 8-6014] Unused sequential element mmsd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:101]
 WARNING: [Synth 8-6014] Unused sequential element msd_v_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:102]
 INFO: [Synth 8-256] done synthesizing module 'sseg_dec' (27#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/BCD7SEG_8.vhdl:32]
-INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_red' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:195]
-INFO: [Synth 8-638] synthesizing module 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:33]
-WARNING: [Synth 8-614] signal 'sw' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:37]
-WARNING: [Synth 8-6014] Unused sequential element swVAR_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'PWM' (28#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:33]
-INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_green' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:203]
-INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:26' bound to instance 'pwm_blue' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:211]
+INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:26' bound to instance 'pwm_red' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:33]
+WARNING: [Synth 8-614] signal 'sw' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element swVAR_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'PWM' (28#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:33]
+INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:26' bound to instance 'pwm_green' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:203]
+INFO: [Synth 8-3491] module 'PWM' declared at 'C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:26' bound to instance 'pwm_blue' of component 'PWM' [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:211]
 WARNING: [Synth 8-614] signal 's_BUTTON' is read in the process but is not in the sensitivity list [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:223]
 WARNING: [Synth 8-3848] Net s_BUTTON in module/entity RAT_wrapper does not have driver. [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:113]
 INFO: [Synth 8-256] done synthesizing module 'RAT_wrapper' (29#1) [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/RAT_WRAPPER.vhd:32]
@@ -204,7 +204,7 @@ WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[2]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[1]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 357.645 ; gain = 133.777
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 358.430 ; gain = 134.652
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -214,7 +214,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 357.645 ; gain = 133.777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 358.430 ; gain = 134.652
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -233,22 +233,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAMB16_S18 => RAMB18E1: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 664.922 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 666.098 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.922 ; gain = 441.055
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 666.098 ; gain = 442.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.922 ; gain = 441.055
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 666.098 ; gain = 442.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 664.922 ; gain = 441.055
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 666.098 ; gain = 442.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "I_SET" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "I_CLR" won't be mapped to RAM because it is too sparse
@@ -282,7 +282,7 @@ INFO: [Synth 8-5544] ROM "MMSD_OUT" won't be mapped to Block RAM because address
 INFO: [Synth 8-5545] ROM "tmp_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "div_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "countVar" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:44]
 INFO: [Synth 8-5546] ROM "r_LEDS" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
 WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
@@ -299,7 +299,7 @@ WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'db_1shot_FSM'
 WARNING: [Synth 8-6014] Unused sequential element PS_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/debounce_one_shot_FSM.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 664.922 ; gain = 441.055
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 666.098 ; gain = 442.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -546,9 +546,9 @@ INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too spar
 WARNING: [Synth 8-6014] Unused sequential element CPU/PC/PC_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/program_counter.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element CPU/stack_pointer_i/SP_COUNT_TMP_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/stack_pointer.vhd:49]
 WARNING: [Synth 8-6014] Unused sequential element db_1shot_FSM_i/bounce_counter/s_count_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/ONE_SHOT_DEBOUNCE/counter_for_one_shot.vhd:44]
-WARNING: [Synth 8-6014] Unused sequential element pwm_red/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
-WARNING: [Synth 8-6014] Unused sequential element pwm_green/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
-WARNING: [Synth 8-6014] Unused sequential element pwm_blue/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.srcs/sources_1/imports/new/PWM.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element pwm_red/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element pwm_green/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element pwm_blue/countVar_reg was removed.  [C:/Users/edavis/Documents/CPE_233/RGB_LED/SRC/PWM.vhd:44]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[7]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[6]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[5]
@@ -558,7 +558,7 @@ WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[2]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[1]
 WARNING: [Synth 8-3331] design RAT_wrapper has unconnected port INT_IN[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 664.922 ; gain = 441.055
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 666.098 ; gain = 442.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -599,13 +599,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 709.914 ; gain = 486.047
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 710.484 ; gain = 486.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 723.336 ; gain = 499.469
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 724.125 ; gain = 500.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -617,7 +617,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -641,7 +641,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -654,7 +654,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -666,25 +666,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -747,11 +747,11 @@ Report Instance Areas:
 |23    |    my_clk              |clk_div           |    83|
 +------+------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 737.125 ; gain = 205.980
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 737.125 ; gain = 513.258
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 738.750 ; gain = 207.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 738.750 ; gain = 514.973
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -765,7 +765,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 145 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 737.125 ; gain = 521.355
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 738.750 ; gain = 522.688
 INFO: [Common 17-1381] The checkpoint 'C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.runs/synth_1/RAT_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 737.125 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 18 15:20:19 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 738.750 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 18 18:06:34 2018...

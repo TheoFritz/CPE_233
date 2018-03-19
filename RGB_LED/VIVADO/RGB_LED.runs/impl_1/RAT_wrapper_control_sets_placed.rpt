@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sun Mar 18 15:21:01 2018
+| Date         : Sun Mar 18 18:07:19 2018
 | Host         : DESKTOP-LJILSIK running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file RAT_wrapper_control_sets_placed.rpt
 | Design       : RAT_wrapper
@@ -51,11 +51,11 @@ Table of Contents
 |  sseg_dec_i/my_clk/CLK |                                           |                                           |                2 |              2 |
 |  CLK_IBUF_BUFG         |                                           |                                           |                2 |              3 |
 |  s_clk_sig_BUFG        |                                           | RST_IBUF                                  |                3 |              3 |
-|  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_SevenSeg_reg[0][0]       |                                           |                4 |              8 |
+|  CLK_IBUF_BUFG         | CPU/prog_rom_i/E[0]                       |                                           |                2 |              8 |
 |  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_red_reg[0][0]            |                                           |                2 |              8 |
 |  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_LEDS_reg[0][0]           |                                           |                5 |              8 |
 |  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_green_reg[0][0]          |                                           |                2 |              8 |
-|  CLK_IBUF_BUFG         | CPU/prog_rom_i/E[0]                       |                                           |                2 |              8 |
+|  CLK_IBUF_BUFG         | CPU/prog_rom_i/r_SevenSeg_reg[0][0]       |                                           |                4 |              8 |
 |  s_clk_sig_BUFG        | CPU/prog_rom_i/SP_COUNT_TMP_reg[7][0]     | CPU/CU/SR[0]                              |                2 |              8 |
 |  s_clk_sig_BUFG        | db_1shot_FSM_i/bounce_counter/s_count_inc | db_1shot_FSM_i/bounce_counter/s_count_rst |                2 |              8 |
 |  s_clk_sig_BUFG        | CPU/CU/E[0]                               | CPU/CU/SR[0]                              |                5 |             10 |
