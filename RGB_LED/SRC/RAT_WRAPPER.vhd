@@ -171,7 +171,7 @@ begin
       A_DB => s_interrupt
     );
 
---    s_interrupt <= s_BUTTON;
+    s_interrupt <= s_BUTTON;
 
 
     sseg_dec_i : sseg_dec

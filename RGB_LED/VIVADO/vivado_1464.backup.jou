@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Mar 17 21:34:47 2018
+# Process ID: 1464
+# Current directory: C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8068 C:\Users\edavis\Documents\CPE_233\RGB_LED\VIVADO\RGB_LED.xpr
+# Log file: C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/vivado.log
+# Journal file: C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/edavis/Documents/CPE_233/RGB_LED/VIVADO/RGB_LED.xpr
+update_compile_order -fileset sources_1
+import_files -norecurse C:/Users/edavis/Documents/CPE_233/HW_1/VIVADO/HW_1.srcs/sources_1/new/PWM.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
